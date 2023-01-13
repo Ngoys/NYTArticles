@@ -1,6 +1,14 @@
 import UIKit
 
 protocol HomeViewControllerDelegate: NSObjectProtocol {
+
+    func homeViewControllerDidSelectSearchArticle(_ homeViewController: HomeViewController)
+
+    func homeViewControllerDidSelectMostViewed(_ homeViewController: HomeViewController)
+
+    func homeViewControllerDidSelectMostShared(_ homeViewController: HomeViewController)
+
+    func homeViewControllerDidSelectMostEmailed(_ homeViewController: HomeViewController)
 }
 
 class HomeViewController: BaseViewController {
@@ -162,16 +170,16 @@ extension HomeViewController: UICollectionViewDelegate {
 
         switch homeMenu {
         case .searchArticle:
-            break
+            delegate?.homeViewControllerDidSelectSearchArticle(self)
 
         case .mostViewed:
-            break
+            delegate?.homeViewControllerDidSelectMostViewed(self)
 
         case .mostShared:
-            break
+            delegate?.homeViewControllerDidSelectMostShared(self)
 
         case .mostEmailed:
-            break
+            delegate?.homeViewControllerDidSelectMostEmailed(self)
         }
     }
 }

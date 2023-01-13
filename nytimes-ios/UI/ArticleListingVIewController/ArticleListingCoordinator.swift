@@ -3,7 +3,7 @@ import UIKit
 protocol ArticleListingCoordinatorDelegate: NSObjectProtocol {
 }
 
-class ArticleListingCoordinator: NSObject {
+class ArticleListingCoordinator: BaseCoordinator {
     
     //----------------------------------------
     // MARK:- Initialization

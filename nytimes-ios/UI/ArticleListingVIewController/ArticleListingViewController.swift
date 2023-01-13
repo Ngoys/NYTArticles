@@ -44,7 +44,7 @@ class ArticleListingViewController: BaseViewController {
     //----------------------------------------
 
     override func configureViews() {
-        navigationItem.title = R.string.localizable.articles()
+        navigationItem.title = R.string.localizable.articles().capitalized
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
 
         collectionView.register(R.nib.articleListingCell)

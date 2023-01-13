@@ -2,7 +2,7 @@ import UIKit
 import Combine
 import Foundation
 
-class AppCoordinator: NSObject {
+class AppCoordinator: BaseCoordinator {
     
     //----------------------------------------
     // MARK: - Initialization

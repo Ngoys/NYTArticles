@@ -3,7 +3,7 @@ import UIKit
 protocol HomeCoordinatorDelegate: NSObjectProtocol {
 }
 
-class HomeCoordinator: NSObject {
+class HomeCoordinator: BaseCoordinator {
 
     //----------------------------------------
     // MARK:- Initialization
@@ -41,4 +41,20 @@ class HomeCoordinator: NSObject {
 //----------------------------------------
 
 extension HomeCoordinator: HomeViewControllerDelegate {
+
+    func homeViewControllerDidSelectSearchArticle(_ homeViewController: HomeViewController) {
+        showArticleListing(activeViewController: homeViewController)
+    }
+
+    func homeViewControllerDidSelectMostViewed(_ homeViewController: HomeViewController) {
+        showArticleListing(activeViewController: homeViewController)
+    }
+
+    func homeViewControllerDidSelectMostShared(_ homeViewController: HomeViewController) {
+        showArticleListing(activeViewController: homeViewController)
+    }
+
+    func homeViewControllerDidSelectMostEmailed(_ homeViewController: HomeViewController) {
+        showArticleListing(activeViewController: homeViewController)
+    }
 }

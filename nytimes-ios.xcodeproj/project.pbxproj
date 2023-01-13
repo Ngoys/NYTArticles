@@ -15,6 +15,7 @@
 		C2487D1A297217490048F8DF /* ArticleListingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D17297217490048F8DF /* ArticleListingCellViewModel.swift */; };
 		C2487D1B297217490048F8DF /* ArticleListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2487D18297217490048F8DF /* ArticleListingCell.xib */; };
 		C2487D1D297218750048F8DF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D1C297218750048F8DF /* Article.swift */; };
+		C2487D21297221340048F8DF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D20297221340048F8DF /* BaseCoordinator.swift */; };
 		C28C49632971572F00E6757E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C28C49652971572F00E6757E /* Localizable.strings */; };
 		C28C49672971581200E6757E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49662971581200E6757E /* R.generated.swift */; };
 		C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49692971594D00E6757E /* MenuHeaderView.swift */; };
@@ -72,6 +73,7 @@
 		C2487D17297217490048F8DF /* ArticleListingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCellViewModel.swift; sourceTree = "<group>"; };
 		C2487D18297217490048F8DF /* ArticleListingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListingCell.xib; sourceTree = "<group>"; };
 		C2487D1C297218750048F8DF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C2487D20297221340048F8DF /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		C28C495C29713F6800E6757E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28C49642971572F00E6757E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C28C49662971581200E6757E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -157,6 +159,16 @@
 			path = ArticleListingVIewController;
 			sourceTree = "<group>";
 		};
+		C2487D222972213F0048F8DF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C2487D20297221340048F8DF /* BaseCoordinator.swift */,
+				C2E3BA1329712CD600180F8A /* BaseViewController.swift */,
+				C2E3BA1629712D0A00180F8A /* BaseUICollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C28C4960297156F600E6757E /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +215,7 @@
 				C2EEFE582971290B006DD687 /* LaunchScreen.storyboard */,
 				C2EEFE4A2971290A006DD687 /* AppDelegate.swift */,
 				C2E3BA0A29712B4D00180F8A /* AppCoordinator.swift */,
+				C2487D222972213F0048F8DF /* Base */,
 				C2E3BA0729712B0E00180F8A /* Main */,
 				C2E3BA1029712C4000180F8A /* Home */,
 				C2487D0D297165900048F8DF /* ArticleListingVIewController */,
@@ -235,8 +248,6 @@
 		C2E3BA1529712CE300180F8A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C2E3BA1329712CD600180F8A /* BaseViewController.swift */,
-				C2E3BA1629712D0A00180F8A /* BaseUICollectionViewCell.swift */,
 				C28C49682971594D00E6757E /* MenuHeaderView */,
 				C28C497229715E4000E6757E /* Reusable */,
 			);
@@ -571,6 +582,7 @@
 				C28C497129715A2200E6757E /* HomeMenuSection.swift in Sources */,
 				C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */,
 				C2E3BA202971328100180F8A /* ServicesContainer.swift in Sources */,
+				C2487D21297221340048F8DF /* BaseCoordinator.swift in Sources */,
 				C2E3BA1929712E4800180F8A /* HomeCoordinator.swift in Sources */,
 				C28C497829715E5600E6757E /* HomeMenuCellViewModel.swift in Sources */,
 				C2E3BA0F29712C3900180F8A /* HomeViewController.swift in Sources */,
