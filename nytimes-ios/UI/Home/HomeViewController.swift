@@ -53,7 +53,7 @@ class HomeViewController: BaseViewController {
     //----------------------------------------
 
     override func bindViewModel() {
-        applySnapshot(HomeMenuSections: viewModel.homeMenuSections)
+        applySnapshot(homeMenuSections: viewModel.homeMenuSections)
     }
 
     //----------------------------------------
@@ -105,10 +105,10 @@ class HomeViewController: BaseViewController {
     // MARK: - UI collection view data source
     //----------------------------------------
 
-    private func applySnapshot(HomeMenuSections: [HomeMenuSection], animatingDifferences: Bool = true) {
+    private func applySnapshot(homeMenuSections: [HomeMenuSection], animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
-        snapshot.appendSections(HomeMenuSections)
-        HomeMenuSections.forEach {
+        snapshot.appendSections(homeMenuSections)
+        homeMenuSections.forEach {
             snapshot.appendItems($0.menus, toSection: $0)
         }
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
