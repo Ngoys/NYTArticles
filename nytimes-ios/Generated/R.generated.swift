@@ -89,14 +89,23 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `ArticleListing`.
+    static let articleListing = _R.storyboard.articleListing()
     /// Storyboard `Home`.
     static let home = _R.storyboard.home()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "ArticleListing", bundle: ...)`
+    static func articleListing(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.articleListing)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "Home", bundle: ...)`
@@ -137,12 +146,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
+    /// Nib `ArticleListingCell`.
+    static let articleListingCell = _R.nib._ArticleListingCell()
     /// Nib `HomeMenuCell`.
     static let homeMenuCell = _R.nib._HomeMenuCell()
     /// Nib `MenuHeaderView`.
     static let menuHeaderView = _R.nib._MenuHeaderView()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ArticleListingCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.articleListingCell) instead")
+    static func articleListingCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.articleListingCell)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "HomeMenuCell", in: bundle)`
@@ -160,6 +179,10 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    static func articleListingCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleListingCell? {
+      return R.nib.articleListingCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleListingCell
+    }
+
     static func homeMenuCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeMenuCell? {
       return R.nib.homeMenuCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeMenuCell
     }
@@ -171,8 +194,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `ArticleListingCell`.
+    static let articleListingCell: Rswift.ReuseIdentifier<ArticleListingCell> = Rswift.ReuseIdentifier(identifier: "ArticleListingCell")
     /// Reuse identifier `HomeMenuCell`.
     static let homeMenuCell: Rswift.ReuseIdentifier<HomeMenuCell> = Rswift.ReuseIdentifier(identifier: "HomeMenuCell")
 
@@ -181,7 +206,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
       /// en translation: Most Emailed
       ///
@@ -211,6 +236,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let search_articles = Rswift.StringResource(key: "search_articles", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: articles
+      ///
+      /// Locales: en
+      static let articles = Rswift.StringResource(key: "articles", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Most Emailed
       ///
@@ -317,6 +346,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("search_articles", bundle: bundle, comment: "")
       }
 
+      /// en translation: articles
+      ///
+      /// Locales: en
+      static func articles(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("articles", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "articles"
+        }
+
+        return NSLocalizedString("articles", bundle: bundle, comment: "")
+      }
+
       fileprivate init() {}
     }
 
@@ -350,6 +394,20 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _HomeMenuCell.validate()
+    }
+
+    struct _ArticleListingCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ArticleListingCell
+
+      let bundle = R.hostingBundle
+      let identifier = "ArticleListingCell"
+      let name = "ArticleListingCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleListingCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleListingCell
+      }
+
+      fileprivate init() {}
     }
 
     struct _HomeMenuCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
@@ -393,6 +451,9 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try articleListing.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try home.validate()
       #endif
       #if os(iOS) || os(tvOS)
@@ -402,6 +463,28 @@ struct _R: Rswift.Validatable {
       try main.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct articleListing: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let homeViewController = StoryboardViewControllerResource<ArticleListingViewController>(identifier: "HomeViewController")
+      let name = "ArticleListing"
+
+      func homeViewController(_: Void = ()) -> ArticleListingViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homeViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.articleListing().homeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeViewController' could not be loaded from storyboard 'ArticleListing' as 'ArticleListingViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct home: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

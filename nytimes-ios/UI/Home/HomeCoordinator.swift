@@ -4,6 +4,7 @@ protocol HomeCoordinatorDelegate: NSObjectProtocol {
 }
 
 class HomeCoordinator: NSObject {
+
     //----------------------------------------
     // MARK:- Initialization
     //----------------------------------------
@@ -36,7 +37,7 @@ class HomeCoordinator: NSObject {
 }
 
 //----------------------------------------
-// MARK:- Home view controller delegate
+// MARK:- HomeViewController delegate
 //----------------------------------------
 
 extension HomeCoordinator: HomeViewControllerDelegate {

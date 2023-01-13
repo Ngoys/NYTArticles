@@ -1,5 +1,7 @@
 "new_york_times" = "New York Times";
 
+"articles" = "articles";
+
 // Home Menu
 "search" = "Search";
 "popular" = "Popular";

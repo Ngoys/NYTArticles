@@ -3,6 +3,7 @@ import Swinject
 
 // swiftlint:disable all
 class ServiceContainer {
+    
     //----------------------------------------
     // MARK: - Initialization
     //----------------------------------------

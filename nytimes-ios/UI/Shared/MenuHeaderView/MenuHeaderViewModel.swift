@@ -1,6 +1,7 @@
 import Foundation
 
 class MenuHeaderViewModel {
+    
     //----------------------------------------
     // MARK: - Initialization
     //----------------------------------------

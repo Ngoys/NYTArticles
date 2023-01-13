@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2487D122972163A0048F8DF /* ArticleListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */; };
+		C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */; };
+		C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D102972163A0048F8DF /* ArticleListingViewController.swift */; };
+		C2487D152972163A0048F8DF /* ArticleListing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2487D112972163A0048F8DF /* ArticleListing.storyboard */; };
+		C2487D19297217490048F8DF /* ArticleListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D16297217490048F8DF /* ArticleListingCell.swift */; };
+		C2487D1A297217490048F8DF /* ArticleListingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D17297217490048F8DF /* ArticleListingCellViewModel.swift */; };
+		C2487D1B297217490048F8DF /* ArticleListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2487D18297217490048F8DF /* ArticleListingCell.xib */; };
+		C2487D1D297218750048F8DF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D1C297218750048F8DF /* Article.swift */; };
 		C28C49632971572F00E6757E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C28C49652971572F00E6757E /* Localizable.strings */; };
 		C28C49672971581200E6757E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49662971581200E6757E /* R.generated.swift */; };
 		C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49692971594D00E6757E /* MenuHeaderView.swift */; };
@@ -56,6 +64,14 @@
 		31DF1213022A63CC30410539 /* Pods_nytimes_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nytimes_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73724476CF6CAA53ABB432A4 /* Pods-nytimes-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes-ios.release.xcconfig"; path = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.release.xcconfig"; sourceTree = "<group>"; };
 		BE5B8FC02B879E7856F8D5AC /* Pods-nytimes-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes-ios.debug.xcconfig"; path = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModel.swift; sourceTree = "<group>"; };
+		C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCoordinator.swift; sourceTree = "<group>"; };
+		C2487D102972163A0048F8DF /* ArticleListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewController.swift; sourceTree = "<group>"; };
+		C2487D112972163A0048F8DF /* ArticleListing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArticleListing.storyboard; sourceTree = "<group>"; };
+		C2487D16297217490048F8DF /* ArticleListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCell.swift; sourceTree = "<group>"; };
+		C2487D17297217490048F8DF /* ArticleListingCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCellViewModel.swift; sourceTree = "<group>"; };
+		C2487D18297217490048F8DF /* ArticleListingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleListingCell.xib; sourceTree = "<group>"; };
+		C2487D1C297218750048F8DF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C28C495C29713F6800E6757E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28C49642971572F00E6757E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C28C49662971581200E6757E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -130,6 +146,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C2487D0D297165900048F8DF /* ArticleListingVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2487D112972163A0048F8DF /* ArticleListing.storyboard */,
+				C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */,
+				C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */,
+				C2487D102972163A0048F8DF /* ArticleListingViewController.swift */,
+			);
+			path = ArticleListingVIewController;
+			sourceTree = "<group>";
+		};
 		C28C4960297156F600E6757E /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				C28C497029715A2200E6757E /* HomeMenuSection.swift */,
+				C2487D1C297218750048F8DF /* Article.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -162,6 +190,9 @@
 				C28C497429715E5600E6757E /* HomeMenuCell.xib */,
 				C28C497329715E5600E6757E /* HomeMenuCell.swift */,
 				C28C497529715E5600E6757E /* HomeMenuCellViewModel.swift */,
+				C2487D18297217490048F8DF /* ArticleListingCell.xib */,
+				C2487D16297217490048F8DF /* ArticleListingCell.swift */,
+				C2487D17297217490048F8DF /* ArticleListingCellViewModel.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -174,6 +205,7 @@
 				C2E3BA0A29712B4D00180F8A /* AppCoordinator.swift */,
 				C2E3BA0729712B0E00180F8A /* Main */,
 				C2E3BA1029712C4000180F8A /* Home */,
+				C2487D0D297165900048F8DF /* ArticleListingVIewController */,
 				C2E3BA1529712CE300180F8A /* Shared */,
 			);
 			path = UI;
@@ -396,11 +428,13 @@
 				C2EEFE5A2971290B006DD687 /* LaunchScreen.storyboard in Resources */,
 				C28C49632971572F00E6757E /* Localizable.strings in Resources */,
 				C2E3BA7C2971393900180F8A /* swiftlint.yml in Resources */,
+				C2487D152972163A0048F8DF /* ArticleListing.storyboard in Resources */,
 				C28C497729715E5600E6757E /* HomeMenuCell.xib in Resources */,
 				C28C496E2971594D00E6757E /* MenuHeaderView.xib in Resources */,
 				C2EEFE572971290B006DD687 /* Assets.xcassets in Resources */,
 				C2EEFE522971290A006DD687 /* Main.storyboard in Resources */,
 				C2E3BA1229712C5500180F8A /* Home.storyboard in Resources */,
+				C2487D1B297217490048F8DF /* ArticleListingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +555,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2487D1D297218750048F8DF /* Article.swift in Sources */,
+				C2487D122972163A0048F8DF /* ArticleListingViewModel.swift in Sources */,
 				C2E3BA1429712CD600180F8A /* BaseViewController.swift in Sources */,
+				C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */,
 				C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */,
 				C2EEFE4F2971290A006DD687 /* MainViewController.swift in Sources */,
 				C28C496D2971594D00E6757E /* MenuHeaderViewModel.swift in Sources */,
@@ -530,12 +567,15 @@
 				C28C497629715E5600E6757E /* HomeMenuCell.swift in Sources */,
 				C2E3BA1729712D0A00180F8A /* BaseUICollectionViewCell.swift in Sources */,
 				C2E3BA0B29712B4D00180F8A /* AppCoordinator.swift in Sources */,
+				C2487D19297217490048F8DF /* ArticleListingCell.swift in Sources */,
 				C28C497129715A2200E6757E /* HomeMenuSection.swift in Sources */,
+				C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */,
 				C2E3BA202971328100180F8A /* ServicesContainer.swift in Sources */,
 				C2E3BA1929712E4800180F8A /* HomeCoordinator.swift in Sources */,
 				C28C497829715E5600E6757E /* HomeMenuCellViewModel.swift in Sources */,
 				C2E3BA0F29712C3900180F8A /* HomeViewController.swift in Sources */,
 				C28C49672971581200E6757E /* R.generated.swift in Sources */,
+				C2487D1A297217490048F8DF /* ArticleListingCellViewModel.swift in Sources */,
 				C2E3BA0929712B2800180F8A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
