@@ -9,11 +9,11 @@ class ArticleListingCoordinator: BaseCoordinator {
     // MARK:- Initialization
     //----------------------------------------
 
-    init(activeViewController: UIViewController) {
+    init(activeViewController: UIViewController, articleListingContentType: ArticleListingContentType) {
         self.activeViewController = activeViewController
 
         let (_, articleListingViewController) = ArticleListingViewController.fromStoryboard()
-        articleListingViewController.viewModel = ArticleListingViewModel()
+        articleListingViewController.viewModel = ArticleListingViewModel(articleListingContentType: articleListingContentType)
         self.articleListingViewController = articleListingViewController
     }
 

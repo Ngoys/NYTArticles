@@ -43,18 +43,18 @@ class HomeCoordinator: BaseCoordinator {
 extension HomeCoordinator: HomeViewControllerDelegate {
 
     func homeViewControllerDidSelectSearchArticle(_ homeViewController: HomeViewController) {
-        showArticleListing(activeViewController: homeViewController)
+        
     }
 
     func homeViewControllerDidSelectMostViewed(_ homeViewController: HomeViewController) {
-        showArticleListing(activeViewController: homeViewController)
+        showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostViewed)
     }
 
     func homeViewControllerDidSelectMostShared(_ homeViewController: HomeViewController) {
-        showArticleListing(activeViewController: homeViewController)
+        showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostShared)
     }
 
     func homeViewControllerDidSelectMostEmailed(_ homeViewController: HomeViewController) {
-        showArticleListing(activeViewController: homeViewController)
+        showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostEmailed)
     }
 }
