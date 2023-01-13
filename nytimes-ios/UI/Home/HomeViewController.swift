@@ -15,9 +15,9 @@ class HomeViewController: BaseViewController {
     // MARK: - Type aliases
     //----------------------------------------
 
-    typealias DataSource = UICollectionViewDiffableDataSource<HomeMenuSection, HomeMenuType>
+    typealias DataSource = UICollectionViewDiffableDataSource<HomeMenuSection, HomeMenu>
 
-    typealias Snapshot = NSDiffableDataSourceSnapshot<HomeMenuSection, HomeMenuType>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<HomeMenuSection, HomeMenu>
 
     //----------------------------------------
     // MARK:- View model
@@ -119,7 +119,7 @@ class HomeViewController: BaseViewController {
             collectionView: collectionView,
             cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.homeMenuCell, for: indexPath) as! HomeMenuCell
-                let viewModel = HomeMenuCellViewModel(homeMenuType: item)
+                let viewModel = HomeMenuCellViewModel(homeMenu: item)
                 cell.bindViewModel(viewModel)
 
                 return cell
@@ -158,9 +158,9 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let homeMenuType = viewModel.homeMenuSections[indexPath.section].menus[indexPath.item]
+        let homeMenu = viewModel.homeMenuSections[indexPath.section].menus[indexPath.item]
 
-        switch homeMenuType {
+        switch homeMenu {
         case .searchArticle:
             break
 

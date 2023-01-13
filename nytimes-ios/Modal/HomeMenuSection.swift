@@ -2,7 +2,7 @@ import Foundation
 
 struct HomeMenuSection: Hashable {
     let type: HomeMenuSectionType
-    let menus: [HomeMenuType]
+    let menus: [HomeMenu]
 
     //----------------------------------------
     // MARK: - Hashable protocols
@@ -36,7 +36,7 @@ enum HomeMenuSectionType: Int, Hashable {
     }
 }
 
-enum HomeMenuType: Hashable {
+enum HomeMenu: Hashable {
     case searchArticle
     case mostViewed
     case mostShared
@@ -66,7 +66,7 @@ enum HomeMenuType: Hashable {
     // MARK: - Hashable protocols
     //----------------------------------------
 
-    static func == (lhs: HomeMenuType, rhs: HomeMenuType) -> Bool {
+    static func == (lhs: HomeMenu, rhs: HomeMenu) -> Bool {
         return false
     }
 }

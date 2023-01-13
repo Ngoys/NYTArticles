@@ -7,8 +7,8 @@ class HomeMenuCellViewModel {
     // MARK: - Initialization
     //----------------------------------------
     
-    init(homeMenuType: HomeMenuType) {
-        self.homeMenuType = homeMenuType
+    init(homeMenu: HomeMenu) {
+        self.homeMenu = homeMenu
     }
     
     //----------------------------------------
@@ -16,12 +16,12 @@ class HomeMenuCellViewModel {
     //----------------------------------------
 
     var titleText: String? {
-        return self.homeMenuType.name
+        return self.homeMenu.name
     }
     
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------
     
-    private let homeMenuType: HomeMenuType
+    private let homeMenu: HomeMenu
 }
