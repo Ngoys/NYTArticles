@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C2EEFE4B2971290A006DD687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE4A2971290A006DD687 /* AppDelegate.swift */; };
-		C2EEFE4D2971290A006DD687 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE4C2971290A006DD687 /* SceneDelegate.swift */; };
-		C2EEFE4F2971290A006DD687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE4E2971290A006DD687 /* ViewController.swift */; };
+		C2EEFE4F2971290A006DD687 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE4E2971290A006DD687 /* MainViewController.swift */; };
 		C2EEFE522971290A006DD687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EEFE502971290A006DD687 /* Main.storyboard */; };
 		C2EEFE552971290A006DD687 /* nytimes_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE532971290A006DD687 /* nytimes_ios.xcdatamodeld */; };
 		C2EEFE572971290B006DD687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EEFE562971290B006DD687 /* Assets.xcassets */; };
 		C2EEFE5A2971290B006DD687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EEFE582971290B006DD687 /* LaunchScreen.storyboard */; };
 		C2EEFE652971290B006DD687 /* nytimes_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE642971290B006DD687 /* nytimes_iosTests.swift */; };
-		C2EEFE6F2971290B006DD687 /* nytimes_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE6E2971290B006DD687 /* nytimes_iosUITests.swift */; };
-		C2EEFE712971290B006DD687 /* nytimes_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEFE702971290B006DD687 /* nytimes_iosUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +36,7 @@
 /* Begin PBXFileReference section */
 		C2EEFE472971290A006DD687 /* nytimes-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nytimes-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EEFE4A2971290A006DD687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2EEFE4C2971290A006DD687 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C2EEFE4E2971290A006DD687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2EEFE4E2971290A006DD687 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C2EEFE512971290A006DD687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2EEFE542971290A006DD687 /* nytimes_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nytimes_ios.xcdatamodel; sourceTree = "<group>"; };
 		C2EEFE562971290B006DD687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,8 +45,6 @@
 		C2EEFE602971290B006DD687 /* nytimes-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nytimes-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EEFE642971290B006DD687 /* nytimes_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nytimes_iosTests.swift; sourceTree = "<group>"; };
 		C2EEFE6A2971290B006DD687 /* nytimes-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nytimes-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2EEFE6E2971290B006DD687 /* nytimes_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nytimes_iosUITests.swift; sourceTree = "<group>"; };
-		C2EEFE702971290B006DD687 /* nytimes_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nytimes_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +77,6 @@
 			children = (
 				C2EEFE492971290A006DD687 /* nytimes-ios */,
 				C2EEFE632971290B006DD687 /* nytimes-iosTests */,
-				C2EEFE6D2971290B006DD687 /* nytimes-iosUITests */,
 				C2EEFE482971290A006DD687 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,8 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C2EEFE4A2971290A006DD687 /* AppDelegate.swift */,
-				C2EEFE4C2971290A006DD687 /* SceneDelegate.swift */,
-				C2EEFE4E2971290A006DD687 /* ViewController.swift */,
+				C2EEFE4E2971290A006DD687 /* MainViewController.swift */,
 				C2EEFE502971290A006DD687 /* Main.storyboard */,
 				C2EEFE562971290B006DD687 /* Assets.xcassets */,
 				C2EEFE582971290B006DD687 /* LaunchScreen.storyboard */,
@@ -119,15 +111,6 @@
 				C2EEFE642971290B006DD687 /* nytimes_iosTests.swift */,
 			);
 			path = "nytimes-iosTests";
-			sourceTree = "<group>";
-		};
-		C2EEFE6D2971290B006DD687 /* nytimes-iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C2EEFE6E2971290B006DD687 /* nytimes_iosUITests.swift */,
-				C2EEFE702971290B006DD687 /* nytimes_iosUITestsLaunchTests.swift */,
-			);
-			path = "nytimes-iosUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2EEFE4F2971290A006DD687 /* ViewController.swift in Sources */,
+				C2EEFE4F2971290A006DD687 /* MainViewController.swift in Sources */,
 				C2EEFE4B2971290A006DD687 /* AppDelegate.swift in Sources */,
-				C2EEFE4D2971290A006DD687 /* SceneDelegate.swift in Sources */,
 				C2EEFE552971290A006DD687 /* nytimes_ios.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2EEFE712971290B006DD687 /* nytimes_iosUITestsLaunchTests.swift in Sources */,
-				C2EEFE6F2971290B006DD687 /* nytimes_iosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
