@@ -13,8 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //----------------------------------------
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let navigationController = window!.rootViewController as! UINavigationController
+        let mainViewController = navigationController.viewControllers[0] as! MainViewController
+
+        appCoordinator = AppCoordinator(mainViewController: mainViewController)
+        appCoordinator.start()
         return true
     }
+
+    //----------------------------------------
+    // MARK: - Internals
+    //----------------------------------------
+
+    private var appCoordinator: AppCoordinator!
 }
 
