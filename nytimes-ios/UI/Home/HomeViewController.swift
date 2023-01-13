@@ -6,7 +6,7 @@ protocol HomeViewControllerDelegate: NSObjectProtocol {
 class HomeViewController: BaseViewController {
 
     class func fromStoryboard() -> (UINavigationController, HomeViewController) {
-        let navigationController = UIStoryboard(name: "Home", bundle: .main).instantiateInitialViewController() as! UINavigationController
+        let navigationController = R.storyboard.home().instantiateInitialViewController() as! UINavigationController
         let viewController = navigationController.topViewController
         return (navigationController, viewController as! HomeViewController)
     }

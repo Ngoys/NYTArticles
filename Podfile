@@ -7,6 +7,7 @@ def shared_pods
 
   # Pods for nytimes-ios
   pod 'SwiftLint'
+  pod 'R.swift'
 end
 
 target 'nytimes-ios' do

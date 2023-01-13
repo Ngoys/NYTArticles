@@ -1,6 +1,6 @@
 excluded:
 - Pods
-- nytimes-ios/Generated
+- nytimes-ios/Generated/R.generated.swift
 
 opt_in_rules:
   - empty_count
