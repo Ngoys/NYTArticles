@@ -68,7 +68,6 @@ class AppCoordinator: NSObject {
 extension AppCoordinator: MainViewControllerDelegate {
 }
 
-
 //----------------------------------------
 // MARK:- HomeCoordinator Delegate
 //----------------------------------------

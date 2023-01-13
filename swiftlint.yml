@@ -1,8 +1,6 @@
 excluded:
-- BuildTools
 - Pods
-- BFM/Generated
-- BFM/Utilities
+- nytimes-ios/Generated
 
 opt_in_rules:
   - empty_count

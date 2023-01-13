@@ -26,5 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //----------------------------------------
 
     private var appCoordinator: AppCoordinator!
+
+    private let services = ServiceContainer()
 }
 

@@ -28,7 +28,6 @@ class HomeCoordinator: NSObject {
         self.homeViewController.delegate = self
     }
 
-
     //----------------------------------------
     // MARK:- Internals
     //----------------------------------------
