@@ -1,0 +1,10 @@
+"new_york_times" = "New York Times";
+
+// Home Menu
+"search" = "Search";
+"popular" = "Popular";
+
+"search_articles" = "Search Articles";
+"most_emailed" = "Most Emailed";
+"most_shared" = "Most Shared";
+"most_viewed" = "Most Viewed";

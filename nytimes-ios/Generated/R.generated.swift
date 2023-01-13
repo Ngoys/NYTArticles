@@ -162,6 +162,192 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  struct nib {
+    /// Nib `HomeMenuCell`.
+    static let homeMenuCell = _R.nib._HomeMenuCell()
+    /// Nib `MenuHeaderView`.
+    static let menuHeaderView = _R.nib._MenuHeaderView()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HomeMenuCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeMenuCell) instead")
+    static func homeMenuCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeMenuCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MenuHeaderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.menuHeaderView) instead")
+    static func menuHeaderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.menuHeaderView)
+    }
+    #endif
+
+    static func homeMenuCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeMenuCell? {
+      return R.nib.homeMenuCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeMenuCell
+    }
+
+    static func menuHeaderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MenuHeaderView? {
+      return R.nib.menuHeaderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuHeaderView
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `HomeMenuCell`.
+    static let homeMenuCell: Rswift.ReuseIdentifier<HomeMenuCell> = Rswift.ReuseIdentifier(identifier: "HomeMenuCell")
+
+    fileprivate init() {}
+  }
+
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+    struct localizable {
+      /// en translation: Most Emailed
+      ///
+      /// Locales: en
+      static let most_emailed = Rswift.StringResource(key: "most_emailed", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Most Shared
+      ///
+      /// Locales: en
+      static let most_shared = Rswift.StringResource(key: "most_shared", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Most Viewed
+      ///
+      /// Locales: en
+      static let most_viewed = Rswift.StringResource(key: "most_viewed", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: New York Times
+      ///
+      /// Locales: en
+      static let new_york_times = Rswift.StringResource(key: "new_york_times", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Popular
+      ///
+      /// Locales: en
+      static let popular = Rswift.StringResource(key: "popular", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Search
+      ///
+      /// Locales: en
+      static let search = Rswift.StringResource(key: "search", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Search Articles
+      ///
+      /// Locales: en
+      static let search_articles = Rswift.StringResource(key: "search_articles", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Most Emailed
+      ///
+      /// Locales: en
+      static func most_emailed(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("most_emailed", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "most_emailed"
+        }
+
+        return NSLocalizedString("most_emailed", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Most Shared
+      ///
+      /// Locales: en
+      static func most_shared(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("most_shared", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "most_shared"
+        }
+
+        return NSLocalizedString("most_shared", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Most Viewed
+      ///
+      /// Locales: en
+      static func most_viewed(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("most_viewed", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "most_viewed"
+        }
+
+        return NSLocalizedString("most_viewed", bundle: bundle, comment: "")
+      }
+
+      /// en translation: New York Times
+      ///
+      /// Locales: en
+      static func new_york_times(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("new_york_times", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "new_york_times"
+        }
+
+        return NSLocalizedString("new_york_times", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Popular
+      ///
+      /// Locales: en
+      static func popular(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("popular", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "popular"
+        }
+
+        return NSLocalizedString("popular", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Search
+      ///
+      /// Locales: en
+      static func search(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("search", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "search"
+        }
+
+        return NSLocalizedString("search", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Search Articles
+      ///
+      /// Locales: en
+      static func search_articles(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("search_articles", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "search_articles"
+        }
+
+        return NSLocalizedString("search_articles", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -178,9 +364,55 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _HomeMenuCell.validate()
+    }
+
+    struct _HomeMenuCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = HomeMenuCell
+
+      let bundle = R.hostingBundle
+      let identifier = "HomeMenuCell"
+      let name = "HomeMenuCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeMenuCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeMenuCell
+      }
+
+      static func validate() throws {
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "chevron.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'chevron.right' is used in nib 'HomeMenuCell', but couldn't be loaded.") } }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "nobelColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'nobelColor' is used in nib 'HomeMenuCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "primaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'primaryTextColor' is used in nib 'HomeMenuCell', but couldn't be loaded.") }
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _MenuHeaderView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MenuHeaderView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MenuHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuHeaderView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
