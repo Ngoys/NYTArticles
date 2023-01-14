@@ -9,16 +9,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Article Listing View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ArticleListingViewController" customModule="nytimes_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="nytimes_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rcU-cx-pgx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0rj-re-ZOl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="NVa-k9-kml">
                                     <size key="itemSize" width="128" height="128"/>
@@ -29,26 +33,30 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-xo-AkH" customClass="StatefulPlaceholderView" customModule="nytimes_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="757"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0rj-re-ZOl" firstAttribute="top" secondItem="rcU-cx-pgx" secondAttribute="bottom" id="5uy-8K-LVc"/>
+                            <constraint firstItem="rcU-cx-pgx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GjE-1a-hcs"/>
+                            <constraint firstItem="rcU-cx-pgx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HOd-Z9-R0T"/>
+                            <constraint firstItem="ejz-xo-AkH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JUd-Ut-T0b"/>
+                            <constraint firstAttribute="trailing" secondItem="ejz-xo-AkH" secondAttribute="trailing" id="LOd-kK-kqe"/>
                             <constraint firstItem="0rj-re-ZOl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LVy-pP-5LT"/>
-                            <constraint firstItem="ejz-xo-AkH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UdK-Ty-t7v"/>
-                            <constraint firstAttribute="trailing" secondItem="ejz-xo-AkH" secondAttribute="trailing" id="fp7-TC-NqE"/>
-                            <constraint firstItem="0rj-re-ZOl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gfo-Vi-0qI"/>
+                            <constraint firstItem="rcU-cx-pgx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="U6S-Lw-WiZ"/>
                             <constraint firstAttribute="trailing" secondItem="0rj-re-ZOl" secondAttribute="trailing" id="gxn-HJ-TBC"/>
-                            <constraint firstItem="ejz-xo-AkH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mFx-V5-zdv"/>
+                            <constraint firstItem="ejz-xo-AkH" firstAttribute="top" secondItem="rcU-cx-pgx" secondAttribute="bottom" id="i6N-cE-XC8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0rj-re-ZOl" secondAttribute="bottom" id="pyB-ny-eJ3"/>
-                            <constraint firstAttribute="bottom" secondItem="ejz-xo-AkH" secondAttribute="bottom" id="uzf-kw-Q60"/>
+                            <constraint firstAttribute="bottom" secondItem="ejz-xo-AkH" secondAttribute="bottom" id="rOb-16-lzm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v3o-RR-YWn"/>
                     <connections>
                         <outlet property="collectionView" destination="0rj-re-ZOl" id="aPW-pi-ssn"/>
+                        <outlet property="searchBar" destination="rcU-cx-pgx" id="4RE-jh-MZD"/>
                         <outlet property="statefulPlaceholderView" destination="ejz-xo-AkH" id="T7B-Cr-4fe"/>
                     </connections>
                 </viewController>

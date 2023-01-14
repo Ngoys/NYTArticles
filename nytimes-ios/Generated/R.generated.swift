@@ -89,7 +89,7 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `ArticleListing`.
     static let articleListing = _R.storyboard.articleListing()
@@ -99,6 +99,8 @@ struct R: Rswift.Validatable {
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `Search`.
+    static let search = _R.storyboard.search()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "ArticleListing", bundle: ...)`
@@ -128,6 +130,13 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Search", bundle: ...)`
+    static func search(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.search)
+    }
+    #endif
+
     fileprivate init() {}
   }
   #endif
@@ -146,10 +155,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `ArticleListingCell`.
     static let articleListingCell = _R.nib._ArticleListingCell()
+    /// Nib `DocumentArticleListingCell`.
+    static let documentArticleListingCell = _R.nib._DocumentArticleListingCell()
     /// Nib `HomeMenuCell`.
     static let homeMenuCell = _R.nib._HomeMenuCell()
     /// Nib `MenuHeaderView`.
@@ -162,6 +173,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.articleListingCell) instead")
     static func articleListingCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.articleListingCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DocumentArticleListingCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.documentArticleListingCell) instead")
+    static func documentArticleListingCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.documentArticleListingCell)
     }
     #endif
 
@@ -193,6 +212,10 @@ struct R: Rswift.Validatable {
       return R.nib.articleListingCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleListingCell
     }
 
+    static func documentArticleListingCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DocumentArticleListingCell? {
+      return R.nib.documentArticleListingCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DocumentArticleListingCell
+    }
+
     static func homeMenuCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeMenuCell? {
       return R.nib.homeMenuCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeMenuCell
     }
@@ -208,10 +231,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `ArticleListingCell`.
     static let articleListingCell: Rswift.ReuseIdentifier<ArticleListingCell> = Rswift.ReuseIdentifier(identifier: "ArticleListingCell")
+    /// Reuse identifier `DocumentArticleListingCell`.
+    static let documentArticleListingCell: Rswift.ReuseIdentifier<DocumentArticleListingCell> = Rswift.ReuseIdentifier(identifier: "DocumentArticleListingCell")
     /// Reuse identifier `HomeMenuCell`.
     static let homeMenuCell: Rswift.ReuseIdentifier<HomeMenuCell> = Rswift.ReuseIdentifier(identifier: "HomeMenuCell")
 
@@ -220,7 +245,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// en translation: An error occurred. Please try again later.
       ///
@@ -274,6 +299,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let errorNo_resultMessage = Rswift.StringResource(key: "error.no_result.message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Type something here...
+      ///
+      /// Locales: en
+      static let type_something_here = Rswift.StringResource(key: "type_something_here", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: You’re offline
       ///
       /// Locales: en
@@ -478,6 +507,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error.no_result.message", bundle: bundle, comment: "")
       }
 
+      /// en translation: Type something here...
+      ///
+      /// Locales: en
+      static func type_something_here(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("type_something_here", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "type_something_here"
+        }
+
+        return NSLocalizedString("type_something_here", bundle: bundle, comment: "")
+      }
+
       /// en translation: You’re offline
       ///
       /// Locales: en
@@ -557,6 +601,20 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _DocumentArticleListingCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = DocumentArticleListingCell
+
+      let bundle = R.hostingBundle
+      let identifier = "DocumentArticleListingCell"
+      let name = "DocumentArticleListingCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DocumentArticleListingCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DocumentArticleListingCell
+      }
+
+      fileprivate init() {}
+    }
+
     struct _HomeMenuCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
       typealias ReusableType = HomeMenuCell
 
@@ -618,6 +676,9 @@ struct _R: Rswift.Validatable {
       #endif
       #if os(iOS) || os(tvOS)
       try main.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
+      try search.validate()
       #endif
     }
 
@@ -691,6 +752,28 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct search: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let homeViewController = StoryboardViewControllerResource<SearchViewController>(identifier: "HomeViewController")
+      let name = "Search"
+
+      func homeViewController(_: Void = ()) -> SearchViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: homeViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.search().homeViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'homeViewController' could not be loaded from storyboard 'Search' as 'SearchViewController'.") }
       }
 
       fileprivate init() {}

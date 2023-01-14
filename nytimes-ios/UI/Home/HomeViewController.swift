@@ -65,7 +65,7 @@ class HomeViewController: BaseViewController {
     }
 
     //----------------------------------------
-    // MARK: - UI collection view layout
+    // MARK: - UICollectionView layout
     //----------------------------------------
 
     func createCollectionViewLayout() -> UICollectionViewLayout {
@@ -110,7 +110,7 @@ class HomeViewController: BaseViewController {
     }
 
     //----------------------------------------
-    // MARK: - UI collection view data source
+    // MARK: - UICollectionView data source
     //----------------------------------------
 
     private func applySnapshot(homeMenuSections: [HomeMenuSection], animatingDifferences: Bool = true) {
@@ -160,7 +160,7 @@ class HomeViewController: BaseViewController {
 }
 
 //----------------------------------------
-// MARK: - UI collection view delegate
+// MARK: - UICollectionView delegate
 //----------------------------------------
 
 extension HomeViewController: UICollectionViewDelegate {

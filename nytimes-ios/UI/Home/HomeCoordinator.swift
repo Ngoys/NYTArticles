@@ -27,6 +27,7 @@ class HomeCoordinator: BaseCoordinator {
 
     func start() {
         self.homeViewController.delegate = self
+        _ = showSearch(activeViewController: homeViewController) //shawn DO NOT KEEP
     }
 
     //----------------------------------------
@@ -43,7 +44,7 @@ class HomeCoordinator: BaseCoordinator {
 extension HomeCoordinator: HomeViewControllerDelegate {
 
     func homeViewControllerDidSelectSearchArticle(_ homeViewController: HomeViewController) {
-
+        _ = showSearch(activeViewController: homeViewController)
     }
 
     func homeViewControllerDidSelectMostViewed(_ homeViewController: HomeViewController) {

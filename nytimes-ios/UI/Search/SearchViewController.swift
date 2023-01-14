@@ -1,14 +1,14 @@
 import UIKit
 
-protocol ArticleListingViewControllerDelegate: NSObjectProtocol {
+protocol SearchViewControllerDelegate: NSObjectProtocol {
 }
 
-class ArticleListingViewController: BaseViewController {
+class SearchViewController: BaseViewController {
 
-    class func fromStoryboard() -> (UINavigationController, ArticleListingViewController) {
-        let navigationController = R.storyboard.articleListing().instantiateInitialViewController() as! UINavigationController
+    class func fromStoryboard() -> (UINavigationController, SearchViewController) {
+        let navigationController = R.storyboard.search().instantiateInitialViewController() as! UINavigationController
         let viewController = navigationController.topViewController
-        return (navigationController, viewController as! ArticleListingViewController)
+        return (navigationController, viewController as! SearchViewController)
     }
 
     //----------------------------------------
@@ -16,28 +16,28 @@ class ArticleListingViewController: BaseViewController {
     //----------------------------------------
 
     enum Section: Int, Hashable {
-        case main
+        case main, loading
     }
 
     //----------------------------------------
     // MARK: - Type aliases
     //----------------------------------------
 
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, Article>
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, DocumentArticle>
 
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Article>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, DocumentArticle>
 
     //----------------------------------------
     // MARK:- View model
     //----------------------------------------
 
-    var viewModel: ArticleListingViewModel!
+    var viewModel: SearchViewModel!
 
     //----------------------------------------
     // MARK:- Delegate
     //----------------------------------------
 
-    weak var delegate: ArticleListingViewControllerDelegate?
+    weak var delegate: SearchViewControllerDelegate?
 
     //----------------------------------------
     // MARK: - Configure views
@@ -47,11 +47,14 @@ class ArticleListingViewController: BaseViewController {
         navigationItem.title = R.string.localizable.articles().capitalized
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
 
-        collectionView.register(R.nib.articleListingCell)
+        collectionView.register(R.nib.documentArticleListingCell)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
 
         collectionView.collectionViewLayout = createCollectionViewLayout()
         collectionView.delegate = self
+
+        searchBar.delegate = self
+        searchBar.placeholder = R.string.localizable.type_something_here()
     }
 
     //----------------------------------------
@@ -66,8 +69,8 @@ class ArticleListingViewController: BaseViewController {
                 self.statefulPlaceholderView.bind(state)
 
                 switch state {
-                case .loaded(let articles):
-                    self.applySnapshot(articles: articles)
+                case .loaded(let documentArticles):
+                    self.applySnapshot(documentArticles: documentArticles)
 
                 default:
                     break
@@ -88,7 +91,7 @@ class ArticleListingViewController: BaseViewController {
             var section: NSCollectionLayoutSection!
             let containerWidth = layoutEnvironment.container.contentSize.width
 
-            cellSize = ArticleListingCell.sizeThatFits(width: containerWidth)
+            cellSize = DocumentArticleListingCell.sizeThatFits(width: containerWidth)
             itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .estimated(cellSize.height))
             item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -105,10 +108,10 @@ class ArticleListingViewController: BaseViewController {
     // MARK: - UICollectionView data source
     //----------------------------------------
 
-    private func applySnapshot(articles: [Article], animatingDifferences: Bool = true) {
+    private func applySnapshot(documentArticles: [DocumentArticle], animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
-        snapshot.appendItems(articles)
+        snapshot.appendItems(documentArticles)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
@@ -116,8 +119,8 @@ class ArticleListingViewController: BaseViewController {
         let dataSource = DataSource(
             collectionView: collectionView,
             cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.articleListingCell, for: indexPath) as! ArticleListingCell
-                let viewModel = ArticleListingCellViewModel(article: item)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.documentArticleListingCell, for: indexPath) as! DocumentArticleListingCell
+                let viewModel = DocumentArticleListingCellViewModel(documentArticle: item)
                 cell.bindViewModel(viewModel)
 
                 return cell
@@ -135,14 +138,27 @@ class ArticleListingViewController: BaseViewController {
     @IBOutlet private var statefulPlaceholderView: StatefulPlaceholderView!
 
     @IBOutlet private var collectionView: UICollectionView!
+
+    @IBOutlet private var searchBar: UISearchBar!
 }
 
 //----------------------------------------
 // MARK: - UICollectionView delegate
 //----------------------------------------
 
-extension ArticleListingViewController: UICollectionViewDelegate {
+extension SearchViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+//----------------------------------------
+// MARK: - UISearchBar delegate
+//----------------------------------------
+
+extension SearchViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.updateSearchKeyword(keyword: searchText)
     }
 }

@@ -60,7 +60,7 @@ class NYTimesAPIClient: APIClient {
 
             return httpClient.apiRequest(request: request)
                 .map { _, data -> APIResponse in
-                    let apiResponse = NYTimesAPIResponse(data: data)
+                    let apiResponse = APIResponse(data: data)
                     return apiResponse
                 }.eraseToAnyPublisher()
         }

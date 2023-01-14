@@ -40,6 +40,22 @@ class ArticleStore: BaseStore {
         return publisher
     }
 
+    func searchArticles(keyword: String, pageNumber: Int = 1) -> AnyPublisher<[DocumentArticle], Error> {
+        let endPoint = "search/v2/articlesearch.json"
+
+        let queryItems = [URLQueryItem(name: "q", value: keyword)]
+
+        let publisher = apiClient.apiRequest(.get, endPoint, queryItems: queryItems, requiresAuthorization: true)
+            .tryMap { apiResponse -> [DocumentArticle] in
+                let decodedModel = try self.decoder.decode(NYTimesAPIResponse<SearchResponse>.self, from: apiResponse.data)
+                return decodedModel.response.docs
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+
+        return publisher
+    }
+
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------

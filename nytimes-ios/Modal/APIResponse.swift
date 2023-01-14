@@ -1,6 +1,5 @@
 import Foundation
-import Combine
 
-protocol APIResponse {
-    var data: Data { get }
+struct APIResponse {
+    let data: Data
 }

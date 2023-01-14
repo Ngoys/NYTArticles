@@ -2,6 +2,8 @@
 
 "articles" = "articles";
 
+"type_something_here" = "Type something here...";
+
 // Home Menu
 "search" = "Search";
 "popular" = "Popular";
