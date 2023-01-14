@@ -39,7 +39,7 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
                 .eraseToAnyPublisher()
         }
 
-        return articleStore.searchArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
+        return articleStore.searchDocumentArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
             .map { documentArticles in
                 var previousFetchedDocumentArticles = self.documentArticles.value
                 previousFetchedDocumentArticles.append(contentsOf: documentArticles)

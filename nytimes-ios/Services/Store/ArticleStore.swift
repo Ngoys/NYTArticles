@@ -40,7 +40,7 @@ class ArticleStore: BaseStore {
         return publisher
     }
 
-    func searchArticles(keyword: String, pageNumber: Int = 1) -> AnyPublisher<[DocumentArticle], Error> {
+    func searchDocumentArticles(keyword: String, pageNumber: Int = 1) -> AnyPublisher<[DocumentArticle], Error> {
         let endPoint = "search/v2/articlesearch.json"
 
         let queryItems = [
