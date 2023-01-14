@@ -182,7 +182,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C2487D0D297165900048F8DF /* ArticleListingVIewController */ = {
+		C2487D0D297165900048F8DF /* ArticleListing */ = {
 			isa = PBXGroup;
 			children = (
 				C2487D112972163A0048F8DF /* ArticleListing.storyboard */,
@@ -190,7 +190,7 @@
 				C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */,
 				C2487D102972163A0048F8DF /* ArticleListingViewController.swift */,
 			);
-			path = ArticleListingVIewController;
+			path = ArticleListing;
 			sourceTree = "<group>";
 		};
 		C2487D222972213F0048F8DF /* Base */ = {
@@ -286,7 +286,7 @@
 				C2487D222972213F0048F8DF /* Base */,
 				C2E3BA0729712B0E00180F8A /* Main */,
 				C2E3BA1029712C4000180F8A /* Home */,
-				C2487D0D297165900048F8DF /* ArticleListingVIewController */,
+				C2487D0D297165900048F8DF /* ArticleListing */,
 				C2E3BA1529712CE300180F8A /* Shared */,
 			);
 			path = UI;

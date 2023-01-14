@@ -47,14 +47,14 @@ extension HomeCoordinator: HomeViewControllerDelegate {
     }
 
     func homeViewControllerDidSelectMostViewed(_ homeViewController: HomeViewController) {
-        let _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostViewed)
+        _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostViewed)
     }
 
     func homeViewControllerDidSelectMostShared(_ homeViewController: HomeViewController) {
-        let _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostShared)
+        _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostShared)
     }
 
     func homeViewControllerDidSelectMostEmailed(_ homeViewController: HomeViewController) {
-        let _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostEmailed)
+        _ = showArticleListing(activeViewController: homeViewController, articleListingContentType: .mostEmailed)
     }
 }
