@@ -1,6 +1,7 @@
 import UIKit
 
 class ArticleListingCell: UICollectionViewCell {
+    
     //----------------------------------------
     // MARK: - View Model Binding
     //----------------------------------------

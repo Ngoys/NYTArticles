@@ -1,6 +1,7 @@
 import UIKit
 
 class HomeMenuCell: UICollectionViewCell {
+    
     //----------------------------------------
     // MARK: - View Model Binding
     //----------------------------------------
