@@ -10,7 +10,7 @@ protocol APIClient {
         queryItems: [URLQueryItem]?,
         requestHeader: [String: String]?,
         requestBody: Data?,
-        requiresAuthorization: Bool) -> AnyPublisher<NYTimesAPIResponse, Error>
+        requiresAuthorization: Bool) -> AnyPublisher<APIResponse, Error>
 }
 
 extension APIClient {
@@ -20,7 +20,7 @@ extension APIClient {
         queryItems: [URLQueryItem]? = nil,
         requestBody: Data? = nil,
         requestHeader: [String: String]? = nil,
-        requiresAuthorization: Bool = false) -> AnyPublisher<NYTimesAPIResponse, Error> {
+        requiresAuthorization: Bool = false) -> AnyPublisher<APIResponse, Error> {
             return apiRequest(method, path, queryItems: queryItems, requestHeader: requestHeader, requestBody: requestBody, requiresAuthorization: requiresAuthorization)
         }
 }

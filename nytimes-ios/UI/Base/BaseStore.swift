@@ -1,8 +1,18 @@
-//
-//  BaseStore.swift
-//  nytimes-ios
-//
-//  Created by Shawn Ngo on 14/01/2023.
-//
+import UIKit
+import Combine
 
-import Foundation
+class BaseStore: NSObject {
+
+    //----------------------------------------
+    // MARK: - Internals
+    //----------------------------------------
+
+    lazy var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+
+        return decoder
+    }()
+
+    private var cancellables: Set<AnyCancellable> = Set()
+}

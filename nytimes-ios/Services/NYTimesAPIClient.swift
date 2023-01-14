@@ -25,7 +25,7 @@ class NYTimesAPIClient: APIClient {
         queryItems: [URLQueryItem]? = nil,
         requestHeader: [String: String]? = nil,
         requestBody: Data? = nil,
-        requiresAuthorization: Bool = false) -> AnyPublisher<NYTimesAPIResponse, Error>  {
+        requiresAuthorization: Bool = false) -> AnyPublisher<APIResponse, Error>  {
             var apiURL: URL?
             let url = apiBaseURL.appendingPathComponent(path)
 
@@ -58,9 +58,9 @@ class NYTimesAPIClient: APIClient {
             }
 
             return httpClient.apiRequest(request: request)
-                .map { httpURLResponse, data -> NYTimesAPIResponse in
-                    let NYTimesAPIResponse = NYTimesAPIResponse(data: data)
-                    return NYTimesAPIResponse
+                .map { _, data -> APIResponse in
+                    let apiResponse = NYTimesAPIResponse(data: data)
+                    return apiResponse
                 }.eraseToAnyPublisher()
         }
     

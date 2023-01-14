@@ -1,5 +1,5 @@
 import Foundation
 
-struct NYTimesAPIResponse {
+struct NYTimesAPIResponse: APIResponse {
     let data: Data
 }
