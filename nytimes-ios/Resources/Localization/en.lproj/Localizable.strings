@@ -10,3 +10,14 @@
 "most_emailed" = "Most Emailed";
 "most_shared" = "Most Shared";
 "most_viewed" = "Most Viewed";
+
+// Error
+"error.general" = "An error occurred. Please try again later.";
+
+"error.no_result.title" = "No results";
+"error.no_result.message" = "Try using a different spelling or search another keyword.";
+
+"error.offline.title" = "You’re offline";
+"error.offline.message" = "Check your data or Wi-Fi\nconnection and try again.";
+"error.something_went_wrong" = "Something went wrong";
+"please_try_again_later" = "Please try again later";

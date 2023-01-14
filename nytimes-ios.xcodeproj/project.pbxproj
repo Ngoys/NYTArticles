@@ -30,6 +30,8 @@
 		C2487D4029723C4F0048F8DF /* StatefulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */; };
 		C2487D4229723DA50048F8DF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D4129723DA50048F8DF /* BaseViewModel.swift */; };
 		C2487D4429724B610048F8DF /* NYTimesAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D4329724B610048F8DF /* NYTimesAPIResult.swift */; };
+		C2487D472972897D0048F8DF /* StatefulPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D452972897D0048F8DF /* StatefulPlaceholderView.swift */; };
+		C2487D482972897D0048F8DF /* StatefulPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2487D462972897D0048F8DF /* StatefulPlaceholderView.xib */; };
 		C28C49632971572F00E6757E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C28C49652971572F00E6757E /* Localizable.strings */; };
 		C28C49672971581200E6757E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49662971581200E6757E /* R.generated.swift */; };
 		C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49692971594D00E6757E /* MenuHeaderView.swift */; };
@@ -102,6 +104,8 @@
 		C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewModel.swift; sourceTree = "<group>"; };
 		C2487D4129723DA50048F8DF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C2487D4329724B610048F8DF /* NYTimesAPIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesAPIResult.swift; sourceTree = "<group>"; };
+		C2487D452972897D0048F8DF /* StatefulPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulPlaceholderView.swift; sourceTree = "<group>"; };
+		C2487D462972897D0048F8DF /* StatefulPlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatefulPlaceholderView.xib; sourceTree = "<group>"; };
 		C28C495C29713F6800E6757E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28C49642971572F00E6757E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C28C49662971581200E6757E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -216,6 +220,16 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		C2487D49297289860048F8DF /* StatefulPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				C2487D462972897D0048F8DF /* StatefulPlaceholderView.xib */,
+				C2487D452972897D0048F8DF /* StatefulPlaceholderView.swift */,
+				C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */,
+			);
+			path = StatefulPlaceholderView;
+			sourceTree = "<group>";
+		};
 		C28C4960297156F600E6757E /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +263,7 @@
 		C28C497229715E4000E6757E /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				C2487D49297289860048F8DF /* StatefulPlaceholderView */,
 				C28C497429715E5600E6757E /* HomeMenuCell.xib */,
 				C28C497329715E5600E6757E /* HomeMenuCell.swift */,
 				C28C497529715E5600E6757E /* HomeMenuCellViewModel.swift */,
@@ -298,7 +313,6 @@
 		C2E3BA1529712CE300180F8A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */,
 				C28C49682971594D00E6757E /* MenuHeaderView */,
 				C28C497229715E4000E6757E /* Reusable */,
 			);
@@ -502,6 +516,7 @@
 				C28C496E2971594D00E6757E /* MenuHeaderView.xib in Resources */,
 				C2EEFE572971290B006DD687 /* Assets.xcassets in Resources */,
 				C2EEFE522971290A006DD687 /* Main.storyboard in Resources */,
+				C2487D482972897D0048F8DF /* StatefulPlaceholderView.xib in Resources */,
 				C2E3BA1229712C5500180F8A /* Home.storyboard in Resources */,
 				C2487D1B297217490048F8DF /* ArticleListingCell.xib in Resources */,
 			);
@@ -660,6 +675,7 @@
 				C2487D1A297217490048F8DF /* ArticleListingCellViewModel.swift in Sources */,
 				C2E3BA0929712B2800180F8A /* MainViewModel.swift in Sources */,
 				C2487D33297225EC0048F8DF /* APIClient.swift in Sources */,
+				C2487D472972897D0048F8DF /* StatefulPlaceholderView.swift in Sources */,
 				C2487D4429724B610048F8DF /* NYTimesAPIResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

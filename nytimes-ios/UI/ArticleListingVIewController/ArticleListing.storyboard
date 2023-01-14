@@ -28,6 +28,11 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-xo-AkH" customClass="StatefulPlaceholderView" customModule="nytimes_ios" customModuleProvider="target">
+                                <rect key="frame" x="10" y="98" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +46,7 @@
                     <navigationItem key="navigationItem" id="v3o-RR-YWn"/>
                     <connections>
                         <outlet property="collectionView" destination="0rj-re-ZOl" id="aPW-pi-ssn"/>
+                        <outlet property="statefulPlaceholderView" destination="ejz-xo-AkH" id="T7B-Cr-4fe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

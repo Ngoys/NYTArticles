@@ -7,7 +7,7 @@ enum ArticleListingContentType {
     case mostEmailed
 }
 
-class ArticleListingViewModel: BaseViewModel {
+class ArticleListingViewModel: StatefulViewModel<[Article]> {
 
     //----------------------------------------
     // MARK:- Initialization
@@ -16,6 +16,14 @@ class ArticleListingViewModel: BaseViewModel {
     init(articleListingContentType: ArticleListingContentType, articleStore: ArticleStore) {
         self.articleListingContentType = articleListingContentType
         self.articleStore = articleStore
+    }
+
+    //----------------------------------------
+    // MARK: - Data loading
+    //----------------------------------------
+
+    override func load() -> AnyPublisher<[Article], Error> {
+        return articleStore.fetchArticles(articleListingContentType: articleListingContentType)
     }
 
     //----------------------------------------

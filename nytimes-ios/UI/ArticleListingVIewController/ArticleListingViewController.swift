@@ -58,7 +58,20 @@ class ArticleListingViewController: BaseViewController {
     //----------------------------------------
 
     override func bindViewModel() {
-//        applySnapshot(articleListingMenuSections: viewModel.articleListingMenuSections)
+        viewModel.statePublisher
+            .sink { [weak self] state in
+                guard let self = self else { return }
+
+                self.statefulPlaceholderView.bind(state)
+
+                switch state {
+                case .loaded(let articles):
+                    self.applySnapshot(articles: articles)
+
+                default:
+                    break
+                }
+            }.store(in: &cancellables)
     }
 
     //----------------------------------------
@@ -117,6 +130,8 @@ class ArticleListingViewController: BaseViewController {
     //----------------------------------------
     // MARK: - Outlets
     //----------------------------------------
+    
+    @IBOutlet private var statefulPlaceholderView: StatefulPlaceholderView!
 
     @IBOutlet private var collectionView: UICollectionView!
 }

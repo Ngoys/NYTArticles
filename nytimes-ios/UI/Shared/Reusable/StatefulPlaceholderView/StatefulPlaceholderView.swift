@@ -1,0 +1,170 @@
+import UIKit
+
+protocol StatefulPlaceholderViewDelegate: AnyObject {
+    func statefulPlaceholderViewRetryButtonDidTap(_ statefulPlaceholderView: StatefulPlaceholderView)
+}
+
+class StatefulPlaceholderView: UIView {
+    //----------------------------------------
+    // MARK: - Initialization
+    //----------------------------------------
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        sharedInit()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        sharedInit()
+    }
+
+    private func sharedInit() {
+        let view = R.nib.statefulPlaceholderView.firstView(owner: self)!
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            view.topAnchor.constraint(equalTo: self.topAnchor),
+            view.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        backgroundColor = .clear
+                
+        retryButton.layer.borderWidth = 1
+        retryButton.layer.borderColor = UIColor.white.cgColor
+    }
+
+    //----------------------------------------
+    // MARK: - View bindings
+    //----------------------------------------
+
+    func bind<T>(_ state: State<T>) {
+        switch state {
+        case .loading:
+            isHidden = false
+            loadingIndicatorView.isHidden = false
+            loadingIndicatorView.startAnimating()
+            
+            titleLabel.isHidden = true
+            subtitleLabel.isHidden = true
+            retryButton.isHidden = true
+            
+        case .loadingFailed(let error):
+            isHidden = false
+            loadingIndicatorView.isHidden = true
+            loadingIndicatorView.stopAnimating()
+            
+            titleLabel.isHidden = false
+            subtitleLabel.isHidden = false
+            retryButton.isHidden = false
+            
+            // Update view based on error.
+            let error = error as? AppError
+            switch error {
+            case .network:
+                titleLabel.text = R.string.localizable.errorOfflineTitle()
+                subtitleLabel.text = R.string.localizable.errorOfflineMessage()
+                
+            case .emptySearchResult:
+                retryButton.isHidden = true
+                titleLabel.text = R.string.localizable.errorNo_resultTitle()
+                subtitleLabel.text = R.string.localizable.errorNo_resultMessage()
+                
+            default:
+                titleLabel.text = R.string.localizable.errorSomething_went_wrong()
+                subtitleLabel.text = R.string.localizable.please_try_again_later()
+            }
+            
+        case .retryingLoad:
+            isHidden = false
+            loadingIndicatorView.isHidden = false
+            loadingIndicatorView.startAnimating()
+            
+            titleLabel.isHidden = true
+            subtitleLabel.isHidden = true
+            retryButton.isHidden = true
+            
+        case .loaded:
+            isHidden = true
+            loadingIndicatorView.isHidden = true
+            loadingIndicatorView.stopAnimating()
+            
+            titleLabel.isHidden = true
+            subtitleLabel.isHidden = true
+            retryButton.isHidden = true
+        
+        case .manualReloading:
+            isHidden = true
+            loadingIndicatorView.isHidden = true
+            loadingIndicatorView.stopAnimating()
+
+            titleLabel.isHidden = true
+            subtitleLabel.isHidden = true
+            retryButton.isHidden = true
+            
+        case .manualReloadingFailed(_, let error):
+            isHidden = true
+            loadingIndicatorView.isHidden = true
+            loadingIndicatorView.stopAnimating()
+
+            titleLabel.isHidden = true
+            subtitleLabel.isHidden = true
+            retryButton.isHidden = true
+            
+        case .loadingNextPage(_):
+            isHidden = true
+            loadingIndicatorView.isHidden = true
+            loadingIndicatorView.stopAnimating()
+        }
+    }
+    
+    //----------------------------------------
+    // MARK: - Actions
+    //----------------------------------------
+    
+    @IBAction func retryButtonDidTap(_ sender: UIButton) {
+        delegate?.statefulPlaceholderViewRetryButtonDidTap(self)
+    }
+    
+    func showLoadingAnimation() {
+        isHidden = false
+        loadingIndicatorView.isHidden = false
+        loadingIndicatorView.startAnimating()
+        
+        titleLabel.isHidden = true
+        subtitleLabel.isHidden = true
+        retryButton.isHidden = true
+    }
+    
+    func hideLoadingAnimation() {
+        isHidden = true
+        loadingIndicatorView.isHidden = true
+        loadingIndicatorView.stopAnimating()
+        
+        titleLabel.isHidden = true
+        subtitleLabel.isHidden = true
+        retryButton.isHidden = true
+    }
+    
+    //----------------------------------------
+    // MARK: - Delegate
+    //----------------------------------------
+
+    weak var delegate: StatefulPlaceholderViewDelegate?
+    
+    //----------------------------------------
+    // MARK: - Outlets
+    //----------------------------------------
+    
+    @IBOutlet private var titleLabel: UILabel!
+    
+    @IBOutlet private var subtitleLabel: UILabel!
+
+    @IBOutlet private var retryButton: UIButton!
+
+    @IBOutlet private var loadingIndicatorView: UIActivityIndicatorView!
+}

@@ -16,7 +16,6 @@ enum Event<T> {
     case manualReload
     case proceedFromManualReloadingFailed
     case loadSuccess(T)
-    case loadNextPage
     case loadFailure(Error)
 }
 
@@ -66,39 +65,12 @@ class StatefulViewModel<T>: BaseViewModel {
         }.store(in: &cancellables)
     }
 
-    private func proceedToLoadNextPage() {
-        loadNextPage().sink { completion in
-            switch completion {
-            case .finished:
-                break
-
-            case .failure(let error):
-                self.transition(with: .loadFailure(error))
-            }
-        } receiveValue: { data in
-            self.transition(with: .loadSuccess(data))
-        }.store(in: &cancellables)
-    }
-
     func retryInitialLoad() {
         transition(with: .retryInitialLoad)
     }
 
     func reloadManually() {
         transition(with: .manualReload)
-    }
-
-    func startLoadNextPage() {
-        // Load next page only when the current state is loaded or manual reloading failed
-        switch stateSubject.value {
-        case .manualReloadingFailed, .loaded:
-            break
-
-        default:
-            return
-        }
-
-        transition(with: .loadNextPage)
     }
 
     //----------------------------------------
@@ -150,16 +122,6 @@ class StatefulViewModel<T>: BaseViewModel {
             print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
             stateSubject.send(.manualReloading(data))
             proceedToLoad()
-
-        case (.loaded(let data), .loadNextPage):
-            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
-            stateSubject.send(.loadingNextPage(data))
-            proceedToLoadNextPage()
-
-        case (.manualReloading(let data), .loadNextPage):
-            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
-            stateSubject.send(.loadingNextPage(data))
-            proceedToLoadNextPage()
 
         case (.loadingFailed, .manualReload):
             print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")

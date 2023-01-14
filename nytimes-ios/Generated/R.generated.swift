@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `ArticleListingCell`.
     static let articleListingCell = _R.nib._ArticleListingCell()
@@ -154,6 +154,8 @@ struct R: Rswift.Validatable {
     static let homeMenuCell = _R.nib._HomeMenuCell()
     /// Nib `MenuHeaderView`.
     static let menuHeaderView = _R.nib._MenuHeaderView()
+    /// Nib `StatefulPlaceholderView`.
+    static let statefulPlaceholderView = _R.nib._StatefulPlaceholderView()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "ArticleListingCell", in: bundle)`
@@ -179,6 +181,14 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "StatefulPlaceholderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.statefulPlaceholderView) instead")
+    static func statefulPlaceholderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.statefulPlaceholderView)
+    }
+    #endif
+
     static func articleListingCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ArticleListingCell? {
       return R.nib.articleListingCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ArticleListingCell
     }
@@ -189,6 +199,10 @@ struct R: Rswift.Validatable {
 
     static func menuHeaderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MenuHeaderView? {
       return R.nib.menuHeaderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuHeaderView
+    }
+
+    static func statefulPlaceholderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.statefulPlaceholderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     fileprivate init() {}
@@ -206,8 +220,16 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
     struct localizable {
+      /// en translation: An error occurred. Please try again later.
+      ///
+      /// Locales: en
+      static let errorGeneral = Rswift.StringResource(key: "error.general", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Check your data or Wi-Fi connection and try again.
+      ///
+      /// Locales: en
+      static let errorOfflineMessage = Rswift.StringResource(key: "error.offline.message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Most Emailed
       ///
       /// Locales: en
@@ -224,6 +246,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let new_york_times = Rswift.StringResource(key: "new_york_times", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: No results
+      ///
+      /// Locales: en
+      static let errorNo_resultTitle = Rswift.StringResource(key: "error.no_result.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Please try again later
+      ///
+      /// Locales: en
+      static let please_try_again_later = Rswift.StringResource(key: "please_try_again_later", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Popular
       ///
       /// Locales: en
@@ -236,10 +266,52 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let search_articles = Rswift.StringResource(key: "search_articles", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Something went wrong
+      ///
+      /// Locales: en
+      static let errorSomething_went_wrong = Rswift.StringResource(key: "error.something_went_wrong", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Try using a different spelling or search another keyword.
+      ///
+      /// Locales: en
+      static let errorNo_resultMessage = Rswift.StringResource(key: "error.no_result.message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: You’re offline
+      ///
+      /// Locales: en
+      static let errorOfflineTitle = Rswift.StringResource(key: "error.offline.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: articles
       ///
       /// Locales: en
       static let articles = Rswift.StringResource(key: "articles", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: An error occurred. Please try again later.
+      ///
+      /// Locales: en
+      static func errorGeneral(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.general", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.general"
+        }
+
+        return NSLocalizedString("error.general", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Check your data or Wi-Fi connection and try again.
+      ///
+      /// Locales: en
+      static func errorOfflineMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.offline.message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.offline.message"
+        }
+
+        return NSLocalizedString("error.offline.message", bundle: bundle, comment: "")
+      }
 
       /// en translation: Most Emailed
       ///
@@ -301,6 +373,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("new_york_times", bundle: bundle, comment: "")
       }
 
+      /// en translation: No results
+      ///
+      /// Locales: en
+      static func errorNo_resultTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.no_result.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.no_result.title"
+        }
+
+        return NSLocalizedString("error.no_result.title", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Please try again later
+      ///
+      /// Locales: en
+      static func please_try_again_later(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("please_try_again_later", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "please_try_again_later"
+        }
+
+        return NSLocalizedString("please_try_again_later", bundle: bundle, comment: "")
+      }
+
       /// en translation: Popular
       ///
       /// Locales: en
@@ -344,6 +446,51 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("search_articles", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Something went wrong
+      ///
+      /// Locales: en
+      static func errorSomething_went_wrong(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.something_went_wrong", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.something_went_wrong"
+        }
+
+        return NSLocalizedString("error.something_went_wrong", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Try using a different spelling or search another keyword.
+      ///
+      /// Locales: en
+      static func errorNo_resultMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.no_result.message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.no_result.message"
+        }
+
+        return NSLocalizedString("error.no_result.message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: You’re offline
+      ///
+      /// Locales: en
+      static func errorOfflineTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.offline.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.offline.title"
+        }
+
+        return NSLocalizedString("error.offline.title", bundle: bundle, comment: "")
       }
 
       /// en translation: articles
@@ -437,6 +584,17 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MenuHeaderView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuHeaderView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _StatefulPlaceholderView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "StatefulPlaceholderView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       fileprivate init() {}
