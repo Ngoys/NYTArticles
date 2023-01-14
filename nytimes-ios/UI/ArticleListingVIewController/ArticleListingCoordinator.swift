@@ -13,7 +13,7 @@ class ArticleListingCoordinator: BaseCoordinator {
         self.activeViewController = activeViewController
 
         let (_, articleListingViewController) = ArticleListingViewController.fromStoryboard()
-        articleListingViewController.viewModel = ArticleListingViewModel(articleListingContentType: articleListingContentType)
+        articleListingViewController.viewModel = ArticleListingViewModel(articleListingContentType: articleListingContentType, articleStore: ServiceContainer.container.resolve(ArticleStore.self)!)
         self.articleListingViewController = articleListingViewController
     }
 

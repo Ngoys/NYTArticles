@@ -13,8 +13,9 @@ class ArticleListingViewModel {
     // MARK:- Initialization
     //----------------------------------------
 
-    init(articleListingContentType: ArticleListingContentType) {
+    init(articleListingContentType: ArticleListingContentType, articleStore: ArticleStore) {
         self.articleListingContentType = articleListingContentType
+        self.articleStore = articleStore
     }
 
     //----------------------------------------
@@ -22,4 +23,6 @@ class ArticleListingViewModel {
     //----------------------------------------
 
     private let articleListingContentType: ArticleListingContentType
+
+    private let articleStore: ArticleStore
 }
