@@ -1,8 +1,19 @@
 import Foundation
 
 struct Article: Codable, Hashable {
-    let id: String
+    let id: Int
     let title: String?
+    let publishedDate: Date?
+
+    //----------------------------------------
+    // MARK: - Coding keys
+    //----------------------------------------
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case publishedDate = "published_date"
+    }
 
     //----------------------------------------
     // MARK: - Hashable protocols

@@ -7,7 +7,7 @@ enum ArticleListingContentType {
     case mostEmailed
 }
 
-class ArticleListingViewModel {
+class ArticleListingViewModel: BaseViewModel {
 
     //----------------------------------------
     // MARK:- Initialization

@@ -27,12 +27,17 @@ class NYTimesAPIClient: APIClient {
         requestBody: Data? = nil,
         requiresAuthorization: Bool = false) -> AnyPublisher<APIResponse, Error>  {
             var apiURL: URL?
+            var queryItems = queryItems ?? []
             let url = apiBaseURL.appendingPathComponent(path)
 
             guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 return Fail(error: AppError.urlError).eraseToAnyPublisher()
             }
-            
+
+            if requiresAuthorization {
+                queryItems.append(URLQueryItem(name: "api-key", value: AppConstant.apiKey))
+            }
+
             // Append query items.
             urlComponents.queryItems = queryItems
             apiURL = urlComponents.url
@@ -52,10 +57,6 @@ class NYTimesAPIClient: APIClient {
             }
             
             request.httpBody = requestBody
-            
-            if requiresAuthorization {
-                urlComponents.queryItems?.append(URLQueryItem(name: "api-key", value: AppConstant.apiKey))
-            }
 
             return httpClient.apiRequest(request: request)
                 .map { _, data -> APIResponse in

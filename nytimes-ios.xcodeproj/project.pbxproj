@@ -27,6 +27,9 @@
 		C2487D39297233260048F8DF /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D38297233260048F8DF /* ArticleStore.swift */; };
 		C2487D3C2972342A0048F8DF /* BaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D3B2972342A0048F8DF /* BaseStore.swift */; };
 		C2487D3E297235C10048F8DF /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D3D297235C10048F8DF /* APIResponse.swift */; };
+		C2487D4029723C4F0048F8DF /* StatefulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */; };
+		C2487D4229723DA50048F8DF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D4129723DA50048F8DF /* BaseViewModel.swift */; };
+		C2487D4429724B610048F8DF /* NYTimesAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D4329724B610048F8DF /* NYTimesAPIResult.swift */; };
 		C28C49632971572F00E6757E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C28C49652971572F00E6757E /* Localizable.strings */; };
 		C28C49672971581200E6757E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49662971581200E6757E /* R.generated.swift */; };
 		C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C49692971594D00E6757E /* MenuHeaderView.swift */; };
@@ -96,6 +99,9 @@
 		C2487D38297233260048F8DF /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		C2487D3B2972342A0048F8DF /* BaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStore.swift; sourceTree = "<group>"; };
 		C2487D3D297235C10048F8DF /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewModel.swift; sourceTree = "<group>"; };
+		C2487D4129723DA50048F8DF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		C2487D4329724B610048F8DF /* NYTimesAPIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesAPIResult.swift; sourceTree = "<group>"; };
 		C28C495C29713F6800E6757E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28C49642971572F00E6757E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C28C49662971581200E6757E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			children = (
 				C2487D20297221340048F8DF /* BaseCoordinator.swift */,
 				C2487D3B2972342A0048F8DF /* BaseStore.swift */,
+				C2487D4129723DA50048F8DF /* BaseViewModel.swift */,
 				C2E3BA1329712CD600180F8A /* BaseViewController.swift */,
 				C2E3BA1629712D0A00180F8A /* BaseUICollectionViewCell.swift */,
 			);
@@ -232,6 +239,7 @@
 			children = (
 				C2487D3D297235C10048F8DF /* APIResponse.swift */,
 				C2487D34297226600048F8DF /* NYTimesAPIResponse.swift */,
+				C2487D4329724B610048F8DF /* NYTimesAPIResult.swift */,
 				C28C497029715A2200E6757E /* HomeMenuSection.swift */,
 				C2487D1C297218750048F8DF /* Article.swift */,
 			);
@@ -290,6 +298,7 @@
 		C2E3BA1529712CE300180F8A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C2487D3F29723C4F0048F8DF /* StatefulViewModel.swift */,
 				C28C49682971594D00E6757E /* MenuHeaderView */,
 				C28C497229715E4000E6757E /* Reusable */,
 			);
@@ -620,6 +629,7 @@
 				C2E3BA1429712CD600180F8A /* BaseViewController.swift in Sources */,
 				C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */,
 				C2487D39297233260048F8DF /* ArticleStore.swift in Sources */,
+				C2487D4229723DA50048F8DF /* BaseViewModel.swift in Sources */,
 				C2487D3E297235C10048F8DF /* APIResponse.swift in Sources */,
 				C28C496C2971594D00E6757E /* MenuHeaderView.swift in Sources */,
 				C2EEFE4F2971290A006DD687 /* MainViewController.swift in Sources */,
@@ -630,6 +640,7 @@
 				C28C497629715E5600E6757E /* HomeMenuCell.swift in Sources */,
 				C2E3BA1729712D0A00180F8A /* BaseUICollectionViewCell.swift in Sources */,
 				C2487D35297226600048F8DF /* NYTimesAPIResponse.swift in Sources */,
+				C2487D4029723C4F0048F8DF /* StatefulViewModel.swift in Sources */,
 				C2E3BA0B29712B4D00180F8A /* AppCoordinator.swift in Sources */,
 				C2487D19297217490048F8DF /* ArticleListingCell.swift in Sources */,
 				C28C497129715A2200E6757E /* HomeMenuSection.swift in Sources */,
@@ -649,6 +660,7 @@
 				C2487D1A297217490048F8DF /* ArticleListingCellViewModel.swift in Sources */,
 				C2E3BA0929712B2800180F8A /* MainViewModel.swift in Sources */,
 				C2487D33297225EC0048F8DF /* APIClient.swift in Sources */,
+				C2487D4429724B610048F8DF /* NYTimesAPIResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,8 +31,8 @@ class ArticleStore: BaseStore {
 
         let publisher = apiClient.apiRequest(.get, endPoint, requiresAuthorization: true)
             .tryMap { apiResponse -> [Article] in
-                let decodedModel = try self.decoder.decode([Article].self, from: apiResponse.data)
-                return decodedModel
+                let decodedModel = try self.decoder.decode(NYTimesAPIResult<[Article]>.self, from: apiResponse.data)
+                return decodedModel.results
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
