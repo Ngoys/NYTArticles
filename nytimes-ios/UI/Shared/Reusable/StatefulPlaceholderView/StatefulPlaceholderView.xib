@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fka-R5-QG3">
-                    <rect key="frame" x="56" y="380.5" width="302" height="145"/>
+                    <rect key="frame" x="56" y="344.5" width="302" height="145"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xjF-eE-O5u">
                             <rect key="frame" x="132.5" y="0.0" width="37" height="37"/>
@@ -81,7 +81,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fka-R5-QG3" secondAttribute="trailing" constant="56" id="H5h-AS-CYX"/>
                 <constraint firstItem="Fka-R5-QG3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="56" id="QgL-gH-va4"/>
                 <constraint firstItem="Fka-R5-QG3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="f9j-rJ-0F6"/>
-                <constraint firstItem="Fka-R5-QG3" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="zC7-82-Uy5"/>
+                <constraint firstItem="Fka-R5-QG3" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-36" id="zC7-82-Uy5"/>
             </constraints>
             <point key="canvasLocation" x="49" y="72"/>
         </view>

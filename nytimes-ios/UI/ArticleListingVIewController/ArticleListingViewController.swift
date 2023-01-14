@@ -48,6 +48,7 @@ class ArticleListingViewController: BaseViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
 
         collectionView.register(R.nib.articleListingCell)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
 
         collectionView.collectionViewLayout = createCollectionViewLayout()
         collectionView.delegate = self
