@@ -115,7 +115,7 @@ class StatefulPlaceholderView: UIView {
             subtitleLabel.isHidden = true
             retryButton.isHidden = true
             
-        case .loadingNextPage(_):
+        case .loadingNextPage:
             isHidden = true
             loadingIndicatorView.isHidden = true
             loadingIndicatorView.stopAnimating()

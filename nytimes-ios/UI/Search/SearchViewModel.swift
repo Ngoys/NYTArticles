@@ -39,7 +39,14 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
                 .eraseToAnyPublisher()
         }
 
-        return articleStore.searchArticles(keyword: searchKeywordSubject.value)
+        return articleStore.searchArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
+            .map { documentArticles in
+                var previousFetchedDocumentArticles = self.documentArticles.value
+                previousFetchedDocumentArticles.append(contentsOf: documentArticles)
+                
+                self.documentArticles.send(previousFetchedDocumentArticles)
+                return self.documentArticles.value
+            }.eraseToAnyPublisher()
     }
 
     //----------------------------------------
@@ -51,10 +58,12 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
     }
 
     //----------------------------------------
-    // MARK: - Publishers
+    // MARK: - Properties
     //----------------------------------------
 
     private let searchKeywordSubject = CurrentValueSubject<String, Never>("")
+
+    private let documentArticles = CurrentValueSubject<[DocumentArticle], Never>([])
 
     //----------------------------------------
     // MARK:- Internals

@@ -43,7 +43,10 @@ class ArticleStore: BaseStore {
     func searchArticles(keyword: String, pageNumber: Int = 1) -> AnyPublisher<[DocumentArticle], Error> {
         let endPoint = "search/v2/articlesearch.json"
 
-        let queryItems = [URLQueryItem(name: "q", value: keyword)]
+        let queryItems = [
+            URLQueryItem(name: "q", value: keyword),
+            URLQueryItem(name: "page", value: "\(pageNumber)")
+        ]
 
         let publisher = apiClient.apiRequest(.get, endPoint, queryItems: queryItems, requiresAuthorization: true)
             .tryMap { apiResponse -> [DocumentArticle] in

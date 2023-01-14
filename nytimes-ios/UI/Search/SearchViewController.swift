@@ -55,6 +55,8 @@ class SearchViewController: BaseViewController {
 
         searchBar.delegate = self
         searchBar.placeholder = R.string.localizable.type_something_here()
+
+        searchBar.becomeFirstResponder()
     }
 
     //----------------------------------------
@@ -149,6 +151,13 @@ class SearchViewController: BaseViewController {
 extension SearchViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == collectionView.numberOfItems(inSection: Section.main.rawValue) - 1 {
+            // Load more when it reaches the last row
+            viewModel.loadNextPage()
+        }
     }
 }
 

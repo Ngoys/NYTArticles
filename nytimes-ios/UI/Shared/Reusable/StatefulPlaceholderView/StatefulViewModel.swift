@@ -3,7 +3,7 @@ import Combine
 
 enum State<T> {
     case loading
-    case loadingNextPage(T)
+    case loadingNextPage
     case loadingFailed(Error)
     case retryingLoad
     case loaded(T)
@@ -17,11 +17,6 @@ enum Event<T> {
     case proceedFromManualReloadingFailed
     case loadSuccess(T)
     case loadFailure(Error)
-}
-
-struct PaginatedResponse<T> {
-    let pageNumber: Int
-    var data: T
 }
 
 class StatefulViewModel<T>: BaseViewModel {
@@ -45,10 +40,11 @@ class StatefulViewModel<T>: BaseViewModel {
     }
 
     func loadNextPage() -> AnyPublisher<T, Error> {
-        // Not neccessary need to overriden by subclasses
-        return Just(T.self as! T)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
+        pageNumber += 1
+        stateSubject.send(.loadingNextPage)
+
+        proceedToLoad()
+        return load()
     }
 
     private func proceedToLoad() {
@@ -66,21 +62,25 @@ class StatefulViewModel<T>: BaseViewModel {
     }
 
     func retryInitialLoad() {
+        pageNumber = 1
         transition(with: .retryInitialLoad)
     }
 
     func reloadManually() {
+        pageNumber = 1
         transition(with: .manualReload)
     }
 
     //----------------------------------------
-    // MARK: - Publishers
+    // MARK: - Properties
     //----------------------------------------
 
     private let stateSubject = CurrentValueSubject<State<T>, Never>(.loading)
     var statePublisher: AnyPublisher<State<T>, Never> {
         stateSubject.eraseToAnyPublisher()
     }
+
+    var pageNumber: Int = 1
 
     //----------------------------------------
     // MARK: - Transition

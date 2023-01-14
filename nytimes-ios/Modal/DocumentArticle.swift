@@ -10,8 +10,20 @@ struct DocumentArticle: Codable, Hashable {
     //----------------------------------------
 
     enum CodingKeys: String, CodingKey {
-        case id
+        case id = "_id"
         case headline
         case publishedDate = "pub_date"
+    }
+
+    //----------------------------------------
+    // MARK: - Hashable protocols
+    //----------------------------------------
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: DocumentArticle, rhs: DocumentArticle) -> Bool {
+        lhs.id == rhs.id
     }
 }
