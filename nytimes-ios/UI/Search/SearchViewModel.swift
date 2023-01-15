@@ -43,7 +43,14 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
                 var previousFetchedDocumentArticles =  self.pageNumber == 1 ? [] : self.documentArticlesSubject.value
     
                 previousFetchedDocumentArticles.append(contentsOf: documentArticles)
-                
+
+                // There are some duplicates coming in from the API
+                // Hence the removeDuplicates(), to prevent collectionView from crashing.
+                // For example, https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Cat&page=12&api-key=aBBpWBWdHveK5y5w9Cbln7kci0vNiT0g
+                // and https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Cat&page=13&api-key=aBBpWBWdHveK5y5w9Cbln7kci0vNiT0g
+                // Last item of page 12 is the same as first item of page 13
+                previousFetchedDocumentArticles.removeDuplicates()
+
                 self.documentArticlesSubject.send(previousFetchedDocumentArticles)
                 return previousFetchedDocumentArticles
             }.eraseToAnyPublisher()
