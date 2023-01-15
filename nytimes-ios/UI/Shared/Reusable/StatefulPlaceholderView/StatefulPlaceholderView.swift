@@ -33,9 +33,10 @@ class StatefulPlaceholderView: UIView {
         ]
         NSLayoutConstraint.activate(constraints)
         backgroundColor = .clear
-                
+
+        retryButton.layer.cornerRadius = 8
         retryButton.layer.borderWidth = 1
-        retryButton.layer.borderColor = UIColor.white.cgColor
+        retryButton.layer.borderColor = UIColor.darkGray.cgColor
     }
 
     //----------------------------------------
