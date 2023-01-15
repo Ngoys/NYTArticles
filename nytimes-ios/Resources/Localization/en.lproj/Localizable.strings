@@ -7,6 +7,9 @@
 // Home Menu
 "search" = "Search";
 "popular" = "Popular";
+"location" = "Location";
+"latitude" = "Latitude";
+"longitude" = "Longitude";
 
 "search_articles" = "Search Articles";
 "most_emailed" = "Most Emailed";

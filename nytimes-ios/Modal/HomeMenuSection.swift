@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 struct HomeMenuSection: Hashable {
     let type: HomeMenuSectionType
@@ -20,6 +21,7 @@ struct HomeMenuSection: Hashable {
 enum HomeMenuSectionType: Int, Hashable {
     case search
     case popular
+    case location
 
     //----------------------------------------
     // MARK: - Properties
@@ -32,6 +34,9 @@ enum HomeMenuSectionType: Int, Hashable {
 
         case .popular:
             return R.string.localizable.popular()
+
+        case .location:
+            return R.string.localizable.location()
         }
     }
 }
@@ -41,6 +46,7 @@ enum HomeMenu: Hashable {
     case mostViewed
     case mostShared
     case mostEmailed
+    case location(clLocation: CLLocation)
 
     //----------------------------------------
     // MARK: - Properties
@@ -59,6 +65,9 @@ enum HomeMenu: Hashable {
 
         case .mostEmailed:
             return R.string.localizable.most_emailed()
+
+        case .location:
+            return R.string.localizable.location()
         }
     }
 

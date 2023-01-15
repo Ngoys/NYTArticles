@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,12 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="632" height="48"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cs0-iW-F3v">
-                                <rect key="frame" x="16" y="12" width="42.5" height="24"/>
+                                <rect key="frame" x="16" y="12" width="560" height="24"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-9O-d1d">
-                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Menu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-9O-d1d">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="24"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                        <color key="textColor" name="primaryTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -37,18 +35,19 @@
                                 <rect key="frame" x="592" y="14" width="24" height="20.5"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="3aZ-Xd-K4T"/>
                                     <constraint firstAttribute="width" secondItem="B4B-ca-ehW" secondAttribute="height" multiplier="1:1" id="PsQ-V6-LRx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="B4B-ca-ehW" firstAttribute="top" secondItem="R46-au-iJg" secondAttribute="top" constant="12" id="4aQ-zI-DxA"/>
-                            <constraint firstAttribute="bottom" secondItem="B4B-ca-ehW" secondAttribute="bottom" constant="12" id="SKG-ue-Jtv"/>
+                            <constraint firstItem="B4B-ca-ehW" firstAttribute="leading" secondItem="Cs0-iW-F3v" secondAttribute="trailing" constant="16" id="LPf-qd-knW"/>
                             <constraint firstAttribute="bottom" secondItem="Cs0-iW-F3v" secondAttribute="bottom" constant="12" id="TIC-dg-PDc"/>
                             <constraint firstItem="Cs0-iW-F3v" firstAttribute="top" secondItem="R46-au-iJg" secondAttribute="top" constant="12" id="eiV-mf-6eu"/>
                             <constraint firstItem="Cs0-iW-F3v" firstAttribute="leading" secondItem="R46-au-iJg" secondAttribute="leading" constant="16" id="hLL-zt-abn"/>
                             <constraint firstAttribute="trailing" secondItem="B4B-ca-ehW" secondAttribute="trailing" constant="16" id="i6x-bZ-Nxn"/>
+                            <constraint firstItem="B4B-ca-ehW" firstAttribute="centerY" secondItem="R46-au-iJg" secondAttribute="centerY" id="wkf-7o-ybk"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -70,9 +69,6 @@
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <namedColor name="primaryTextColor">
-            <color red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

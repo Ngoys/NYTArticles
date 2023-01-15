@@ -61,7 +61,12 @@ class HomeViewController: BaseViewController {
     //----------------------------------------
 
     override func bindViewModel() {
-        applySnapshot(homeMenuSections: viewModel.homeMenuSections)
+        viewModel.homeMenuSectionsPublisher
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { [weak self] homeMenuSections in
+                guard let self = self else { return }
+                self.applySnapshot(homeMenuSections: homeMenuSections)
+            }).store(in: &cancellables)
     }
 
     //----------------------------------------
@@ -89,7 +94,7 @@ class HomeViewController: BaseViewController {
 
             cellSize = HomeMenuCell.sizeThatFits(width: containerWidth)
             itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .absolute(cellSize.height))
+                                              heightDimension: .estimated(cellSize.height))
             item = NSCollectionLayoutItem(layoutSize: itemSize)
             group = .vertical(layoutSize: itemSize, subitems: [item])
             section = NSCollectionLayoutSection(group: group)
@@ -100,6 +105,10 @@ class HomeViewController: BaseViewController {
                 section.boundarySupplementaryItems = [header]
 
             case .popular:
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 28, trailing: 0)
+                section.boundarySupplementaryItems = [header]
+
+            case .location:
                 section.boundarySupplementaryItems = [header]
             }
 
@@ -180,6 +189,9 @@ extension HomeViewController: UICollectionViewDelegate {
 
         case .mostEmailed:
             delegate?.homeViewControllerDidSelectMostEmailed(self)
+
+        case .location(_):
+            break
         }
     }
 }

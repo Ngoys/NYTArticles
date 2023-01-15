@@ -16,7 +16,13 @@ class HomeMenuCellViewModel {
     //----------------------------------------
 
     var titleText: String? {
-        return self.homeMenu.name
+        switch self.homeMenu {
+        case .location(let clLocation):
+            return "\(R.string.localizable.latitude()): \(clLocation.coordinate.latitude)\n\(R.string.localizable.longitude()): \(clLocation.coordinate.longitude)"
+
+        default:
+            return self.homeMenu.name
+        }
     }
     
     //----------------------------------------

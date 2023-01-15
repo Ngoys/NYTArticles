@@ -27,7 +27,6 @@ class HomeCoordinator: BaseCoordinator {
 
     func start() {
         self.homeViewController.delegate = self
-        _ = showSearch(activeViewController: homeViewController) //shawn DO NOT KEEP
     }
 
     //----------------------------------------

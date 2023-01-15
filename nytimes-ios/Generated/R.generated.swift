@@ -245,7 +245,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 20 localization keys.
     struct localizable {
       /// en translation: An error occurred. Please try again later.
       ///
@@ -255,6 +255,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let errorOfflineMessage = Rswift.StringResource(key: "error.offline.message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Latitude
+      ///
+      /// Locales: en
+      static let latitude = Rswift.StringResource(key: "latitude", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Location
+      ///
+      /// Locales: en
+      static let location = Rswift.StringResource(key: "location", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Longitude
+      ///
+      /// Locales: en
+      static let longitude = Rswift.StringResource(key: "longitude", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Most Emailed
       ///
       /// Locales: en
@@ -344,6 +356,51 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error.offline.message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Latitude
+      ///
+      /// Locales: en
+      static func latitude(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("latitude", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "latitude"
+        }
+
+        return NSLocalizedString("latitude", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Location
+      ///
+      /// Locales: en
+      static func location(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("location", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "location"
+        }
+
+        return NSLocalizedString("location", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Longitude
+      ///
+      /// Locales: en
+      static func longitude(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("longitude", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "longitude"
+        }
+
+        return NSLocalizedString("longitude", bundle: bundle, comment: "")
       }
 
       /// en translation: Most Emailed
@@ -648,7 +705,6 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "chevron.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'chevron.right' is used in nib 'HomeMenuCell', but couldn't be loaded.") } }
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "primaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'primaryTextColor' is used in nib 'HomeMenuCell', but couldn't be loaded.") }
         }
       }
 
