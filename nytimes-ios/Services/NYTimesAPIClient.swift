@@ -2,6 +2,7 @@ import Combine
 import Foundation
 
 class NYTimesAPIClient: APIClient {
+    
     //----------------------------------------
     // MARK: - Initialization
     //----------------------------------------
@@ -57,6 +58,8 @@ class NYTimesAPIClient: APIClient {
             }
             
             request.httpBody = requestBody
+
+            print("NYTimesAPIClient - \(url)")
 
             return httpClient.apiRequest(request: request)
                 .map { _, data -> APIResponse in
