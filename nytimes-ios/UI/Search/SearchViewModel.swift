@@ -20,11 +20,11 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
 
     private func startObservingData() {
         searchKeywordSubject
-            .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+            .debounce(for: .milliseconds(600), scheduler: RunLoop.main)
             .sink(receiveCompletion: { _ in },
                   receiveValue: { [weak self] text in
                 guard let self = self else { return }
-
+                self.documentArticlesSubject.send([])
                 self.retryInitialLoad()
             }).store(in: &cancellables)
     }
@@ -34,18 +34,18 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
     //----------------------------------------
 
     override func load() -> AnyPublisher<[DocumentArticle], Error> {
-        guard searchKeywordSubject.value.isEmpty == false else {
-            return Result.Publisher(.success([]))
-                .eraseToAnyPublisher()
+        guard searchKeywordSubject.value.count > minimumSearchWordCount else {
+            return Result.Publisher(.success([])).eraseToAnyPublisher()
         }
 
         return articleStore.searchDocumentArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
             .map { documentArticles in
-                var previousFetchedDocumentArticles = self.documentArticles.value
+                var previousFetchedDocumentArticles =  self.pageNumber == 1 ? [] : self.documentArticlesSubject.value
+    
                 previousFetchedDocumentArticles.append(contentsOf: documentArticles)
                 
-                self.documentArticles.send(previousFetchedDocumentArticles)
-                return self.documentArticles.value
+                self.documentArticlesSubject.send(previousFetchedDocumentArticles)
+                return previousFetchedDocumentArticles
             }.eraseToAnyPublisher()
     }
 
@@ -61,13 +61,15 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
     // MARK: - Properties
     //----------------------------------------
 
-    private let searchKeywordSubject = CurrentValueSubject<String, Never>("")
-
-    private let documentArticles = CurrentValueSubject<[DocumentArticle], Never>([])
+    let minimumSearchWordCount = 2
 
     //----------------------------------------
     // MARK:- Internals
     //----------------------------------------
+
+    private let searchKeywordSubject = CurrentValueSubject<String, Never>("")
+
+    private let documentArticlesSubject = CurrentValueSubject<[DocumentArticle], Never>([])
 
     private let articleStore: ArticleStore
 }

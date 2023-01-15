@@ -16,6 +16,7 @@ enum Event<T> {
     case manualReload
     case proceedFromManualReloadingFailed
     case loadSuccess(T)
+    case loadNextPage
     case loadFailure(Error)
 }
 
@@ -39,12 +40,18 @@ class StatefulViewModel<T>: BaseViewModel {
         fatalError("\(#function) must be overridden by subclasses")
     }
 
-    func loadNextPage() -> AnyPublisher<T, Error> {
-        pageNumber += 1
-        stateSubject.send(.loadingNextPage)
+    func loadNextPage() {
+        // Load next page only when the current state is loaded or manual reloading failed
+        switch stateSubject.value {
+        case .manualReloadingFailed, .loaded:
+            break
 
-        proceedToLoad()
-        return load()
+        default:
+            return
+        }
+
+        pageNumber += 1
+        transition(with: .loadNextPage)
     }
 
     private func proceedToLoad() {
@@ -89,11 +96,11 @@ class StatefulViewModel<T>: BaseViewModel {
     private func transition(with event: Event<T>) {
         switch (stateSubject.value, event) {
         case (.loading, .loadSuccess(let data)):
-            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
+            print("StatefulViewModel - transition from \(stateSubject.value) to .loadSuccess")
             stateSubject.send(.loaded(data))
 
         case (.loadingNextPage, .loadSuccess(let data)):
-            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
+            print("StatefulViewModel - transition from \(stateSubject.value) to .loadSuccess")
             stateSubject.send(.loaded(data))
 
         case (.loading, .loadFailure(let error)):
@@ -121,6 +128,16 @@ class StatefulViewModel<T>: BaseViewModel {
         case (.loaded(let data), .manualReload):
             print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
             stateSubject.send(.manualReloading(data))
+            proceedToLoad()
+
+        case (.loaded(let data), .loadNextPage):
+            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
+            stateSubject.send(.loadingNextPage)
+            proceedToLoad()
+
+        case (.manualReloading(let data), .loadNextPage):
+            print("StatefulViewModel - transition from \(stateSubject.value) to \(event)")
+            stateSubject.send(.loadingNextPage)
             proceedToLoad()
 
         case (.loadingFailed, .manualReload):

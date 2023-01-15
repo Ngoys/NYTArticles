@@ -15,6 +15,7 @@
 
 // Error
 "error.general" = "An error occurred. Please try again later.";
+"error.quota_violation" = "Quota Violation Error.";
 
 "error.no_result.title" = "No results";
 "error.no_result.message" = "Try using a different spelling or search another keyword.";

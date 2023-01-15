@@ -10,7 +10,9 @@ public enum AppError: Error, Equatable {
     case badRequest
     case notFound
     case invalidateSession
-    
+
+    case quotaViolation
+
     case emptySearchResult
     
     // HTTP Status code 500 range.

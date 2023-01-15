@@ -2,7 +2,7 @@ import Combine
 import Foundation
 
 class NYTimesAPIClient: APIClient {
-    
+
     //----------------------------------------
     // MARK: - Initialization
     //----------------------------------------

@@ -44,7 +44,7 @@ class ArticleStore: BaseStore {
         let endPoint = "search/v2/articlesearch.json"
 
         let queryItems = [
-            URLQueryItem(name: "q", value: keyword),
+            URLQueryItem(name: "q", value: keyword.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "+")),
             URLQueryItem(name: "page", value: "\(pageNumber)")
         ]
 

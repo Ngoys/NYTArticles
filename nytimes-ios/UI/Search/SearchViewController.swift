@@ -16,7 +16,7 @@ class SearchViewController: BaseViewController {
     //----------------------------------------
 
     enum Section: Int, Hashable {
-        case main, loading
+        case main
     }
 
     //----------------------------------------
@@ -44,8 +44,10 @@ class SearchViewController: BaseViewController {
     //----------------------------------------
 
     override func configureViews() {
-        navigationItem.title = R.string.localizable.articles().capitalized
+        navigationItem.title = R.string.localizable.search().capitalized
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+
+        statefulPlaceholderView.delegate = self
 
         collectionView.register(R.nib.documentArticleListingCell)
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
@@ -72,7 +74,14 @@ class SearchViewController: BaseViewController {
 
                 switch state {
                 case .loaded(let documentArticles):
-                    self.applySnapshot(documentArticles: documentArticles)
+                    if documentArticles.isEmpty && self.searchBar.text?.count ?? 0 > self.viewModel.minimumSearchWordCount {
+                        self.statefulPlaceholderView.bind(State<Any>.loadingFailed(AppError.emptySearchResult))
+                    } else {
+                        self.applySnapshot(documentArticles: documentArticles)
+                    }
+
+                case .loadingFailed(let error):
+                    self.applySnapshot(documentArticles: [])
 
                 default:
                     break
@@ -152,10 +161,18 @@ extension SearchViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
+}
 
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == collectionView.numberOfItems(inSection: Section.main.rawValue) - 1 {
-            // Load more when it reaches the last row
+//----------------------------------------
+// MARK: - UIScrollView delegate
+//----------------------------------------
+
+extension SearchViewController: UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pos = scrollView.contentOffset.y
+        let offSet = 200.0
+        if pos > collectionView.contentSize.height - offSet - scrollView.frame.size.height {
             viewModel.loadNextPage()
         }
     }
@@ -169,5 +186,20 @@ extension SearchViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.updateSearchKeyword(keyword: searchText)
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
+}
+
+//----------------------------------------
+// MARK: - StatefulPlaceholderView delegate
+//----------------------------------------
+
+extension SearchViewController: StatefulPlaceholderViewDelegate {
+
+    func statefulPlaceholderViewRetryButtonDidTap(_ statefulPlaceholderView: StatefulPlaceholderView) {
+        viewModel.retryInitialLoad()
     }
 }

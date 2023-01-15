@@ -31,17 +31,20 @@ class HTTPClient {
             switch response.statusCode {
             case 401:
                 error = .authentication
-                
+
                 do {
                     let apiError = try JSONDecoder().decode(ApiError.self, from: data!)
                     switch apiError.code {
-                        
+
                     default:
                         error = .authentication
                     }
                 } catch {
                     break
                 }
+
+            case 429:
+                error = .quotaViolation
                 
             default:
                 error = .notFound

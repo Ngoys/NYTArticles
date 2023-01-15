@@ -16,7 +16,7 @@ class DocumentArticleListingCellViewModel {
     //----------------------------------------
 
     var titleText: String? {
-        return self.documentArticle.headline?.printHeadline
+        return self.documentArticle.abstract
     }
 
     var dateText: String? {

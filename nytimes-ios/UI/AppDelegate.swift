@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         appCoordinator = AppCoordinator(mainViewController: mainViewController)
         appCoordinator.start()
+        
         return true
     }
 

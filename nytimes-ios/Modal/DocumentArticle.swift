@@ -2,7 +2,7 @@ import Foundation
 
 struct DocumentArticle: Codable, Hashable {
     let id: String?
-    let headline: Headline?
+    let abstract: String?
     let publishedDate: Date?
 
     //----------------------------------------
@@ -11,7 +11,7 @@ struct DocumentArticle: Codable, Hashable {
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case headline
+        case abstract
         case publishedDate = "pub_date"
     }
 

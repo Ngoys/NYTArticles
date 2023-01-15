@@ -69,12 +69,17 @@ class StatefulPlaceholderView: UIView {
             case .network:
                 titleLabel.text = R.string.localizable.errorOfflineTitle()
                 subtitleLabel.text = R.string.localizable.errorOfflineMessage()
-                
+
             case .emptySearchResult:
                 retryButton.isHidden = true
                 titleLabel.text = R.string.localizable.errorNo_resultTitle()
                 subtitleLabel.text = R.string.localizable.errorNo_resultMessage()
-                
+
+            case .quotaViolation:
+                retryButton.isHidden = true
+                titleLabel.text = R.string.localizable.errorQuota_violation()
+                subtitleLabel.text = R.string.localizable.please_try_again_later()
+
             default:
                 titleLabel.text = R.string.localizable.errorSomething_went_wrong()
                 subtitleLabel.text = R.string.localizable.please_try_again_later()

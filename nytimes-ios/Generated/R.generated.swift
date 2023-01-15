@@ -245,7 +245,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
       /// en translation: An error occurred. Please try again later.
       ///
@@ -283,6 +283,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let popular = Rswift.StringResource(key: "popular", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Quota Violation Error.
+      ///
+      /// Locales: en
+      static let errorQuota_violation = Rswift.StringResource(key: "error.quota_violation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Search
       ///
       /// Locales: en
@@ -445,6 +449,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("popular", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Quota Violation Error.
+      ///
+      /// Locales: en
+      static func errorQuota_violation(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.quota_violation", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.quota_violation"
+        }
+
+        return NSLocalizedString("error.quota_violation", bundle: bundle, comment: "")
       }
 
       /// en translation: Search
