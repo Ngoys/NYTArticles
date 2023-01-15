@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        let coreDataProvider = ServiceContainer.container.resolve(CoreDataProvider.self)!
+        coreDataProvider.save()
+    }
+
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------

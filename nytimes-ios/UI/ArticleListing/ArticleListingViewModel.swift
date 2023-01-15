@@ -24,6 +24,10 @@ class ArticleListingViewModel: StatefulViewModel<[Article]> {
 
     override func load() -> AnyPublisher<[Article], Error> {
         return articleStore.fetchArticles(articleListingContentType: articleListingContentType)
+            .map { articles in
+                self.articleStore.createOrUpdateArticles(articles: articles)
+                return articles
+            }.eraseToAnyPublisher()
     }
 
     //----------------------------------------

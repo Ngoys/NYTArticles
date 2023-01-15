@@ -7,8 +7,9 @@ class ArticleStore: BaseStore {
     // MARK: - Initialization
     //----------------------------------------
 
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient, coreDataProvider: CoreDataProvider) {
         self.apiClient = apiClient
+        self.coreDataProvider = coreDataProvider
     }
 
     //----------------------------------------
@@ -59,9 +60,21 @@ class ArticleStore: BaseStore {
         return publisher
     }
 
+    func createOrUpdateArticles(articles: [Article]) {
+        articles.forEach { article in
+            coreDataProvider.createOrUpdateArticle(article: article)
+        }
+    }
+
+    func fetchArticles() -> [Article] {
+        return coreDataProvider.fetchArticles()
+    }
+
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------
 
     private let apiClient: APIClient
+
+    private let coreDataProvider: CoreDataProvider
 }

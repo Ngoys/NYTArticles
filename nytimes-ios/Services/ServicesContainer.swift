@@ -11,6 +11,7 @@ class ServiceContainer {
     static let container: Container = {
         var container: Container = Container()
         container = ServiceContainer.registerStores(inContainer: container)
+        container = ServiceContainer.registerCoreData(inContainer: container)
         return container
     }()
 
@@ -30,7 +31,21 @@ class ServiceContainer {
 
         container.register(ArticleStore.self) { r -> ArticleStore in
             let nyTimesAPIClient = r.resolve(NYTimesAPIClient.self)!
-            return ArticleStore(apiClient: nyTimesAPIClient)
+            let coreDataProvider = r.resolve(CoreDataProvider.self)!
+            return ArticleStore(apiClient: nyTimesAPIClient, coreDataProvider: coreDataProvider)
+        }.inObjectScope(.container)
+
+        return container
+    }
+
+    private static func registerCoreData(inContainer container: Container) -> Container {
+        container.register(CoreDataStack.self) { r -> CoreDataStack in
+            return CoreDataStack()
+        }.inObjectScope(.container)
+
+        container.register(CoreDataProvider.self) { r -> CoreDataProvider in
+            let coreDataStack = r.resolve(CoreDataStack.self)!
+            return CoreDataProvider(context: coreDataStack.managedContext)
         }.inObjectScope(.container)
 
         return container

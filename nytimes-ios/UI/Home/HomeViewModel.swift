@@ -24,6 +24,7 @@ class HomeViewModel: BaseViewModel {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         }
+        
         startObservingData()
     }
 
