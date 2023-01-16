@@ -7,9 +7,10 @@ extension ArticleDataModal {
     // MARK: - Properties
     //----------------------------------------
 
-    @NSManaged public var id: Int
+    @NSManaged public var id: String
     @NSManaged public var title: String?
     @NSManaged public var publishedDate: Date?
+    @NSManaged public var articleListingContentType: String?
 
     //----------------------------------------
     // MARK: - Actions

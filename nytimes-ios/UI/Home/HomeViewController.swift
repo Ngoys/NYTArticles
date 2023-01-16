@@ -65,7 +65,7 @@ class HomeViewController: BaseViewController {
             .sink(receiveCompletion: { _ in },
                   receiveValue: { [weak self] homeMenuSections in
                 guard let self = self else { return }
-                self.applySnapshot(homeMenuSections: homeMenuSections)
+                self.applySnapshot(homeMenuSections: homeMenuSections, animatingDifferences: false)
             }).store(in: &cancellables)
     }
 

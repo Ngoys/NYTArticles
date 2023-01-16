@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21499142975060900272F32 /* ArticleListingContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21499132975060900272F32 /* ArticleListingContentType.swift */; };
 		C2487D122972163A0048F8DF /* ArticleListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */; };
 		C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */; };
 		C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D102972163A0048F8DF /* ArticleListingViewController.swift */; };
@@ -97,6 +98,7 @@
 		31DF1213022A63CC30410539 /* Pods_nytimes_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nytimes_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73724476CF6CAA53ABB432A4 /* Pods-nytimes-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes-ios.release.xcconfig"; path = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.release.xcconfig"; sourceTree = "<group>"; };
 		BE5B8FC02B879E7856F8D5AC /* Pods-nytimes-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes-ios.debug.xcconfig"; path = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C21499132975060900272F32 /* ArticleListingContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListingContentType.swift; sourceTree = "<group>"; };
 		C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModel.swift; sourceTree = "<group>"; };
 		C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCoordinator.swift; sourceTree = "<group>"; };
 		C2487D102972163A0048F8DF /* ArticleListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				C2487D5D297297DB0048F8DF /* SearchResponse.swift */,
 				C2487D5F297298790048F8DF /* DocumentArticle.swift */,
 				C2487D3D297235C10048F8DF /* APIResponse.swift */,
+				C21499132975060900272F32 /* ArticleListingContentType.swift */,
 				C2487D782973F4A00048F8DF /* CoreDataModal */,
 			);
 			path = Modal;
@@ -728,6 +731,7 @@
 				C2487D37297228700048F8DF /* URLRequest+Extension.swift in Sources */,
 				C28C496D2971594D00E6757E /* MenuHeaderViewModel.swift in Sources */,
 				C2487D682972AEF70048F8DF /* DocumentArticleListingCellViewModel.swift in Sources */,
+				C21499142975060900272F32 /* ArticleListingContentType.swift in Sources */,
 				C2E3BA0D29712C2F00180F8A /* HomeViewModel.swift in Sources */,
 				C2EEFE4B2971290A006DD687 /* AppDelegate.swift in Sources */,
 				C28C497629715E5600E6757E /* HomeMenuCell.swift in Sources */,

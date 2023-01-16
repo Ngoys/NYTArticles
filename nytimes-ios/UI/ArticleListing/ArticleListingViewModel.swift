@@ -1,12 +1,6 @@
 import Foundation
 import Combine
 
-enum ArticleListingContentType {
-    case mostViewed
-    case mostShared
-    case mostEmailed
-}
-
 class ArticleListingViewModel: StatefulViewModel<[Article]> {
 
     //----------------------------------------
@@ -23,11 +17,23 @@ class ArticleListingViewModel: StatefulViewModel<[Article]> {
     //----------------------------------------
 
     override func load() -> AnyPublisher<[Article], Error> {
+        print("ArticleListingViewModel - fetchArticles(\(articleListingContentType.name))")
         return articleStore.fetchArticles(articleListingContentType: articleListingContentType)
             .map { articles in
-                self.articleStore.createOrUpdateArticles(articles: articles)
+                articles.forEach { article in
+                    self.articleStore.createOrUpdateArticleDataModal(article: article, articleListingContentType: self.articleListingContentType)
+                }
                 return articles
             }.eraseToAnyPublisher()
+    }
+
+    //----------------------------------------
+    // MARK: - Actions
+    //----------------------------------------
+
+    func fetchCoreDataArticles() -> [Article] {
+        print("ArticleListingViewModel - fetchCoreDataArticles(\(articleListingContentType.name))")
+        return articleStore.fetchCoreDataArticles(articleListingContentType: articleListingContentType)
     }
 
     //----------------------------------------

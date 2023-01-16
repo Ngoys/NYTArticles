@@ -15,16 +15,13 @@ class CoreDataProvider {
     // MARK: - Actions
     //----------------------------------------
 
-    func createOrUpdateArticle(article: Article) { //shawn category
+    func createOrUpdateArticle(article: Article, articleListingContentType: ArticleListingContentType) {
         var currentArticleDataModal: ArticleDataModal?
-        let newsPostFetch: NSFetchRequest<ArticleDataModal> = ArticleDataModal.fetchRequest()
-
-        //shawn
-        let newsItemIDPredicate = NSPredicate(format: "%K == %i", #keyPath(ArticleDataModal.id), article.id)
-        newsPostFetch.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [newsItemIDPredicate])
+        let articleFetchRequest = ArticleDataModal.fetchRequest()
+        articleFetchRequest.predicate = NSPredicate(format: "id == %@", article.id)
 
         do {
-            let results = try context.fetch(newsPostFetch)
+            let results = try context.fetch(articleFetchRequest)
 
             if results.isEmpty {
                 currentArticleDataModal = ArticleDataModal(context: context)
@@ -32,6 +29,7 @@ class CoreDataProvider {
                 currentArticleDataModal?.id = article.id
                 currentArticleDataModal?.title = article.title
                 currentArticleDataModal?.publishedDate = article.publishedDate
+                currentArticleDataModal?.articleListingContentType = articleListingContentType.name
             } else {
                 currentArticleDataModal = results.first
             }
@@ -42,12 +40,29 @@ class CoreDataProvider {
         }
     }
 
-    func fetchArticles() -> [Article] {
+    func fetchArticles(articleListingContentType: ArticleListingContentType) -> [Article] {
         do {
-            let articleDataModals = try context.fetch(ArticleDataModal.fetchRequest())
+            let fetchRequest = ArticleDataModal.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "articleListingContentType == %@", articleListingContentType.name)
+            
+            let articleDataModals = try context.fetch(fetchRequest)
+
             return articleDataModals.map({ $0.toArticle() })
         } catch {
             return []
+        }
+    }
+
+    func deleteAllArticles() {
+        let fetchRequest = ArticleDataModal.fetchRequest()
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try context.fetch(fetchRequest)
+            results.forEach { result in
+                context.delete(result)
+            }
+        } catch {
+            print("CoreDataProvider - deleteAllArticles() Error \(error)")
         }
     }
 

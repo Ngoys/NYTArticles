@@ -60,14 +60,16 @@ class ArticleStore: BaseStore {
         return publisher
     }
 
-    func createOrUpdateArticles(articles: [Article]) {
-        articles.forEach { article in
-            coreDataProvider.createOrUpdateArticle(article: article)
-        }
+    func createOrUpdateArticleDataModal(article: Article, articleListingContentType: ArticleListingContentType) {
+        coreDataProvider.createOrUpdateArticle(article: article, articleListingContentType: articleListingContentType)
     }
 
-    func fetchArticles() -> [Article] {
-        return coreDataProvider.fetchArticles()
+    func fetchCoreDataArticles(articleListingContentType: ArticleListingContentType) -> [Article] {
+        return coreDataProvider.fetchArticles(articleListingContentType: articleListingContentType)
+    }
+
+    func deleteAllCoreDataArticles() {
+        return coreDataProvider.deleteAllArticles()
     }
 
     //----------------------------------------

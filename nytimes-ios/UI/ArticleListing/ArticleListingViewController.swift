@@ -69,6 +69,12 @@ class ArticleListingViewController: BaseViewController {
                 case .loaded(let articles):
                     self.applySnapshot(articles: articles)
 
+                case .loadingFailed:
+                    let articles = self.viewModel.fetchCoreDataArticles()
+
+                    self.statefulPlaceholderView.isHidden = articles.isEmpty == false
+                    self.applySnapshot(articles: articles)
+
                 default:
                     break
                 }
