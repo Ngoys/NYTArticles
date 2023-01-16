@@ -31,7 +31,6 @@ class CoreDataStore {
                     currentArticleDataModal = results.first
                 }
 
-                currentArticleDataModal?.id = article.id
                 currentArticleDataModal?.title = article.title
                 currentArticleDataModal?.publishedDate = article.publishedDate
                 currentArticleDataModal?.articleListingContentType = articleListingContentType.name
@@ -86,7 +85,6 @@ class CoreDataStore {
                     currentDocumentArticleDataModal = results.first
                 }
 
-                currentDocumentArticleDataModal?.id = documentArticleId
                 currentDocumentArticleDataModal?.abstract = documentArticle.abstract
                 currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
 
