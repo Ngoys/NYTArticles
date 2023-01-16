@@ -27,14 +27,14 @@ class CoreDataStore {
 
                 if results.isEmpty {
                     currentArticleDataModal = ArticleDataModal(context: self.backgroundContext)
-
-                    currentArticleDataModal?.id = article.id
-                    currentArticleDataModal?.title = article.title
-                    currentArticleDataModal?.publishedDate = article.publishedDate
-                    currentArticleDataModal?.articleListingContentType = articleListingContentType.name
                 } else {
                     currentArticleDataModal = results.first
                 }
+
+                currentArticleDataModal?.id = article.id
+                currentArticleDataModal?.title = article.title
+                currentArticleDataModal?.publishedDate = article.publishedDate
+                currentArticleDataModal?.articleListingContentType = articleListingContentType.name
 
                 self.saveInBackgroundContext()
             } catch {
@@ -82,13 +82,13 @@ class CoreDataStore {
 
                 if results.isEmpty {
                     currentDocumentArticleDataModal = DocumentArticleDataModal(context: self.backgroundContext)
-
-                    currentDocumentArticleDataModal?.id = documentArticleId
-                    currentDocumentArticleDataModal?.abstract = documentArticle.abstract
-                    currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
                 } else {
                     currentDocumentArticleDataModal = results.first
                 }
+
+                currentDocumentArticleDataModal?.id = documentArticleId
+                currentDocumentArticleDataModal?.abstract = documentArticle.abstract
+                currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
 
                 self.saveInBackgroundContext()
             } catch {
