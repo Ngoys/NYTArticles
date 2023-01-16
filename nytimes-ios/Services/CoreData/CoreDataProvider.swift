@@ -21,7 +21,7 @@ class CoreDataProvider {
         let fetchRequest = ArticleDataModal.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", article.id)
 
-        backgroundContext.perform {
+        backgroundContext.performAndWait {
             do {
                 let results = try self.backgroundContext.fetch(fetchRequest)
 
@@ -76,7 +76,7 @@ class CoreDataProvider {
         let fetchRequest = DocumentArticleDataModal.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", documentArticleId)
 
-        backgroundContext.perform {
+        backgroundContext.performAndWait {
             do {
                 let results = try self.backgroundContext.fetch(fetchRequest)
 
