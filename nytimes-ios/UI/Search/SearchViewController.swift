@@ -83,7 +83,9 @@ class SearchViewController: BaseViewController {
                 case .loadingFailed:
                     let documentArticles = self.viewModel.fetchCoreDataDocumentArticles()
 
+                    self.statefulPlaceholderView.bind(State<Any>.loadingFailed(AppError.emptySearchResult))
                     self.statefulPlaceholderView.isHidden = documentArticles.isEmpty == false
+
                     self.applySnapshot(documentArticles: documentArticles)
 
                 default:

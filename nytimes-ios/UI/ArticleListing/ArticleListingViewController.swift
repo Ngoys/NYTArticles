@@ -72,7 +72,9 @@ class ArticleListingViewController: BaseViewController {
                 case .loadingFailed:
                     let articles = self.viewModel.fetchCoreDataArticles()
 
+                    self.statefulPlaceholderView.bind(State<Any>.loadingFailed(AppError.emptySearchResult))
                     self.statefulPlaceholderView.isHidden = articles.isEmpty == false
+
                     self.applySnapshot(articles: articles)
 
                 default:
