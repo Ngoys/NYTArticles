@@ -10,8 +10,8 @@ class CoreDataStack {
     private lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { _, error in
-            if let error = error as NSError? {
-                print("CoreDataStack - Error \(error), \(error.userInfo)")
+            if let error = error {
+                print("CoreDataStack - Error \(error)")
             }
         }
         return container
