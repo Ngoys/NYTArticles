@@ -7,7 +7,7 @@ class CoreDataStack {
     // MARK: - Properties
     //----------------------------------------
 
-    private lazy var storeContainer: NSPersistentContainer = {
+    lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { _, error in
             if let error = error {
@@ -17,7 +17,17 @@ class CoreDataStack {
         return container
     }()
 
-    lazy var managedContext: NSManagedObjectContext = self.storeContainer.viewContext
+    lazy var mainContext: NSManagedObjectContext = {
+        let context = self.storeContainer.viewContext
+        context.automaticallyMergesChangesFromParent = true
+        return context
+    }()
+
+    lazy var backgroundContext: NSManagedObjectContext = {
+        let context = self.storeContainer.newBackgroundContext()
+        context.automaticallyMergesChangesFromParent = true
+        return context
+    }()
 
     //----------------------------------------
     // MARK: - Internals

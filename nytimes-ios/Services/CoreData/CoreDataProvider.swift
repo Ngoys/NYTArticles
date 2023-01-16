@@ -7,8 +7,9 @@ class CoreDataProvider {
     // MARK: - Initialization
     //----------------------------------------
 
-    init(context: NSManagedObjectContext) {
-        self.context = context
+    init(coreDataStack: CoreDataStack) {
+        self.mainContext = coreDataStack.mainContext
+        self.backgroundContext = coreDataStack.backgroundContext
     }
 
     //----------------------------------------
@@ -20,23 +21,25 @@ class CoreDataProvider {
         let fetchRequest = ArticleDataModal.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", article.id)
 
-        do {
-            let results = try context.fetch(fetchRequest)
+        backgroundContext.perform {
+            do {
+                let results = try self.backgroundContext.fetch(fetchRequest)
 
-            if results.isEmpty {
-                currentArticleDataModal = ArticleDataModal(context: context)
+                if results.isEmpty {
+                    currentArticleDataModal = ArticleDataModal(context: self.backgroundContext)
 
-                currentArticleDataModal?.id = article.id
-                currentArticleDataModal?.title = article.title
-                currentArticleDataModal?.publishedDate = article.publishedDate
-                currentArticleDataModal?.articleListingContentType = articleListingContentType.name
-            } else {
-                currentArticleDataModal = results.first
+                    currentArticleDataModal?.id = article.id
+                    currentArticleDataModal?.title = article.title
+                    currentArticleDataModal?.publishedDate = article.publishedDate
+                    currentArticleDataModal?.articleListingContentType = articleListingContentType.name
+                } else {
+                    currentArticleDataModal = results.first
+                }
+
+                self.saveInBackgroundContext()
+            } catch {
+                print("CoreDataProvider - createOrUpdateArticle() Error \(error)")
             }
-
-            save()
-        } catch {
-            print("CoreDataProvider - createOrUpdateArticle() Error \(error)")
         }
     }
 
@@ -45,7 +48,7 @@ class CoreDataProvider {
             let fetchRequest = ArticleDataModal.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "articleListingContentType == %@", articleListingContentType.name)
             
-            let articleDataModals = try context.fetch(fetchRequest)
+            let articleDataModals = try mainContext.fetch(fetchRequest)
 
             return articleDataModals.map({ $0.toArticle() })
         } catch {
@@ -57,9 +60,9 @@ class CoreDataProvider {
         let fetchRequest = ArticleDataModal.fetchRequest()
         fetchRequest.returnsObjectsAsFaults = false
         do {
-            let results = try context.fetch(fetchRequest)
+            let results = try mainContext.fetch(fetchRequest)
             results.forEach { result in
-                context.delete(result)
+                mainContext.delete(result)
             }
         } catch {
             print("CoreDataProvider - deleteAllArticles() Error \(error)")
@@ -73,22 +76,24 @@ class CoreDataProvider {
         let fetchRequest = DocumentArticleDataModal.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", documentArticleId)
 
-        do {
-            let results = try context.fetch(fetchRequest)
+        backgroundContext.perform {
+            do {
+                let results = try self.backgroundContext.fetch(fetchRequest)
 
-            if results.isEmpty {
-                currentDocumentArticleDataModal = DocumentArticleDataModal(context: context)
+                if results.isEmpty {
+                    currentDocumentArticleDataModal = DocumentArticleDataModal(context: self.backgroundContext)
 
-                currentDocumentArticleDataModal?.id = documentArticleId
-                currentDocumentArticleDataModal?.abstract = documentArticle.abstract
-                currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
-            } else {
-                currentDocumentArticleDataModal = results.first
+                    currentDocumentArticleDataModal?.id = documentArticleId
+                    currentDocumentArticleDataModal?.abstract = documentArticle.abstract
+                    currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
+                } else {
+                    currentDocumentArticleDataModal = results.first
+                }
+
+                self.saveInBackgroundContext()
+            } catch {
+                print("CoreDataProvider - createOrUpdateDocumentArticle() Error \(error)")
             }
-
-            save()
-        } catch {
-            print("CoreDataProvider - createOrUpdateDocumentArticle() Error \(error)")
         }
     }
 
@@ -98,7 +103,7 @@ class CoreDataProvider {
             // [c] means case insensitive
             fetchRequest.predicate = NSPredicate(format: "abstract CONTAINS[c] %@", keyword)
 
-            let documentArticleDataModals = try context.fetch(fetchRequest)
+            let documentArticleDataModals = try mainContext.fetch(fetchRequest)
 
             return documentArticleDataModals.map({ $0.toDocumentArticle() })
         } catch {
@@ -106,12 +111,22 @@ class CoreDataProvider {
         }
     }
 
-    func save() {
-        guard context.hasChanges else { return }
+    func saveInMainContext() {
+        guard mainContext.hasChanges else { return }
         do {
-            try context.save()
+            try mainContext.save()
         } catch {
-            print("CoreDataProvider - save() Error \(error)")
+            mainContext.rollback()
+            print("CoreDataProvider - saveInMainContext() Error \(error)")
+        }
+    }
+
+    func saveInBackgroundContext() {
+        do {
+            try backgroundContext.save()
+        } catch {
+            backgroundContext.rollback()
+            print("CoreDataProvider - saveInBackgroundContext() Error \(error)")
         }
     }
 
@@ -119,5 +134,7 @@ class CoreDataProvider {
     // MARK: - Internals
     //----------------------------------------
 
-    private let context: NSManagedObjectContext
+    private let mainContext: NSManagedObjectContext
+
+    private let backgroundContext: NSManagedObjectContext
 }

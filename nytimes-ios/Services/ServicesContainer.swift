@@ -45,7 +45,7 @@ class ServiceContainer {
 
         container.register(CoreDataProvider.self) { r -> CoreDataProvider in
             let coreDataStack = r.resolve(CoreDataStack.self)!
-            return CoreDataProvider(context: coreDataStack.managedContext)
+            return CoreDataProvider(coreDataStack: coreDataStack)
         }.inObjectScope(.container)
 
         return container
