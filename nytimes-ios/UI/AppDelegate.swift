@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        let coreDataProvider = ServiceContainer.container.resolve(CoreDataProvider.self)!
-        coreDataProvider.saveInMainContext()
+        let coreDataStore = ServiceContainer.container.resolve(CoreDataStore.self)!
+        coreDataStore.saveInMainContext()
     }
 
     //----------------------------------------

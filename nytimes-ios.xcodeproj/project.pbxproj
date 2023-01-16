@@ -242,6 +242,8 @@
 		C2487D3A297233310048F8DF /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				C2487D722973E3E00048F8DF /* CoreDataStack.swift */,
+				C2BB54FD2973FE2900C29F41 /* CoreDataProvider.swift */,
 				C2487D38297233260048F8DF /* ArticleStore.swift */,
 			);
 			path = Store;
@@ -266,15 +268,6 @@
 				C2487D4E297292CB0048F8DF /* SearchViewController.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		C2487D742973E56E0048F8DF /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				C2487D722973E3E00048F8DF /* CoreDataStack.swift */,
-				C2BB54FD2973FE2900C29F41 /* CoreDataProvider.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C2487D782973F4A00048F8DF /* CoreDataModal */ = {
@@ -403,7 +396,6 @@
 				C2487D29297225EC0048F8DF /* AppError.swift */,
 				C2487D2A297225EC0048F8DF /* ApiError.swift */,
 				C2487D3A297233310048F8DF /* Store */,
-				C2487D742973E56E0048F8DF /* CoreData */,
 			);
 			path = Services;
 			sourceTree = "<group>";

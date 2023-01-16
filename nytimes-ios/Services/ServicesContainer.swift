@@ -31,8 +31,8 @@ class ServiceContainer {
 
         container.register(ArticleStore.self) { r -> ArticleStore in
             let nyTimesAPIClient = r.resolve(NYTimesAPIClient.self)!
-            let coreDataProvider = r.resolve(CoreDataProvider.self)!
-            return ArticleStore(apiClient: nyTimesAPIClient, coreDataProvider: coreDataProvider)
+            let coreDataStore = r.resolve(CoreDataStore.self)!
+            return ArticleStore(apiClient: nyTimesAPIClient, coreDataStore: coreDataStore)
         }.inObjectScope(.container)
 
         return container
@@ -43,9 +43,9 @@ class ServiceContainer {
             return CoreDataStack()
         }.inObjectScope(.container)
 
-        container.register(CoreDataProvider.self) { r -> CoreDataProvider in
+        container.register(CoreDataStore.self) { r -> CoreDataStore in
             let coreDataStack = r.resolve(CoreDataStack.self)!
-            return CoreDataProvider(coreDataStack: coreDataStack)
+            return CoreDataStore(coreDataStack: coreDataStack)
         }.inObjectScope(.container)
 
         return container

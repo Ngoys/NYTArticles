@@ -7,9 +7,9 @@ class ArticleStore: BaseStore {
     // MARK: - Initialization
     //----------------------------------------
 
-    init(apiClient: APIClient, coreDataProvider: CoreDataProvider) {
+    init(apiClient: APIClient, coreDataStore: CoreDataStore) {
         self.apiClient = apiClient
-        self.coreDataProvider = coreDataProvider
+        self.coreDataStore = coreDataStore
     }
 
     //----------------------------------------
@@ -61,23 +61,23 @@ class ArticleStore: BaseStore {
     }
 
     func createOrUpdateArticleDataModal(article: Article, articleListingContentType: ArticleListingContentType) {
-        coreDataProvider.createOrUpdateArticle(article: article, articleListingContentType: articleListingContentType)
+        coreDataStore.createOrUpdateArticle(article: article, articleListingContentType: articleListingContentType)
     }
 
     func fetchCoreDataArticles(articleListingContentType: ArticleListingContentType) -> [Article] {
-        return coreDataProvider.fetchArticles(articleListingContentType: articleListingContentType)
+        return coreDataStore.fetchArticles(articleListingContentType: articleListingContentType)
     }
 
     func deleteAllCoreDataArticles() {
-        return coreDataProvider.deleteAllArticles()
+        return coreDataStore.deleteAllArticles()
     }
 
     func createOrUpdateDocumentArticleDataModal(documentArticle: DocumentArticle) {
-        coreDataProvider.createOrUpdateDocumentArticle(documentArticle: documentArticle)
+        coreDataStore.createOrUpdateDocumentArticle(documentArticle: documentArticle)
     }
 
     func fetchCoreDataDocumentArticles(keyword: String) -> [DocumentArticle] {
-        return coreDataProvider.fetchDocumentArticles(keyword: keyword)
+        return coreDataStore.fetchDocumentArticles(keyword: keyword)
     }
 
     //----------------------------------------
@@ -86,5 +86,5 @@ class ArticleStore: BaseStore {
 
     private let apiClient: APIClient
 
-    private let coreDataProvider: CoreDataProvider
+    private let coreDataStore: CoreDataStore
 }

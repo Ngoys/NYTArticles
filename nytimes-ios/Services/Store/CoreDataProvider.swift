@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-class CoreDataProvider {
+class CoreDataStore {
 
     //----------------------------------------
     // MARK: - Initialization
@@ -38,7 +38,7 @@ class CoreDataProvider {
 
                 self.saveInBackgroundContext()
             } catch {
-                print("CoreDataProvider - createOrUpdateArticle() Error \(error)")
+                print("CoreDataStore - createOrUpdateArticle() Error \(error)")
             }
         }
     }
@@ -65,7 +65,7 @@ class CoreDataProvider {
                 mainContext.delete(result)
             }
         } catch {
-            print("CoreDataProvider - deleteAllArticles() Error \(error)")
+            print("CoreDataStore - deleteAllArticles() Error \(error)")
         }
     }
 
@@ -92,7 +92,7 @@ class CoreDataProvider {
 
                 self.saveInBackgroundContext()
             } catch {
-                print("CoreDataProvider - createOrUpdateDocumentArticle() Error \(error)")
+                print("CoreDataStore - createOrUpdateDocumentArticle() Error \(error)")
             }
         }
     }
@@ -117,7 +117,7 @@ class CoreDataProvider {
             try mainContext.save()
         } catch {
             mainContext.rollback()
-            print("CoreDataProvider - saveInMainContext() Error \(error)")
+            print("CoreDataStore - saveInMainContext() Error \(error)")
         }
     }
 
@@ -126,7 +126,7 @@ class CoreDataProvider {
             try backgroundContext.save()
         } catch {
             backgroundContext.rollback()
-            print("CoreDataProvider - saveInBackgroundContext() Error \(error)")
+            print("CoreDataStore - saveInBackgroundContext() Error \(error)")
         }
     }
 
