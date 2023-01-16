@@ -80,13 +80,26 @@ class SearchViewController: BaseViewController {
                         self.applySnapshot(documentArticles: documentArticles)
                     }
 
-                case .loadingFailed:
-                    let documentArticles = self.viewModel.fetchCoreDataDocumentArticles()
+                case .loadingFailed(let error):
+                    switch error as? AppError {
+                    case .quotaViolation:
+                        self.statefulPlaceholderView.isHidden = true
 
-                    self.statefulPlaceholderView.bind(State<Any>.loadingFailed(AppError.emptySearchResult))
-                    self.statefulPlaceholderView.isHidden = documentArticles.isEmpty == false
+                        let alertController = UIAlertController(title: R.string.localizable.errorQuota_violation(), message: R.string.localizable.please_try_again_later(), preferredStyle: .alert)
 
-                    self.applySnapshot(documentArticles: documentArticles)
+                        let ok = UIAlertAction(title: R.string.localizable.ok(), style: .default, handler: nil)
+
+                        alertController.addAction(ok)
+                        self.present(alertController, animated: true, completion: nil)
+
+                    default:
+                        let documentArticles = self.viewModel.fetchCoreDataDocumentArticles()
+
+                        self.statefulPlaceholderView.bind(State<Any>.loadingFailed(AppError.emptySearchResult))
+                        self.statefulPlaceholderView.isHidden = documentArticles.isEmpty == false
+
+                        self.applySnapshot(documentArticles: documentArticles)
+                    }
 
                 default:
                     break
