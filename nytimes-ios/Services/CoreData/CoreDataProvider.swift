@@ -17,11 +17,11 @@ class CoreDataProvider {
 
     func createOrUpdateArticle(article: Article, articleListingContentType: ArticleListingContentType) {
         var currentArticleDataModal: ArticleDataModal?
-        let articleFetchRequest = ArticleDataModal.fetchRequest()
-        articleFetchRequest.predicate = NSPredicate(format: "id == %@", article.id)
+        let fetchRequest = ArticleDataModal.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", article.id)
 
         do {
-            let results = try context.fetch(articleFetchRequest)
+            let results = try context.fetch(fetchRequest)
 
             if results.isEmpty {
                 currentArticleDataModal = ArticleDataModal(context: context)
@@ -63,6 +63,46 @@ class CoreDataProvider {
             }
         } catch {
             print("CoreDataProvider - deleteAllArticles() Error \(error)")
+        }
+    }
+
+    func createOrUpdateDocumentArticle(documentArticle: DocumentArticle) {
+        guard let documentArticleId = documentArticle.id else { return }
+
+        var currentDocumentArticleDataModal: DocumentArticleDataModal?
+        let fetchRequest = DocumentArticleDataModal.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", documentArticleId)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+
+            if results.isEmpty {
+                currentDocumentArticleDataModal = DocumentArticleDataModal(context: context)
+
+                currentDocumentArticleDataModal?.id = documentArticleId
+                currentDocumentArticleDataModal?.abstract = documentArticle.abstract
+                currentDocumentArticleDataModal?.publishedDate = documentArticle.publishedDate
+            } else {
+                currentDocumentArticleDataModal = results.first
+            }
+
+            save()
+        } catch {
+            print("CoreDataProvider - createOrUpdateDocumentArticle() Error \(error)")
+        }
+    }
+
+    func fetchDocumentArticles(keyword: String) -> [DocumentArticle] {
+        do {
+            let fetchRequest = DocumentArticleDataModal.fetchRequest()
+            // [c] means case insensitive
+            fetchRequest.predicate = NSPredicate(format: "abstract CONTAINS[c] %@", keyword)
+
+            let documentArticleDataModals = try context.fetch(fetchRequest)
+
+            return documentArticleDataModals.map({ $0.toDocumentArticle() })
+        } catch {
+            return []
         }
     }
 

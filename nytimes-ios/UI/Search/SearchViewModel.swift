@@ -38,8 +38,13 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
             return Result.Publisher(.success([])).eraseToAnyPublisher()
         }
 
+        print("SearchViewModel - searchDocumentArticles(\(searchKeywordSubject.value))")
         return articleStore.searchDocumentArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
             .map { documentArticles in
+                documentArticles.forEach { documentArticle in
+                    self.articleStore.createOrUpdateDocumentArticleDataModal(documentArticle: documentArticle)
+                }
+
                 var previousFetchedDocumentArticles =  self.pageNumber == 1 ? [] : self.documentArticlesSubject.value
     
                 previousFetchedDocumentArticles.append(contentsOf: documentArticles)
@@ -62,6 +67,11 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
 
     func updateSearchKeyword(keyword: String) {
         searchKeywordSubject.send(keyword)
+    }
+
+    func fetchCoreDataDocumentArticles() -> [DocumentArticle] {
+        print("SearchViewModel - fetchCoreDataDocumentArticles(\(searchKeywordSubject.value))")
+        return articleStore.fetchCoreDataDocumentArticles(keyword: searchKeywordSubject.value)
     }
 
     //----------------------------------------

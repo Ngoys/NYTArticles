@@ -72,6 +72,14 @@ class ArticleStore: BaseStore {
         return coreDataProvider.deleteAllArticles()
     }
 
+    func createOrUpdateDocumentArticleDataModal(documentArticle: DocumentArticle) {
+        coreDataProvider.createOrUpdateDocumentArticle(documentArticle: documentArticle)
+    }
+
+    func fetchCoreDataDocumentArticles(keyword: String) -> [DocumentArticle] {
+        return coreDataProvider.fetchDocumentArticles(keyword: keyword)
+    }
+
     //----------------------------------------
     // MARK: - Internals
     //----------------------------------------

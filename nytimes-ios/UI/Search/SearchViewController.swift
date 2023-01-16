@@ -80,8 +80,11 @@ class SearchViewController: BaseViewController {
                         self.applySnapshot(documentArticles: documentArticles)
                     }
 
-                case .loadingFailed(let error):
-                    self.applySnapshot(documentArticles: [])
+                case .loadingFailed:
+                    let documentArticles = self.viewModel.fetchCoreDataDocumentArticles()
+
+                    self.statefulPlaceholderView.isHidden = documentArticles.isEmpty == false
+                    self.applySnapshot(documentArticles: documentArticles)
 
                 default:
                     break
