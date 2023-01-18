@@ -24,6 +24,16 @@ class HomeMenuCellViewModel {
             return self.homeMenu.name
         }
     }
+
+    var isRightArrowImageViewHidden: Bool {
+        switch self.homeMenu {
+        case .location(let clLocation):
+            return true
+
+        default:
+            return false
+        }
+    }
     
     //----------------------------------------
     // MARK: - Internals

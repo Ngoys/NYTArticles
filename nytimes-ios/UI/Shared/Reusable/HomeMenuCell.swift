@@ -8,6 +8,7 @@ class HomeMenuCell: UICollectionViewCell {
     
     func bindViewModel(_ viewModel: HomeMenuCellViewModel) {
         titleLabel.text = viewModel.titleText
+        rightArrow.isHidden = viewModel.isRightArrowImageViewHidden
     }
     
     //----------------------------------------
