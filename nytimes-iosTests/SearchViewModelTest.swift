@@ -129,7 +129,8 @@ class SearchViewModelTest: BaseTest {
         })
     }
 
-    func testArticlesSearchPagination() {
+    func testSearchPagination() {
+        let otherKeyword = "other keyword"
         setupViewModel()
 
         Cuckoo.stub(mockArticleStore) { stub in
@@ -141,14 +142,14 @@ class SearchViewModelTest: BaseTest {
                 .eraseToAnyPublisher())
             when(stub.searchDocumentArticles(keyword: mockKeyword, pageNumber: 4)).thenReturn(Result.Publisher(.success(mockDocumentArticlesPage4))
                 .eraseToAnyPublisher())
-            when(stub.searchDocumentArticles(keyword: "other keyword", pageNumber: 1)).thenReturn(Result.Publisher(.success(mockDocumentArticlesOtherKeywordPage1))
+            when(stub.searchDocumentArticles(keyword: otherKeyword, pageNumber: 1)).thenReturn(Result.Publisher(.success(mockDocumentArticlesOtherKeywordPage1))
                 .eraseToAnyPublisher())
         }
 
         viewModel.updateSearchKeyword(keyword: mockKeyword)
 
-        let expectation = expectation(description: "Should call search API after 0.6 seconds")
-        let result = XCTWaiter.wait(for: [expectation], timeout: 0.7)
+        let delayExpectation = expectation(description: "Should call search API after 0.6 seconds")
+        let result = XCTWaiter.wait(for: [delayExpectation], timeout: 0.7)
         if result == .timedOut {
             viewModel.statePublisher
                 .sink { [weak self] state in
@@ -191,4 +192,36 @@ class SearchViewModelTest: BaseTest {
             viewModel.loadNextPage()
         }
     }
+
+    func testSearchLoadError() {
+        let appError = AppError.quotaViolation
+
+        Cuckoo.stub(mockArticleStore) { stub in
+            when(stub.searchDocumentArticles(keyword: any(), pageNumber: any())).thenReturn(Result.Publisher(.failure(AppError.quotaViolation))
+                .eraseToAnyPublisher())
+        }
+
+        setupViewModel()
+
+        viewModel.updateSearchKeyword(keyword: "abcdefg")
+
+        let delayExpectation = expectation(description: "Should call search API after 0.6 seconds")
+        let result = XCTWaiter.wait(for: [delayExpectation], timeout: 0.7)
+        if result == .timedOut {
+            verify(mockArticleStore, never()).createOrUpdateDocumentArticleDataModal(documentArticle: any())
+
+            viewModel.load().sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    XCTFail("Should not execute this block clause")
+
+                case .failure(let error):
+                    XCTAssertEqual(error as? AppError, appError)
+                }
+            }, receiveValue: { value in
+                XCTFail("Should not execute this block clause")
+            }).store(in: &cancellables)
+        }
+    }
+
 }
