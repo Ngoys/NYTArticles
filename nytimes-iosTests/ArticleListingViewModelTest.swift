@@ -58,10 +58,10 @@ class ArticleListingViewModelTest: BaseTest {
         verify(mockArticleStore).fetchArticles(articleListingContentType: articleListingContentType)
         verify(mockArticleStore, times(articles.count)).createOrUpdateArticleDataModal(article: any(), articleListingContentType: articleListingContentType)
 
-        _ = viewModel.load().sink(receiveCompletion: { completion in
+        viewModel.load().sink(receiveCompletion: { completion in
         }, receiveValue: { value in
             XCTAssert(value == articles)
-        })
+        }).store(in: &cancellables)
     }
 
     func testArticlesLoad() {
@@ -83,9 +83,9 @@ class ArticleListingViewModelTest: BaseTest {
     }
 
     func testArticlesCoreDataLoad() {
-        testArticlesCoreDataLoad(articleListingContentType: .mostViewed, articles: mockArticles)
-        testArticlesCoreDataLoad(articleListingContentType: .mostShared, articles: mockArticles)
-        testArticlesCoreDataLoad(articleListingContentType: .mostEmailed, articles: mockArticles)
+        testArticlesCoreDataLoad(articleListingContentType: .mostViewed, articles: mockCoreDataArticles)
+        testArticlesCoreDataLoad(articleListingContentType: .mostShared, articles: mockCoreDataArticles)
+        testArticlesCoreDataLoad(articleListingContentType: .mostEmailed, articles: mockCoreDataArticles)
     }
 
     func testArticlesLoadError(articleListingContentType: ArticleListingContentType, appError: AppError) {
@@ -99,7 +99,7 @@ class ArticleListingViewModelTest: BaseTest {
         verify(mockArticleStore).fetchArticles(articleListingContentType: articleListingContentType)
         verify(mockArticleStore, never()).createOrUpdateArticleDataModal(article: any(), articleListingContentType: articleListingContentType)
 
-        _ = viewModel.load().sink(receiveCompletion: { completion in
+        viewModel.load().sink(receiveCompletion: { completion in
             switch completion {
             case .finished:
                 XCTFail("Should not execute this block clause")
@@ -109,7 +109,7 @@ class ArticleListingViewModelTest: BaseTest {
             }
         }, receiveValue: { value in
             XCTFail("Should not execute this block clause")
-        })
+        }).store(in: &cancellables)
     }
 
     func testArticlesLoadError() {

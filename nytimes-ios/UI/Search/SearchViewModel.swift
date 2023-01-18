@@ -38,7 +38,7 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
             return Result.Publisher(.success([])).eraseToAnyPublisher()
         }
 
-        print("SearchViewModel - searchDocumentArticles(\(searchKeywordSubject.value))")
+        print("SearchViewModel - searchDocumentArticles(keyword: \(searchKeywordSubject.value), pageNumber: \(pageNumber))")
         return articleStore.searchDocumentArticles(keyword: searchKeywordSubject.value, pageNumber: self.pageNumber)
             .map { documentArticles in
                 documentArticles.forEach { documentArticle in
@@ -79,6 +79,10 @@ class SearchViewModel: StatefulViewModel<[DocumentArticle]> {
     //----------------------------------------
 
     let minimumSearchWordCount = 2
+
+    var searchKeyword: String {
+        return searchKeywordSubject.value
+    }
 
     //----------------------------------------
     // MARK:- Internals
