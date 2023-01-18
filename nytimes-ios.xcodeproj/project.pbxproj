@@ -16,6 +16,8 @@
 		C22C09152977A2C9005736E1 /* ArticleListingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */; };
 		C22C09192977A6CE005736E1 /* Cuckoo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C09182977A6CE005736E1 /* Cuckoo+Extension.swift */; };
 		C22C091B2977C34C005736E1 /* SearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C091A2977C34C005736E1 /* SearchViewModelTest.swift */; };
+		C22C091D2977DE90005736E1 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C091C2977DE90005736E1 /* HomeViewModelTest.swift */; };
+		C22C091F2977E112005736E1 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C091E2977E112005736E1 /* MockCLLocationManager.swift */; };
 		C2487D122972163A0048F8DF /* ArticleListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */; };
 		C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */; };
 		C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D102972163A0048F8DF /* ArticleListingViewController.swift */; };
@@ -113,6 +115,8 @@
 		C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModelTest.swift; sourceTree = "<group>"; };
 		C22C09182977A6CE005736E1 /* Cuckoo+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cuckoo+Extension.swift"; sourceTree = "<group>"; };
 		C22C091A2977C34C005736E1 /* SearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModelTest.swift; sourceTree = "<group>"; };
+		C22C091C2977DE90005736E1 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		C22C091E2977E112005736E1 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModel.swift; sourceTree = "<group>"; };
 		C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCoordinator.swift; sourceTree = "<group>"; };
 		C2487D102972163A0048F8DF /* ArticleListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewController.swift; sourceTree = "<group>"; };
@@ -307,7 +311,9 @@
 			isa = PBXGroup;
 			children = (
 				C22C090A29779A8A005736E1 /* GeneratedMocks.swift */,
+				C22C091E2977E112005736E1 /* MockCLLocationManager.swift */,
 				C22C09122977A219005736E1 /* BaseTest.swift */,
+				C22C091C2977DE90005736E1 /* HomeViewModelTest.swift */,
 				C22C091A2977C34C005736E1 /* SearchViewModelTest.swift */,
 				C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */,
 				C2578AB82975299A0066E24D /* HomeMenuCellViewModel.swift */,
@@ -768,11 +774,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22C091F2977E112005736E1 /* MockCLLocationManager.swift in Sources */,
 				C22C09132977A219005736E1 /* BaseTest.swift in Sources */,
 				C2578AB92975299A0066E24D /* HomeMenuCellViewModel.swift in Sources */,
 				C22C09152977A2C9005736E1 /* ArticleListingViewModelTest.swift in Sources */,
 				C22C090D29779D4C005736E1 /* ArticleListingCellViewModelTest.swift in Sources */,
 				C22C09192977A6CE005736E1 /* Cuckoo+Extension.swift in Sources */,
+				C22C091D2977DE90005736E1 /* HomeViewModelTest.swift in Sources */,
 				C22C090F2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift in Sources */,
 				C22C091B2977C34C005736E1 /* SearchViewModelTest.swift in Sources */,
 				C22C090B29779A8A005736E1 /* GeneratedMocks.swift in Sources */,

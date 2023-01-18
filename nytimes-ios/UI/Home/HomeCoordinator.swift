@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 protocol HomeCoordinatorDelegate: NSObjectProtocol {
 }
@@ -10,7 +11,7 @@ class HomeCoordinator: BaseCoordinator {
     //----------------------------------------
 
     init(homeViewController: HomeViewController) {
-        homeViewController.viewModel = HomeViewModel()
+        homeViewController.viewModel = HomeViewModel(locationManager: CLLocationManager())
 
         self.homeViewController = homeViewController
     }

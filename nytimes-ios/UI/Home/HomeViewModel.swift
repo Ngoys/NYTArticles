@@ -8,7 +8,9 @@ class HomeViewModel: BaseViewModel {
     // MARK:- Initialization
     //----------------------------------------
 
-    override init() {
+    init(locationManager: CLLocationManager) {
+        self.locationManager = locationManager
+
         super.init()
 
         let searchSection = HomeMenuSection(type: .search, menus: [.searchArticle])
@@ -53,7 +55,7 @@ class HomeViewModel: BaseViewModel {
     // MARK:- Internals
     //----------------------------------------
 
-    private let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager
 
     private var currentLocationSubject = CurrentValueSubject<CLLocation?, Never>(nil)
 

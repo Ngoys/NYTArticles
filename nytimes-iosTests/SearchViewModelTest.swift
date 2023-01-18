@@ -223,5 +223,4 @@ class SearchViewModelTest: BaseTest {
             }).store(in: &cancellables)
         }
     }
-
 }
