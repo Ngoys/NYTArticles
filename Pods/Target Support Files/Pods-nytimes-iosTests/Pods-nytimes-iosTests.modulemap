@@ -1,0 +1,6 @@
+framework module Pods_nytimes_iosTests {
+  umbrella header "Pods-nytimes-iosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
