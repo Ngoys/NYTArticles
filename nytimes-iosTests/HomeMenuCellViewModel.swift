@@ -21,7 +21,7 @@ class HomeMenuCellViewModelTest: BaseTest {
     }
 
     override func setUp() {
-        // No action
+        super.setUp()
     }
 
     //----------------------------------------

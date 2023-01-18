@@ -20,7 +20,7 @@ class DocumentArticleListingCellViewModelTest: BaseTest {
     }
 
     override func setUp() {
-        // No action
+        super.setUp()
     }
 
     //----------------------------------------
@@ -34,14 +34,9 @@ class DocumentArticleListingCellViewModelTest: BaseTest {
     }
 
     func testLabelTextOutput() {
-        let calendar = Calendar.current
-
-        let today = Date()
         let mockArticle1 = DocumentArticle(id: "id", abstract: "test title", publishedDate: today)
         testDocumentArticle(documentArticle: mockArticle1, expectedTitleText: "test title", expectedDateText: "Today")
 
-        let midnight = calendar.startOfDay(for: today)
-        let tomorrow = calendar.date(byAdding: .day, value: 1, to: midnight)!
         let mockArticle2 = DocumentArticle(id: "id", abstract: "abc title", publishedDate: tomorrow)
         testDocumentArticle(documentArticle: mockArticle2, expectedTitleText: "abc title", expectedDateText: "Tomorrow")
 
