@@ -29,144 +29,137 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0297DA79FF716015994D8E83A990AAEF /* StubbingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4F092EF77757B1D19EECD4738B752 /* StubbingProxy.swift */; };
-		02DCFC3FF2B210BA4C0EA42CE5FD49B1 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64A4458D13026A66D6C2243BFF3DA3 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */; };
-		0612B0B3F7A6186FC0999E805DEFA600 /* Pods-nytimes-iosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBA25E64429ACDE6DF6658532E3D2EC /* Pods-nytimes-iosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13EB0EB237900B58F3AEB1FAAA5601F5 /* StubNoReturnThrowingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994323D528E66DB48CC44AB9B299ED6 /* StubNoReturnThrowingFunction.swift */; };
-		14907BD9555EC9AB7170338B3048DD28 /* UIColor+ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7F440D1685362600D032550C8ED76 /* UIColor+ColorResource.swift */; };
-		194620E1714F8ACF2F33E84CB2008554 /* StubThrowingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14A0149BE59FF2B192A6A3A4459005 /* StubThrowingFunction.swift */; };
-		194AEB590270E44779846C5F280AE404 /* StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1353B26474453391234248D2ABA803D /* StoryboardViewControllerResource.swift */; };
-		22D5BE0819A8EAEA3046CD45BD777500 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		268BBB39A09A008F11E4CFB568E1BE53 /* CreateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80913DCE5BEA036B99F73A9580B991 /* CreateMock.swift */; };
-		28B04D6DF510A914AAA771738B811A99 /* CallMatcherFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F17D93CAF6810AC2BF27E3A7DE2C4 /* CallMatcherFunctions.swift */; };
-		2A2A08A95BF5F0DC3E77C0E97C12AD09 /* StubNoReturnFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE084CB308E3F492D4E2803F8DE1E0C1 /* StubNoReturnFunction.swift */; };
-		2AF99B268514A004C8E9BCE43C00FE57 /* ToBeStubbedReadOnlyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B819EADD64713F53F058F432830FF /* ToBeStubbedReadOnlyProperty.swift */; };
-		2B310E24A1CA875C3DF0B0AA04605BEC /* Pods-nytimes-iosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1D4F132B70E2709F580E7164D5D3C /* Pods-nytimes-iosTests-dummy.m */; };
-		2D22EED4B1BF3AE1589985E1E0FB8092 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59130C80E99C411FEA88ABB9D93B39B /* Mock.swift */; };
-		31777E0EB1A230DBAAC68B9B04059818 /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436F4E59A771CB2998429C8D8E6C6DF /* FontResource.swift */; };
-		3313D81519EAAB42F1B17053CDAC959B /* R.swift.Library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD47CC2A22DD5BCF4A4CE862AA392A80 /* R.swift.Library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		338BEA76B5E34CC05ECEEF5D491E2152 /* Cuckoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1A19A2BA18A698D41F14B033CE4B74 /* Cuckoo-dummy.m */; };
-		36B4613494D7162C972727EAC1C7D664 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A306E35A976BD260873AC51C4BF50F1 /* StoryboardResourceWithInitialController+UIKit.swift */; };
-		39AD60066BA7D08C4C0F45312942381B /* Cuckoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D47F641ABE0B8EF474EB47ABB7FB309 /* Cuckoo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A0A628A3C1F944B50E20596FA4AFA66 /* StubFunctionThenThrowingTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE7223CECED7C12E204933A19760DE /* StubFunctionThenThrowingTrait.swift */; };
-		3D4B6619B1A10D2A3AEE4306D0543ABE /* VerificationProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A77C675FBD972D0B6F54B3AFD76E5D /* VerificationProxy.swift */; };
-		4186D70F37672E92A4A1F3AE930BD084 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D798006D69F84DE4C3CBC01AB20CD3 /* ColorResource.swift */; };
-		448CC832205727C2365D59F4767C5419 /* BaseStubFunctionTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDEB9F9B5D329F30D74E03D03B4627 /* BaseStubFunctionTrait.swift */; };
-		49931473DEE256EB9DCD38F52E691C79 /* ParameterMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3A9027131CE850BF71D5B463C26DF /* ParameterMatcher.swift */; };
-		4E244721BBC15C1849B859BF5C4AD07A /* StubFunctionThenTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B777B420B033C80987CEAFCB9F895C /* StubFunctionThenTrait.swift */; };
-		4FB70D67071642EB79D7D7291FA9D0AC /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347DBFC60AED7D47444B706472E5071 /* ImageResource.swift */; };
+		0297DA79FF716015994D8E83A990AAEF /* StubbingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E60E1160BEE3829BEE9413428311DE0 /* StubbingProxy.swift */; };
+		02DCFC3FF2B210BA4C0EA42CE5FD49B1 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1990E359020E3717E4980CF2FA1C9A7F /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */; };
+		13EB0EB237900B58F3AEB1FAAA5601F5 /* StubNoReturnThrowingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E4A6B30EAAA9E3F609218DFB35D1D /* StubNoReturnThrowingFunction.swift */; };
+		14907BD9555EC9AB7170338B3048DD28 /* UIColor+ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8C67DB8D2445CB08CF8E3619785B6 /* UIColor+ColorResource.swift */; };
+		194620E1714F8ACF2F33E84CB2008554 /* StubThrowingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0E85BFF4BCA332F0F09BE2E1A7CBD /* StubThrowingFunction.swift */; };
+		194AEB590270E44779846C5F280AE404 /* StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E494B0E42D10AA3AF88F1DF8DA39E4 /* StoryboardViewControllerResource.swift */; };
+		268BBB39A09A008F11E4CFB568E1BE53 /* CreateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A1D3EC78D8A213009FAD98B9F8F40B /* CreateMock.swift */; };
+		28B04D6DF510A914AAA771738B811A99 /* CallMatcherFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55ECA4AC088BB708DCB2424BA74DB83 /* CallMatcherFunctions.swift */; };
+		2A2A08A95BF5F0DC3E77C0E97C12AD09 /* StubNoReturnFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D93FEAA9DEA306877AA9959F8A59A /* StubNoReturnFunction.swift */; };
+		2AF99B268514A004C8E9BCE43C00FE57 /* ToBeStubbedReadOnlyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10752110F288B786D3572F83A4E46EF3 /* ToBeStubbedReadOnlyProperty.swift */; };
+		2D22EED4B1BF3AE1589985E1E0FB8092 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6343DBDD7F4CD2784108146C82EC56 /* Mock.swift */; };
+		31777E0EB1A230DBAAC68B9B04059818 /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18505D80E5297B244FB19F8C269B8949 /* FontResource.swift */; };
+		3313D81519EAAB42F1B17053CDAC959B /* R.swift.Library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A835CB14369FEFC2795E9A9F58EC2F6 /* R.swift.Library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		338BEA76B5E34CC05ECEEF5D491E2152 /* Cuckoo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DE384FF6519A53565C5EDD7F1E55EC /* Cuckoo-dummy.m */; };
+		36B4613494D7162C972727EAC1C7D664 /* StoryboardResourceWithInitialController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026CC01CEF7ADF19B9640C5D7913658 /* StoryboardResourceWithInitialController+UIKit.swift */; };
+		39AD60066BA7D08C4C0F45312942381B /* Cuckoo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8E9C92C53034FB01474F64C8185812 /* Cuckoo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A0A628A3C1F944B50E20596FA4AFA66 /* StubFunctionThenThrowingTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8D46221392893B546B2F479B14B1D4 /* StubFunctionThenThrowingTrait.swift */; };
+		3D10EDC45077684C800756B8E215AAC4 /* Pods-nytimes-iosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBA25E64429ACDE6DF6658532E3D2EC /* Pods-nytimes-iosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4B6619B1A10D2A3AEE4306D0543ABE /* VerificationProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E6974394E967EE527C763C2A6EBA /* VerificationProxy.swift */; };
+		3F98250A97BDF40AC14448EE3E97DEFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
+		4186D70F37672E92A4A1F3AE930BD084 /* ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263E82CBD8B6A9DE62590538F7BF1A7 /* ColorResource.swift */; };
+		448CC832205727C2365D59F4767C5419 /* BaseStubFunctionTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F01D72A201718F12238EB22A570B4E /* BaseStubFunctionTrait.swift */; };
+		49931473DEE256EB9DCD38F52E691C79 /* ParameterMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54A625C07DE4FE24FA2BE6B20672911 /* ParameterMatcher.swift */; };
+		4E244721BBC15C1849B859BF5C4AD07A /* StubFunctionThenTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E842DD021963F1329719984942A761 /* StubFunctionThenTrait.swift */; };
+		4FB70D67071642EB79D7D7291FA9D0AC /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331694829E8BC904CA9C2058FB21CE9D /* ImageResource.swift */; };
 		50E0EC11DC06710AAD90D11EFEA681AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		528AFAF465CA449A29FACEE31E8137A3 /* StubFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDC37F9E18BE356F9B919F24C8977A1 /* StubFunction.swift */; };
-		529DA6F9DCA20BEB2DAC84E944971771 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9975DC8A94CD5E55CA89D62529DEC774 /* ReuseIdentifierProtocol.swift */; };
-		57576922EAD2B7BD3113FE6AF590A947 /* ArgumentCaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648394F60C6AE1656978C0A0851513C1 /* ArgumentCaptor.swift */; };
-		57E016283EC83DFF229E1A23983199B1 /* StubCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627CE3FB04F89FFA4AE4E79C6F0B170 /* StubCall.swift */; };
-		5800AE5DA61A60C69728263B93E99131 /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA657D1C9A12975C2046531D646A745 /* NibResource.swift */; };
-		5A7B19220E9E6C935BE218F28D507495 /* MockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67008F4BA17E7F26BDCDDB0675F21D67 /* MockManager.swift */; };
-		5BA06F81694F4A573DAF9C8D59497C40 /* UIImage+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE7C90802927110A13DFED242511902 /* UIImage+ImageResource.swift */; };
-		5D1E784F8C3E27C0311F177B82CF9537 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812F32A6A19587F336CF79FBB570748 /* Matchable.swift */; };
-		65AF6D80712689F320489652E8240DF8 /* StubFunctionThenCallRealImplementationTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55FAD297EEA3FE3B9DC6C7898D2E646 /* StubFunctionThenCallRealImplementationTrait.swift */; };
-		65D7E6D0D4D089EA8E9BF47B5F2102F3 /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285AA84D48F531B1E1E316E74341179F /* StringResource.swift */; };
-		66CA379737E97DCC82F85DA5ADA8696A /* Dictionary+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6661A0B118FBA3B1D1D7829ACD5BC668 /* Dictionary+matchers.swift */; };
-		6C870845950EDBCC59E5673A1A61AEB9 /* CallMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FA6F585CA3C7CF99883A0DFB3DB9E /* CallMatcher.swift */; };
-		7141A43A3A8D9EB357FD292E75CBA774 /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F85B53F6472BB053A86C3E1C59900 /* FileResource.swift */; };
-		73A9167ED72BFAD91CF83E42B6055435 /* Set+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13458F4C378236F6FFBBA2533666ECCE /* Set+matchers.swift */; };
-		73E3FED37F7F262848E71C7AA470CA5D /* Bundle+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4CA7475C048644947905BBD1A62C0 /* Bundle+FileResource.swift */; };
-		794DCE2938E1921E639B3D82D7A9FD78 /* StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E8FA9B9AD0C8925D9440336F75856 /* StoryboardSegueIdentifierProtocol.swift */; };
-		7FEFADB71372C247E7BF64EFC26536A4 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D3658D9947339BF63B2D04E498CD8 /* Identifier.swift */; };
-		85E0CC79BEA38BFEDA8D91CFDE3F5D35 /* UIFont+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0426BF01EFB6A193064EAAA02E7078A /* UIFont+FontResource.swift */; };
-		883F6D997383279C699858A5C37096E0 /* Pods-nytimes-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FCD01B007E546B160398BBEBEA7A3F8 /* Pods-nytimes-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A72A17A96E7EC03A864DABDB8DB2732 /* DefaultValueRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2CC9764188FB8CAFD39C0547A355F /* DefaultValueRegistry.swift */; };
-		8E320F5743CCF419F647D300C7ACAEBA /* UINib+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C481A099F29C59796359BE522F9CCF /* UINib+NibResource.swift */; };
-		91CF1390B81F968D50CC549A12A35E36 /* MockManager+preconfigured.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F10D715E2F11A24B80E48FF772A854 /* MockManager+preconfigured.swift */; };
-		944DD4BA58C9CB396F2118E6CFCF4B7B /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC4D793DFFB56432A5C6023560E0DDA /* ThreadLocal.swift */; };
-		9694BD93EF456B33B6BFB4ED27925736 /* StubAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571907F2720B0DAABD307F7931AEE6F2 /* StubAction.swift */; };
-		9ABADB74172031CD746EE8EDEF54E207 /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2E3EE4CE6E3CB5390B94E9D2549AA /* UIViewController+StoryboardSegueIdentifierProtocol.swift */; };
-		9AEE1602600526D215458FCC2CCF471B /* Mocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7338285E7914213E0203BEF50D23D5 /* Mocked.swift */; };
-		9CD5B22FA43EA4EB9605FBE9924C0777 /* CuckooFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FDDABCBBA813629CFCE590B128DED /* CuckooFunctions.swift */; };
-		AAA59091052557CA709875E5F48312FD /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B44620A453AA07B1DA3109E4A6B81F /* Validatable.swift */; };
-		B1D39E7A11EE8E064AFAF499789378BB /* StubFunctionThenThrowTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C0C7C5F60F3F8AE7B28CEA2551E426 /* StubFunctionThenThrowTrait.swift */; };
+		5151166249C750293F23BEFB2A3A144F /* Pods-nytimes-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FCD01B007E546B160398BBEBEA7A3F8 /* Pods-nytimes-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		528AFAF465CA449A29FACEE31E8137A3 /* StubFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A7537A3FEC60117BEA3DEC4B9C1A9D /* StubFunction.swift */; };
+		529DA6F9DCA20BEB2DAC84E944971771 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD525660454EE1E5FDC4F305CC494 /* ReuseIdentifierProtocol.swift */; };
+		57576922EAD2B7BD3113FE6AF590A947 /* ArgumentCaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ADB36BF24D49A277E172EA51EF7872 /* ArgumentCaptor.swift */; };
+		57E016283EC83DFF229E1A23983199B1 /* StubCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA563C398A89C1F30A8F625F1E9ED210 /* StubCall.swift */; };
+		5800AE5DA61A60C69728263B93E99131 /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C171F9F6C4C463DEEFAED0C2CEAFCF /* NibResource.swift */; };
+		5A7B19220E9E6C935BE218F28D507495 /* MockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00129EF56AC1D213A4A7492EC5E4A77 /* MockManager.swift */; };
+		5BA06F81694F4A573DAF9C8D59497C40 /* UIImage+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C17C61993E3B63A57594DD8C963229 /* UIImage+ImageResource.swift */; };
+		5D1E784F8C3E27C0311F177B82CF9537 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9B67A77C6E6A08333CBCA31DE4DCF /* Matchable.swift */; };
+		639ECA191F8290E3A81D8D6602B8D7D5 /* Pods-nytimes-iosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1D4F132B70E2709F580E7164D5D3C /* Pods-nytimes-iosTests-dummy.m */; };
+		65AF6D80712689F320489652E8240DF8 /* StubFunctionThenCallRealImplementationTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E875EFFC2F257332F236925FE6D7 /* StubFunctionThenCallRealImplementationTrait.swift */; };
+		65D7E6D0D4D089EA8E9BF47B5F2102F3 /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658AF7F64E42BF112CDF9C556FE7EE7 /* StringResource.swift */; };
+		66CA379737E97DCC82F85DA5ADA8696A /* Dictionary+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19568297FD4B9656387639F95DA866D /* Dictionary+matchers.swift */; };
+		6C870845950EDBCC59E5673A1A61AEB9 /* CallMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3711E0B00F7C695F6845EAB5590C3FA2 /* CallMatcher.swift */; };
+		70098DFF8E8C5404AE3EE64BEC8228C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
+		7141A43A3A8D9EB357FD292E75CBA774 /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359515FB097A6601F4BB7EEDA2735F3D /* FileResource.swift */; };
+		73A9167ED72BFAD91CF83E42B6055435 /* Set+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8BD0B052768021EBCEB4D5019333B /* Set+matchers.swift */; };
+		73E3FED37F7F262848E71C7AA470CA5D /* Bundle+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10617AFA55B0E1E840661D39A0E1810A /* Bundle+FileResource.swift */; };
+		794DCE2938E1921E639B3D82D7A9FD78 /* StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE6465282561FDD466D6A235C946D0 /* StoryboardSegueIdentifierProtocol.swift */; };
+		7FEFADB71372C247E7BF64EFC26536A4 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564CE60C65BF2ACA18AACD30B4A9316 /* Identifier.swift */; };
+		85E0CC79BEA38BFEDA8D91CFDE3F5D35 /* UIFont+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F4D5A3271A6E0873489DB1593C17D /* UIFont+FontResource.swift */; };
+		8A72A17A96E7EC03A864DABDB8DB2732 /* DefaultValueRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF973E5033412520EE71159DA4D6DAB /* DefaultValueRegistry.swift */; };
+		8E320F5743CCF419F647D300C7ACAEBA /* UINib+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E262F520A1C28898158D750476776D1 /* UINib+NibResource.swift */; };
+		91CF1390B81F968D50CC549A12A35E36 /* MockManager+preconfigured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFC40EF6CD157CDB70C50DD35E5823 /* MockManager+preconfigured.swift */; };
+		944DD4BA58C9CB396F2118E6CFCF4B7B /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2235E182FB35C0C8F44DE7C5BC4DA89 /* ThreadLocal.swift */; };
+		9694BD93EF456B33B6BFB4ED27925736 /* StubAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C757235F0F44E15F668A7149F70A8 /* StubAction.swift */; };
+		9ABADB74172031CD746EE8EDEF54E207 /* UIViewController+StoryboardSegueIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A7C36513E6AC714338CA52492F629 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */; };
+		9AEE1602600526D215458FCC2CCF471B /* Mocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177A80FF7FCBE5997B68A312DF15C41 /* Mocked.swift */; };
+		9CD5B22FA43EA4EB9605FBE9924C0777 /* CuckooFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F48F43E3BE8F1053141F96EC03C287 /* CuckooFunctions.swift */; };
+		AAA59091052557CA709875E5F48312FD /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469364769ECD66FF4B246A9716AAC12 /* Validatable.swift */; };
+		B1D39E7A11EE8E064AFAF499789378BB /* StubFunctionThenThrowTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404663B3F8B4E17D9128E6C2C22D1A2 /* StubFunctionThenThrowTrait.swift */; };
 		B22B0D36BD5CE0DF8D34B9C5B482E6BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */; };
-		B2EE2EA48B1562B48A77C37E1CAC7FA2 /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE858EA91499C3D05D2FF7F7AB8B50EE /* UIStoryboard+StoryboardResource.swift */; };
-		C160ED46CCBC2A9B920BA35E2F44A439 /* StubFunctionThenDoNothingTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD42DD2EF02ABDC92573737696B98E2C /* StubFunctionThenDoNothingTrait.swift */; };
-		C3CEEDEBCA0E23742D647416BDD240CD /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DAA293006A0F88BE509698297A4A2E /* UIStoryboard+StoryboardViewControllerResource.swift */; };
-		C781D1F18AFFB58BEBBAD98CF35B5B89 /* UIViewController+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C512E4845801318D3437518B3A07E4F /* UIViewController+NibResource.swift */; };
-		C90CDDC3C205D6AC8DA723EDE6771EFE /* VerifyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E625F3C1482627D94D5F76011F35BF4 /* VerifyProperty.swift */; };
-		CAB7CFB8A632FED19C8BBB51021C2958 /* NibResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE802010FF0F2A4D6EB2CADD6D2146F /* NibResource+UIKit.swift */; };
-		CC4EB18F75DD139CC2F2491474CD3520 /* Data+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26D679A5BA0DCD26FE15DD75973645 /* Data+FileResource.swift */; };
-		CEC1947D7F7C07B50A390AA42B5FFD60 /* ToBeStubbedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD91E75FD8D5784306FF87F16EC682 /* ToBeStubbedProperty.swift */; };
-		CF75A0EE5BF67A281E02C75650CCE6C5 /* ParameterMatcherFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB0AE8F6BDEE522E5767B36DD7913D /* ParameterMatcherFunctions.swift */; };
-		D6AFC2722B8B56035DF1256F437058B8 /* StubFunctionThenReturnTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63527FD3454B055CBC606DE8CC7B55F /* StubFunctionThenReturnTrait.swift */; };
-		D7B4FDEA7CE4AB0E1E5CE47D08C29758 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A7F37285CA660394132ED6ECD79B4F /* Stub.swift */; };
-		DB38B48CAB40A3AB237283B912BED1EC /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CCB64B1CC87732E37AD41DF564D99 /* UITableView+ReuseIdentifierProtocol.swift */; };
-		DCFC0402001B3CD27C75A8325EACB6A1 /* StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E2DF34253004D6A68F3202EF3E4A0F /* StoryboardResource.swift */; };
-		E149D844E661CE19B960ED6BC5DD4440 /* R.swift.Library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 893F4B10911E2FADFE86300ECD0961EB /* R.swift.Library-dummy.m */; };
+		B2EE2EA48B1562B48A77C37E1CAC7FA2 /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967248F8EFBE7A8E2B9B184DE3575E8 /* UIStoryboard+StoryboardResource.swift */; };
+		C160ED46CCBC2A9B920BA35E2F44A439 /* StubFunctionThenDoNothingTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF3A417321D49A01FFC98DBD0EEA /* StubFunctionThenDoNothingTrait.swift */; };
+		C3CEEDEBCA0E23742D647416BDD240CD /* UIStoryboard+StoryboardViewControllerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC37BF8CF1F2A8CFB10994E2F96016F /* UIStoryboard+StoryboardViewControllerResource.swift */; };
+		C781D1F18AFFB58BEBBAD98CF35B5B89 /* UIViewController+NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E774821C112D8487EF29E7FC5D39E /* UIViewController+NibResource.swift */; };
+		C842997F62D3ED574E162CE717A56D36 /* Pods-nytimes-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA007F22B9BF8D43F42848EC5AFAEC /* Pods-nytimes-ios-dummy.m */; };
+		C90CDDC3C205D6AC8DA723EDE6771EFE /* VerifyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B52547FFF966A47AA231986D44D6F /* VerifyProperty.swift */; };
+		CAB7CFB8A632FED19C8BBB51021C2958 /* NibResource+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB92FD6419C30C509282E1D3BD3028E /* NibResource+UIKit.swift */; };
+		CC4EB18F75DD139CC2F2491474CD3520 /* Data+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A392E3EE0364A4D2B6F1BB346CD943 /* Data+FileResource.swift */; };
+		CEC1947D7F7C07B50A390AA42B5FFD60 /* ToBeStubbedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F98850F8D6CE04747FFD593880134 /* ToBeStubbedProperty.swift */; };
+		CF75A0EE5BF67A281E02C75650CCE6C5 /* ParameterMatcherFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5EBAA7B1373BEEF30DA1D991D32403 /* ParameterMatcherFunctions.swift */; };
+		D6AFC2722B8B56035DF1256F437058B8 /* StubFunctionThenReturnTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = F476CA27D961749BA54F991900D3EDE0 /* StubFunctionThenReturnTrait.swift */; };
+		D7B4FDEA7CE4AB0E1E5CE47D08C29758 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE4BB0FC134B34398BA3D853E11594 /* Stub.swift */; };
+		DB38B48CAB40A3AB237283B912BED1EC /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4579E23B72DF576868226173DCBD9 /* UITableView+ReuseIdentifierProtocol.swift */; };
+		DCFC0402001B3CD27C75A8325EACB6A1 /* StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F33DE998178D63901829BE1990753 /* StoryboardResource.swift */; };
+		E149D844E661CE19B960ED6BC5DD4440 /* R.swift.Library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F991EFA3055123463FAAFEB667FFA817 /* R.swift.Library-dummy.m */; };
 		E2650D57E2C9F9DFD42525AABA7B9341 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		E286EE8B9E1AF776FE2F24FCAD8235FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		EC9B6D89542BC95CF79F527C4B8E9844 /* __DoNotUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512A22395A42C7EC9BA52EAFED5A57A /* __DoNotUse.swift */; };
-		F0EDB4736D81B172A2FA9B2CE8085C31 /* Array+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B943C528CBBD6E1A9EA748015F5E8 /* Array+matchers.swift */; };
-		F26D9171D14690349E6E562194E50C97 /* Pods-nytimes-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA007F22B9BF8D43F42848EC5AFAEC /* Pods-nytimes-ios-dummy.m */; };
-		F2930455B8C09087FB06E42651EED0C9 /* VerifyReadOnlyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0801940D804523AB8BB1C395EDA43A72 /* VerifyReadOnlyProperty.swift */; };
-		F7350770C52320D7F83623EC6CE491CE /* MockBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF5A89310B4A96F4F742BDAAEDD496 /* MockBuilder.swift */; };
-		F8DD8DA53FB59EDB358FDCE1F64E2A59 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A9818D46754AE73EC671D5E8292B0 /* UICollectionView+ReuseIdentifierProtocol.swift */; };
-		FB6B2D75AA9CED14A52368A3B4025C4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C7B47873C8B18D90C6662A7C89E78 /* Utils.swift */; };
+		EC9B6D89542BC95CF79F527C4B8E9844 /* __DoNotUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E98833DA26D1A1B55919B837466C6 /* __DoNotUse.swift */; };
+		F0EDB4736D81B172A2FA9B2CE8085C31 /* Array+matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6E810253F9C3E4B3B1C60C1F57925 /* Array+matchers.swift */; };
+		F2930455B8C09087FB06E42651EED0C9 /* VerifyReadOnlyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3541DA3BE9B28927E9A18050352360E /* VerifyReadOnlyProperty.swift */; };
+		F7350770C52320D7F83623EC6CE491CE /* MockBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83E93AB2DABDDF35CEA57E558239835 /* MockBuilder.swift */; };
+		F8DD8DA53FB59EDB358FDCE1F64E2A59 /* UICollectionView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5337AD2AB2C96FE4174EF91CE62AD04 /* UICollectionView+ReuseIdentifierProtocol.swift */; };
+		FB6B2D75AA9CED14A52368A3B4025C4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0839A707D4C3E4F5EA9D74E56E42FC /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30430C15DC72FCA7CAC7714BAA69414E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
-			remoteInfo = R.swift.Library;
-		};
-		892F350515F3CA72D27D4247DDFABB55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
-			remoteInfo = SwiftLint;
-		};
-		8DE89A88F3A87B05BD6F24D5262DB088 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFCA8CA494372A14108299CE150648B8;
-			remoteInfo = Cuckoo;
-		};
-		A2AE3A590E50CB8B8D76FD93532FBBEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
-			remoteInfo = R.swift.Library;
-		};
-		A92E0C9530F7FC720CF8D0E86E3FB481 /* PBXContainerItemProxy */ = {
+		6E33DEC1564D20A2196CB9641D530734 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 230984053C6652DFF510F450F21C5CF7;
 			remoteInfo = R.swift;
 		};
-		B3CB73BD6278D4B454D056B7A72D8EFD /* PBXContainerItemProxy */ = {
+		805AC641C17013D4CF05BB348F856ACC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CFCA8CA494372A14108299CE150648B8;
 			remoteInfo = Cuckoo;
 		};
-		DDD9EBCFCA99F8400243790944CEE92D /* PBXContainerItemProxy */ = {
+		9EA92310009613475EC72BE3D5DD69E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 230984053C6652DFF510F450F21C5CF7;
+			remoteInfo = R.swift;
+		};
+		A4AB74F16882A6ED8F924142F53D6EDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		E2DFEC118650361D87E00CE34961D2C6 /* PBXContainerItemProxy */ = {
+		B80CFF5140E99EA0E77421FCCBA9C9B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 230984053C6652DFF510F450F21C5CF7;
-			remoteInfo = R.swift;
+			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
+			remoteInfo = R.swift.Library;
+		};
+		C32B661D7B4F21FF276C64715B5855AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12748D8506CB48696BD90F2CA4F4E38;
+			remoteInfo = R.swift.Library;
+		};
+		C5103CF706048AB3E2FFA7FAAAA3D985 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
 		};
 		EB23EFAD2BE94CC4B5B1193807593702 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -178,124 +171,132 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0381E6974394E967EE527C763C2A6EBA /* VerificationProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerificationProxy.swift; path = Source/Mock/VerificationProxy.swift; sourceTree = "<group>"; };
+		03A392E3EE0364A4D2B6F1BB346CD943 /* Data+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+FileResource.swift"; path = "Library/Foundation/Data+FileResource.swift"; sourceTree = "<group>"; };
+		051E98833DA26D1A1B55919B837466C6 /* __DoNotUse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = __DoNotUse.swift; path = Source/Verification/__DoNotUse.swift; sourceTree = "<group>"; };
 		06BBD3298EFC08D95EEFE526BDDCDBD1 /* Cuckoo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cuckoo; path = Cuckoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0801940D804523AB8BB1C395EDA43A72 /* VerifyReadOnlyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyReadOnlyProperty.swift; path = Source/Verification/VerifyProperty/VerifyReadOnlyProperty.swift; sourceTree = "<group>"; };
-		097B819EADD64713F53F058F432830FF /* ToBeStubbedReadOnlyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToBeStubbedReadOnlyProperty.swift; path = Source/Stubbing/ToBeStubbedProperty/ToBeStubbedReadOnlyProperty.swift; sourceTree = "<group>"; };
-		0A9E8FA9B9AD0C8925D9440336F75856 /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = "<group>"; };
-		0C512E4845801318D3437518B3A07E4F /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
-		0E625F3C1482627D94D5F76011F35BF4 /* VerifyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyProperty.swift; path = Source/Verification/VerifyProperty/VerifyProperty.swift; sourceTree = "<group>"; };
-		0FE802010FF0F2A4D6EB2CADD6D2146F /* NibResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NibResource+UIKit.swift"; path = "Library/UIKit/NibResource+UIKit.swift"; sourceTree = "<group>"; };
-		13458F4C378236F6FFBBA2533666ECCE /* Set+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+matchers.swift"; path = "Source/Matching/Set+matchers.swift"; sourceTree = "<group>"; };
-		1627CE3FB04F89FFA4AE4E79C6F0B170 /* StubCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubCall.swift; path = Source/Stubbing/StubCall.swift; sourceTree = "<group>"; };
-		167B943C528CBBD6E1A9EA748015F5E8 /* Array+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+matchers.swift"; path = "Source/Matching/Array+matchers.swift"; sourceTree = "<group>"; };
-		17A2E3EE4CE6E3CB5390B94E9D2549AA /* UIViewController+StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardSegueIdentifierProtocol.swift"; path = "Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift"; sourceTree = "<group>"; };
-		17A77C675FBD972D0B6F54B3AFD76E5D /* VerificationProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerificationProxy.swift; path = Source/Mock/VerificationProxy.swift; sourceTree = "<group>"; };
-		18CA8E9B1C174C64904BD30C9C21B001 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		06C171F9F6C4C463DEEFAED0C2CEAFCF /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = Library/Core/NibResource.swift; sourceTree = "<group>"; };
+		07F8C67DB8D2445CB08CF8E3619785B6 /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "Library/UIKit/UIColor+ColorResource.swift"; sourceTree = "<group>"; };
+		10617AFA55B0E1E840661D39A0E1810A /* Bundle+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+FileResource.swift"; path = "Library/Foundation/Bundle+FileResource.swift"; sourceTree = "<group>"; };
+		10752110F288B786D3572F83A4E46EF3 /* ToBeStubbedReadOnlyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToBeStubbedReadOnlyProperty.swift; path = Source/Stubbing/ToBeStubbedProperty/ToBeStubbedReadOnlyProperty.swift; sourceTree = "<group>"; };
+		1177A80FF7FCBE5997B68A312DF15C41 /* Mocked.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mocked.swift; path = Source/Mock/Mocked.swift; sourceTree = "<group>"; };
+		18505D80E5297B244FB19F8C269B8949 /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = Library/Core/FontResource.swift; sourceTree = "<group>"; };
+		1990E359020E3717E4980CF2FA1C9A7F /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
 		1A267F91F72C5DDA45A6D741F3E79691 /* Pods-nytimes-iosTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-nytimes-iosTests-frameworks.sh"; sourceTree = "<group>"; };
+		1A835CB14369FEFC2795E9A9F58EC2F6 /* R.swift.Library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-umbrella.h"; sourceTree = "<group>"; };
+		1A8F6B85FA658D4666FFF857ABD2092B /* R.swift.Library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-prefix.pch"; sourceTree = "<group>"; };
+		1B8D46221392893B546B2F479B14B1D4 /* StubFunctionThenThrowingTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenThrowingTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenThrowingTrait.swift; sourceTree = "<group>"; };
 		1CCA007F22B9BF8D43F42848EC5AFAEC /* Pods-nytimes-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nytimes-ios-dummy.m"; sourceTree = "<group>"; };
-		1CE3A9027131CE850BF71D5B463C26DF /* ParameterMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterMatcher.swift; path = Source/Matching/ParameterMatcher.swift; sourceTree = "<group>"; };
-		1D47F641ABE0B8EF474EB47ABB7FB309 /* Cuckoo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cuckoo-umbrella.h"; sourceTree = "<group>"; };
-		285AA84D48F531B1E1E316E74341179F /* StringResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResource.swift; path = Library/Core/StringResource.swift; sourceTree = "<group>"; };
-		286B95B7940B807FD685F9404005AFB3 /* R.swift.Library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-prefix.pch"; sourceTree = "<group>"; };
-		2994323D528E66DB48CC44AB9B299ED6 /* StubNoReturnThrowingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubNoReturnThrowingFunction.swift; path = Source/Stubbing/StubFunction/StubNoReturnThrowingFunction.swift; sourceTree = "<group>"; };
+		1F9D93FEAA9DEA306877AA9959F8A59A /* StubNoReturnFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubNoReturnFunction.swift; path = Source/Stubbing/StubFunction/StubNoReturnFunction.swift; sourceTree = "<group>"; };
+		202B52547FFF966A47AA231986D44D6F /* VerifyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyProperty.swift; path = Source/Verification/VerifyProperty/VerifyProperty.swift; sourceTree = "<group>"; };
+		2719074CFAC40CE33B418E1537740FBA /* R.swift.Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = R.swift.Library.modulemap; sourceTree = "<group>"; };
+		2BBFC40EF6CD157CDB70C50DD35E5823 /* MockManager+preconfigured.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MockManager+preconfigured.swift"; path = "Source/Initialization/MockManager+preconfigured.swift"; sourceTree = "<group>"; };
+		2E262F520A1C28898158D750476776D1 /* UINib+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+NibResource.swift"; path = "Library/UIKit/UINib+NibResource.swift"; sourceTree = "<group>"; };
 		2EBA25E64429ACDE6DF6658532E3D2EC /* Pods-nytimes-iosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nytimes-iosTests-umbrella.h"; sourceTree = "<group>"; };
+		2F87A518B0C906D70E98752725CF7BEB /* Cuckoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cuckoo.release.xcconfig; sourceTree = "<group>"; };
 		2FCD01B007E546B160398BBEBEA7A3F8 /* Pods-nytimes-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-nytimes-ios-umbrella.h"; sourceTree = "<group>"; };
-		326A0446209F9862669F0F5ECE008798 /* Cuckoo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cuckoo-Info.plist"; sourceTree = "<group>"; };
-		35EB0AE8F6BDEE522E5767B36DD7913D /* ParameterMatcherFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterMatcherFunctions.swift; path = Source/Matching/ParameterMatcherFunctions.swift; sourceTree = "<group>"; };
+		30E494B0E42D10AA3AF88F1DF8DA39E4 /* StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardViewControllerResource.swift; path = Library/Core/StoryboardViewControllerResource.swift; sourceTree = "<group>"; };
+		331694829E8BC904CA9C2058FB21CE9D /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = Library/Core/ImageResource.swift; sourceTree = "<group>"; };
+		359515FB097A6601F4BB7EEDA2735F3D /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
+		35D8BD0B052768021EBCEB4D5019333B /* Set+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Set+matchers.swift"; path = "Source/Matching/Set+matchers.swift"; sourceTree = "<group>"; };
+		3711E0B00F7C695F6845EAB5590C3FA2 /* CallMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallMatcher.swift; path = Source/Matching/CallMatcher.swift; sourceTree = "<group>"; };
+		3C1E774821C112D8487EF29E7FC5D39E /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
 		3C7094CD8081D8C4CEDA002B41AD0F87 /* Pods-nytimes-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nytimes-ios"; path = Pods_nytimes_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7CCB64B1CC87732E37AD41DF564D99 /* UITableView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UITableView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		3E60E1160BEE3829BEE9413428311DE0 /* StubbingProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubbingProxy.swift; path = Source/Mock/StubbingProxy.swift; sourceTree = "<group>"; };
+		3E8E9C92C53034FB01474F64C8185812 /* Cuckoo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cuckoo-umbrella.h"; sourceTree = "<group>"; };
 		3ED69F0D6A0EA6B36875980751ADE4F5 /* Pods-nytimes-iosTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nytimes-iosTests-Info.plist"; sourceTree = "<group>"; };
-		45BE7223CECED7C12E204933A19760DE /* StubFunctionThenThrowingTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenThrowingTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenThrowingTrait.swift; sourceTree = "<group>"; };
-		479C7B47873C8B18D90C6662A7C89E78 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/Utils.swift; sourceTree = "<group>"; };
-		4A306E35A976BD260873AC51C4BF50F1 /* StoryboardResourceWithInitialController+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StoryboardResourceWithInitialController+UIKit.swift"; path = "Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift"; sourceTree = "<group>"; };
-		4BA735DDCEE6DFDFB2CC9E4F8E83A44E /* R.swift.Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.release.xcconfig; sourceTree = "<group>"; };
+		3FF973E5033412520EE71159DA4D6DAB /* DefaultValueRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValueRegistry.swift; path = Source/DefaultValueRegistry.swift; sourceTree = "<group>"; };
+		4967248F8EFBE7A8E2B9B184DE3575E8 /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
+		4B0839A707D4C3E4F5EA9D74E56E42FC /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/Utils.swift; sourceTree = "<group>"; };
+		4FF4579E23B72DF576868226173DCBD9 /* UITableView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UITableView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		5026CC01CEF7ADF19B9640C5D7913658 /* StoryboardResourceWithInitialController+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StoryboardResourceWithInitialController+UIKit.swift"; path = "Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift"; sourceTree = "<group>"; };
+		507F4D5A3271A6E0873489DB1593C17D /* UIFont+FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+FontResource.swift"; path = "Library/UIKit/UIFont+FontResource.swift"; sourceTree = "<group>"; };
 		540F4968B3C01DC3939BACFE52AF876A /* Pods-nytimes-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nytimes-ios-acknowledgements.plist"; sourceTree = "<group>"; };
-		548D3658D9947339BF63B2D04E498CD8 /* Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Library/Core/Identifier.swift; sourceTree = "<group>"; };
-		571907F2720B0DAABD307F7931AEE6F2 /* StubAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubAction.swift; path = Source/Stubbing/StubAction.swift; sourceTree = "<group>"; };
 		5AC1D4F132B70E2709F580E7164D5D3C /* Pods-nytimes-iosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-nytimes-iosTests-dummy.m"; sourceTree = "<group>"; };
-		5C5F17D93CAF6810AC2BF27E3A7DE2C4 /* CallMatcherFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallMatcherFunctions.swift; path = Source/Matching/CallMatcherFunctions.swift; sourceTree = "<group>"; };
+		5B6AD525660454EE1E5FDC4F305CC494 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseIdentifierProtocol.swift; path = Library/Core/ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		608319A77F3E4B6F0B883BBD0FA20391 /* R.swift.Library-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "R.swift.Library-Info.plist"; sourceTree = "<group>"; };
-		60DD91E75FD8D5784306FF87F16EC682 /* ToBeStubbedProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToBeStubbedProperty.swift; path = Source/Stubbing/ToBeStubbedProperty/ToBeStubbedProperty.swift; sourceTree = "<group>"; };
+		5F5F98850F8D6CE04747FFD593880134 /* ToBeStubbedProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToBeStubbedProperty.swift; path = Source/Stubbing/ToBeStubbedProperty/ToBeStubbedProperty.swift; sourceTree = "<group>"; };
+		61579FD12CCFB3823FFCAAFCAB196FAE /* Cuckoo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cuckoo-prefix.pch"; sourceTree = "<group>"; };
 		61886C8ADBB19737C85A1B8C033BAA22 /* Pods-nytimes-iosTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-nytimes-iosTests"; path = Pods_nytimes_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63527A013E18F1349E090C74D4B3B93F /* R.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.release.xcconfig; sourceTree = "<group>"; };
-		6436F4E59A771CB2998429C8D8E6C6DF /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = Library/Core/FontResource.swift; sourceTree = "<group>"; };
-		648394F60C6AE1656978C0A0851513C1 /* ArgumentCaptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArgumentCaptor.swift; path = Source/Verification/ArgumentCaptor.swift; sourceTree = "<group>"; };
+		64E842DD021963F1329719984942A761 /* StubFunctionThenTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenTrait.swift; sourceTree = "<group>"; };
 		66300B0D7CC7D653519FCECBBCC048A6 /* Pods-nytimes-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nytimes-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6661A0B118FBA3B1D1D7829ACD5BC668 /* Dictionary+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+matchers.swift"; path = "Source/Matching/Dictionary+matchers.swift"; sourceTree = "<group>"; };
-		67008F4BA17E7F26BDCDDB0675F21D67 /* MockManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockManager.swift; path = Source/MockManager.swift; sourceTree = "<group>"; };
-		689069888DFEB7258727A17205E603D8 /* Cuckoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cuckoo.debug.xcconfig; sourceTree = "<group>"; };
-		6A64A4458D13026A66D6C2243BFF3DA3 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
-		6AEC74E659056741924F7F1B6C98C78D /* Cuckoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cuckoo.release.xcconfig; sourceTree = "<group>"; };
+		69ADB36BF24D49A277E172EA51EF7872 /* ArgumentCaptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArgumentCaptor.swift; path = Source/Verification/ArgumentCaptor.swift; sourceTree = "<group>"; };
+		6DC37BF8CF1F2A8CFB10994E2F96016F /* UIStoryboard+StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardViewControllerResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift"; sourceTree = "<group>"; };
 		6E8B13DF06E7AD510DEE5D35B2B65A1C /* Pods-nytimes-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nytimes-iosTests.release.xcconfig"; sourceTree = "<group>"; };
-		7D3FEB403F54FBDDCE5CEC8F6E06CA08 /* R.swift.Library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = R.swift.Library.modulemap; sourceTree = "<group>"; };
-		7D80913DCE5BEA036B99F73A9580B991 /* CreateMock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateMock.swift; path = Source/Initialization/CreateMock.swift; sourceTree = "<group>"; };
+		711A7C36513E6AC714338CA52492F629 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardSegueIdentifierProtocol.swift"; path = "Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift"; sourceTree = "<group>"; };
+		77DE384FF6519A53565C5EDD7F1E55EC /* Cuckoo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cuckoo-dummy.m"; sourceTree = "<group>"; };
+		79C17C61993E3B63A57594DD8C963229 /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
+		7E5EBAA7B1373BEEF30DA1D991D32403 /* ParameterMatcherFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterMatcherFunctions.swift; path = Source/Matching/ParameterMatcherFunctions.swift; sourceTree = "<group>"; };
+		7EBE6465282561FDD466D6A235C946D0 /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = "<group>"; };
 		80285E1A7A133C981934569473A264A3 /* Pods-nytimes-iosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nytimes-iosTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8347DBFC60AED7D47444B706472E5071 /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = Library/Core/ImageResource.swift; sourceTree = "<group>"; };
-		836F85B53F6472BB053A86C3E1C59900 /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
-		893F4B10911E2FADFE86300ECD0961EB /* R.swift.Library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R.swift.Library-dummy.m"; sourceTree = "<group>"; };
-		8EE7C90802927110A13DFED242511902 /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
+		87BE4BB0FC134B34398BA3D853E11594 /* Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stub.swift; path = Source/Stubbing/Stub.swift; sourceTree = "<group>"; };
+		903E4A6B30EAAA9E3F609218DFB35D1D /* StubNoReturnThrowingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubNoReturnThrowingFunction.swift; path = Source/Stubbing/StubFunction/StubNoReturnThrowingFunction.swift; sourceTree = "<group>"; };
+		938D507589C9CF4DD777BCDB1484D821 /* Cuckoo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cuckoo.modulemap; sourceTree = "<group>"; };
+		958C757235F0F44E15F668A7149F70A8 /* StubAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubAction.swift; path = Source/Stubbing/StubAction.swift; sourceTree = "<group>"; };
 		989BD2AE326798098AA71796967302F3 /* Pods-nytimes-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nytimes-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9975DC8A94CD5E55CA89D62529DEC774 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseIdentifierProtocol.swift; path = Library/Core/ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		9BB65039BEBC52893C4744807609C11B /* R.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F870AC335E22E9C795D27847254E50A /* Pods-nytimes-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nytimes-ios.release.xcconfig"; sourceTree = "<group>"; };
-		A4A7F37285CA660394132ED6ECD79B4F /* Stub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stub.swift; path = Source/Stubbing/Stub.swift; sourceTree = "<group>"; };
-		A4F10D715E2F11A24B80E48FF772A854 /* MockManager+preconfigured.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MockManager+preconfigured.swift"; path = "Source/Initialization/MockManager+preconfigured.swift"; sourceTree = "<group>"; };
+		A072EF56051517613C07C4B81EA607F3 /* R.swift.Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.debug.xcconfig; sourceTree = "<group>"; };
 		A5E0CE9256D5923791ABE40DC20A75E9 /* Pods-nytimes-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-nytimes-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		AD47CC2A22DD5BCF4A4CE862AA392A80 /* R.swift.Library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R.swift.Library-umbrella.h"; sourceTree = "<group>"; };
-		ADC4D793DFFB56432A5C6023560E0DDA /* ThreadLocal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = Source/Initialization/ThreadLocal.swift; sourceTree = "<group>"; };
-		AE858EA91499C3D05D2FF7F7AB8B50EE /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
-		AF1A19A2BA18A698D41F14B033CE4B74 /* Cuckoo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cuckoo-dummy.m"; sourceTree = "<group>"; };
-		B0426BF01EFB6A193064EAAA02E7078A /* UIFont+FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+FontResource.swift"; path = "Library/UIKit/UIFont+FontResource.swift"; sourceTree = "<group>"; };
-		B135673565A8927C3F4C7C7FC6D804BF /* R.swift.Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.debug.xcconfig; sourceTree = "<group>"; };
-		B59130C80E99C411FEA88ABB9D93B39B /* Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mock.swift; path = Source/Mock/Mock.swift; sourceTree = "<group>"; };
-		B6CDEB9F9B5D329F30D74E03D03B4627 /* BaseStubFunctionTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseStubFunctionTrait.swift; path = Source/Stubbing/StubFunction/Trait/BaseStubFunctionTrait.swift; sourceTree = "<group>"; };
-		B8D798006D69F84DE4C3CBC01AB20CD3 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
-		B8DAA293006A0F88BE509698297A4A2E /* UIStoryboard+StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardViewControllerResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift"; sourceTree = "<group>"; };
+		A658AF7F64E42BF112CDF9C556FE7EE7 /* StringResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResource.swift; path = Library/Core/StringResource.swift; sourceTree = "<group>"; };
+		A83E93AB2DABDDF35CEA57E558239835 /* MockBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockBuilder.swift; path = Source/Initialization/MockBuilder.swift; sourceTree = "<group>"; };
+		A9B5E875EFFC2F257332F236925FE6D7 /* StubFunctionThenCallRealImplementationTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenCallRealImplementationTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenCallRealImplementationTrait.swift; sourceTree = "<group>"; };
+		AB2B358181FDD98891E9392DDB229EE3 /* R.swift.Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.release.xcconfig; sourceTree = "<group>"; };
+		B3A7537A3FEC60117BEA3DEC4B9C1A9D /* StubFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunction.swift; path = Source/Stubbing/StubFunction/StubFunction.swift; sourceTree = "<group>"; };
+		B54A625C07DE4FE24FA2BE6B20672911 /* ParameterMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterMatcher.swift; path = Source/Matching/ParameterMatcher.swift; sourceTree = "<group>"; };
+		B55ECA4AC088BB708DCB2424BA74DB83 /* CallMatcherFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallMatcherFunctions.swift; path = Source/Matching/CallMatcherFunctions.swift; sourceTree = "<group>"; };
+		B564CE60C65BF2ACA18AACD30B4A9316 /* Identifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Library/Core/Identifier.swift; sourceTree = "<group>"; };
+		B5BE1AC80BFD7E862259B5B9B122E103 /* R.swift.Library-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "R.swift.Library-Info.plist"; sourceTree = "<group>"; };
+		B5F48F43E3BE8F1053141F96EC03C287 /* CuckooFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CuckooFunctions.swift; path = Source/CuckooFunctions.swift; sourceTree = "<group>"; };
+		B6AFDF3A417321D49A01FFC98DBD0EEA /* StubFunctionThenDoNothingTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenDoNothingTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenDoNothingTrait.swift; sourceTree = "<group>"; };
 		BB2D811CFB927374E94BFB79780B28F0 /* Pods-nytimes-iosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-nytimes-iosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C1353B26474453391234248D2ABA803D /* StoryboardViewControllerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardViewControllerResource.swift; path = Library/Core/StoryboardViewControllerResource.swift; sourceTree = "<group>"; };
-		C1C0C7C5F60F3F8AE7B28CEA2551E426 /* StubFunctionThenThrowTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenThrowTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenThrowTrait.swift; sourceTree = "<group>"; };
-		C55FAD297EEA3FE3B9DC6C7898D2E646 /* StubFunctionThenCallRealImplementationTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenCallRealImplementationTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenCallRealImplementationTrait.swift; sourceTree = "<group>"; };
-		C5B44620A453AA07B1DA3109E4A6B81F /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
-		C8E2DF34253004D6A68F3202EF3E4A0F /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
+		BBB92FD6419C30C509282E1D3BD3028E /* NibResource+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NibResource+UIKit.swift"; path = "Library/UIKit/NibResource+UIKit.swift"; sourceTree = "<group>"; };
+		C00129EF56AC1D213A4A7492EC5E4A77 /* MockManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockManager.swift; path = Source/MockManager.swift; sourceTree = "<group>"; };
+		C404663B3F8B4E17D9128E6C2C22D1A2 /* StubFunctionThenThrowTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenThrowTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenThrowTrait.swift; sourceTree = "<group>"; };
+		C8A1D3EC78D8A213009FAD98B9F8F40B /* CreateMock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateMock.swift; path = Source/Initialization/CreateMock.swift; sourceTree = "<group>"; };
 		CA4E3B66CE4D02048C77392B64FD0ABB /* R.swift.Library */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = R.swift.Library; path = Rswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CB26D679A5BA0DCD26FE15DD75973645 /* Data+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+FileResource.swift"; path = "Library/Foundation/Data+FileResource.swift"; sourceTree = "<group>"; };
-		CBA657D1C9A12975C2046531D646A745 /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = Library/Core/NibResource.swift; sourceTree = "<group>"; };
-		CE084CB308E3F492D4E2803F8DE1E0C1 /* StubNoReturnFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubNoReturnFunction.swift; path = Source/Stubbing/StubFunction/StubNoReturnFunction.swift; sourceTree = "<group>"; };
-		CE14A0149BE59FF2B192A6A3A4459005 /* StubThrowingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubThrowingFunction.swift; path = Source/Stubbing/StubFunction/StubThrowingFunction.swift; sourceTree = "<group>"; };
-		CF4FDDABCBBA813629CFCE590B128DED /* CuckooFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CuckooFunctions.swift; path = Source/CuckooFunctions.swift; sourceTree = "<group>"; };
-		D0C481A099F29C59796359BE522F9CCF /* UINib+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINib+NibResource.swift"; path = "Library/UIKit/UINib+NibResource.swift"; sourceTree = "<group>"; };
-		D1B777B420B033C80987CEAFCB9F895C /* StubFunctionThenTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenTrait.swift; sourceTree = "<group>"; };
-		D244BB14E2911838A16C6CDFBA34457C /* R.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.debug.xcconfig; sourceTree = "<group>"; };
-		D3F4F092EF77757B1D19EECD4738B752 /* StubbingProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubbingProxy.swift; path = Source/Mock/StubbingProxy.swift; sourceTree = "<group>"; };
+		CDF3C16F2575F756A6C81715CBE7B365 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		D19568297FD4B9656387639F95DA866D /* Dictionary+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+matchers.swift"; path = "Source/Matching/Dictionary+matchers.swift"; sourceTree = "<group>"; };
+		D263E82CBD8B6A9DE62590538F7BF1A7 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
+		D3541DA3BE9B28927E9A18050352360E /* VerifyReadOnlyProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyReadOnlyProperty.swift; path = Source/Verification/VerifyProperty/VerifyReadOnlyProperty.swift; sourceTree = "<group>"; };
+		D469364769ECD66FF4B246A9716AAC12 /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
+		D7EEF27DACB80AA357972E43ABE4A523 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		D933F691B2E83EB42F466976128CC5FF /* Pods-nytimes-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-nytimes-ios-frameworks.sh"; sourceTree = "<group>"; };
-		DD42DD2EF02ABDC92573737696B98E2C /* StubFunctionThenDoNothingTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenDoNothingTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenDoNothingTrait.swift; sourceTree = "<group>"; };
-		DEA7F440D1685362600D032550C8ED76 /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "Library/UIKit/UIColor+ColorResource.swift"; sourceTree = "<group>"; };
-		DFAF5A89310B4A96F4F742BDAAEDD496 /* MockBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MockBuilder.swift; path = Source/Initialization/MockBuilder.swift; sourceTree = "<group>"; };
+		DA563C398A89C1F30A8F625F1E9ED210 /* StubCall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubCall.swift; path = Source/Stubbing/StubCall.swift; sourceTree = "<group>"; };
 		E3A499DF7EDE854F64C8E5012EE037FC /* Pods-nytimes-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nytimes-ios.modulemap"; sourceTree = "<group>"; };
-		E4A2CC9764188FB8CAFD39C0547A355F /* DefaultValueRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValueRegistry.swift; path = Source/DefaultValueRegistry.swift; sourceTree = "<group>"; };
-		E4C0A96581175EBE4BF548F7C98A63B0 /* Cuckoo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cuckoo-prefix.pch"; sourceTree = "<group>"; };
-		E6C4CA7475C048644947905BBD1A62C0 /* Bundle+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+FileResource.swift"; path = "Library/Foundation/Bundle+FileResource.swift"; sourceTree = "<group>"; };
-		E812F32A6A19587F336CF79FBB570748 /* Matchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchable.swift; path = Source/Matching/Matchable.swift; sourceTree = "<group>"; };
-		E93A9818D46754AE73EC671D5E8292B0 /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
-		EB7338285E7914213E0203BEF50D23D5 /* Mocked.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mocked.swift; path = Source/Mock/Mocked.swift; sourceTree = "<group>"; };
+		E41055363B2C7888733D0D2D956425D4 /* Cuckoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cuckoo.debug.xcconfig; sourceTree = "<group>"; };
+		E5337AD2AB2C96FE4174EF91CE62AD04 /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = "<group>"; };
 		EC16DF432C67238F8055CB8D00F75BEE /* Pods-nytimes-iosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-nytimes-iosTests.modulemap"; sourceTree = "<group>"; };
-		ECDC37F9E18BE356F9B919F24C8977A1 /* StubFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunction.swift; path = Source/Stubbing/StubFunction/StubFunction.swift; sourceTree = "<group>"; };
 		EDA8B4544D7624B19F05078DAB412DC6 /* Pods-nytimes-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-nytimes-ios-Info.plist"; sourceTree = "<group>"; };
-		EE8FA6F585CA3C7CF99883A0DFB3DB9E /* CallMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallMatcher.swift; path = Source/Matching/CallMatcher.swift; sourceTree = "<group>"; };
-		EED68E4DC53A9DD44D9C8C47FFF212A3 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		F3276FD4775A51930B976494E4CCBB08 /* Cuckoo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cuckoo.modulemap; sourceTree = "<group>"; };
-		F512A22395A42C7EC9BA52EAFED5A57A /* __DoNotUse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = __DoNotUse.swift; path = Source/Verification/__DoNotUse.swift; sourceTree = "<group>"; };
-		F63527FD3454B055CBC606DE8CC7B55F /* StubFunctionThenReturnTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenReturnTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenReturnTrait.swift; sourceTree = "<group>"; };
+		EFA0E85BFF4BCA332F0F09BE2E1A7CBD /* StubThrowingFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubThrowingFunction.swift; path = Source/Stubbing/StubFunction/StubThrowingFunction.swift; sourceTree = "<group>"; };
+		F2235E182FB35C0C8F44DE7C5BC4DA89 /* ThreadLocal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = Source/Initialization/ThreadLocal.swift; sourceTree = "<group>"; };
+		F27F33DE998178D63901829BE1990753 /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
+		F3B9B67A77C6E6A08333CBCA31DE4DCF /* Matchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchable.swift; path = Source/Matching/Matchable.swift; sourceTree = "<group>"; };
+		F476CA27D961749BA54F991900D3EDE0 /* StubFunctionThenReturnTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubFunctionThenReturnTrait.swift; path = Source/Stubbing/StubFunction/Trait/StubFunctionThenReturnTrait.swift; sourceTree = "<group>"; };
+		F916022C32D37C911AF04437EA8F39DD /* Cuckoo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cuckoo-Info.plist"; sourceTree = "<group>"; };
+		F991EFA3055123463FAAFEB667FFA817 /* R.swift.Library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R.swift.Library-dummy.m"; sourceTree = "<group>"; };
+		F9F01D72A201718F12238EB22A570B4E /* BaseStubFunctionTrait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseStubFunctionTrait.swift; path = Source/Stubbing/StubFunction/Trait/BaseStubFunctionTrait.swift; sourceTree = "<group>"; };
+		FA6343DBDD7F4CD2784108146C82EC56 /* Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mock.swift; path = Source/Mock/Mock.swift; sourceTree = "<group>"; };
+		FFD6E810253F9C3E4B3B1C60C1F57925 /* Array+matchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+matchers.swift"; path = "Source/Matching/Array+matchers.swift"; sourceTree = "<group>"; };
+		FFF5AADFF1686EDF33023A12C2643B75 /* R.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C22FE60E90D9D7AE660A44BA2B5B3C7 /* Frameworks */ = {
+		2BD696C59D48023103A6A02577E0BC19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D5BE0819A8EAEA3046CD45BD777500 /* Foundation.framework in Frameworks */,
+				3F98250A97BDF40AC14448EE3E97DEFD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4834D030CA30C418312144AC862C9440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70098DFF8E8C5404AE3EE64BEC8228C1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,14 +317,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6E8DF50957D7629C841D3C79614D767 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E286EE8B9E1AF776FE2F24FCAD8235FF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -333,15 +326,6 @@
 				974814B39C0012DECD183BBB91B32103 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		29177BB007BE2289066623FF5089453C /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-				746215B4FB006FECB6F97BF93F007EBC /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		36D89430DE694E14DD3EF2FA3C7B95DE /* Products */ = {
@@ -355,132 +339,78 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		45D66473DFC8FEB285DF9F26C91A3E1A /* Support Files */ = {
+		3789B9F19B6BAEA855AC63C50E67FFC5 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				F3276FD4775A51930B976494E4CCBB08 /* Cuckoo.modulemap */,
-				AF1A19A2BA18A698D41F14B033CE4B74 /* Cuckoo-dummy.m */,
-				326A0446209F9862669F0F5ECE008798 /* Cuckoo-Info.plist */,
-				E4C0A96581175EBE4BF548F7C98A63B0 /* Cuckoo-prefix.pch */,
-				1D47F641ABE0B8EF474EB47ABB7FB309 /* Cuckoo-umbrella.h */,
-				689069888DFEB7258727A17205E603D8 /* Cuckoo.debug.xcconfig */,
-				6AEC74E659056741924F7F1B6C98C78D /* Cuckoo.release.xcconfig */,
+				694D8674D7374AADD0E4F2B8B8EF9E28 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Cuckoo";
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		53B2F5128ABD316B5D926F36BA94F9E4 /* Swift */ = {
+		3CBEB6108C6738A0A1EC7AD6B8C97D5D /* Cuckoo */ = {
 			isa = PBXGroup;
 			children = (
-				F512A22395A42C7EC9BA52EAFED5A57A /* __DoNotUse.swift */,
-				648394F60C6AE1656978C0A0851513C1 /* ArgumentCaptor.swift */,
-				167B943C528CBBD6E1A9EA748015F5E8 /* Array+matchers.swift */,
-				B6CDEB9F9B5D329F30D74E03D03B4627 /* BaseStubFunctionTrait.swift */,
-				EE8FA6F585CA3C7CF99883A0DFB3DB9E /* CallMatcher.swift */,
-				5C5F17D93CAF6810AC2BF27E3A7DE2C4 /* CallMatcherFunctions.swift */,
-				7D80913DCE5BEA036B99F73A9580B991 /* CreateMock.swift */,
-				CF4FDDABCBBA813629CFCE590B128DED /* CuckooFunctions.swift */,
-				E4A2CC9764188FB8CAFD39C0547A355F /* DefaultValueRegistry.swift */,
-				6661A0B118FBA3B1D1D7829ACD5BC668 /* Dictionary+matchers.swift */,
-				E812F32A6A19587F336CF79FBB570748 /* Matchable.swift */,
-				B59130C80E99C411FEA88ABB9D93B39B /* Mock.swift */,
-				DFAF5A89310B4A96F4F742BDAAEDD496 /* MockBuilder.swift */,
-				EB7338285E7914213E0203BEF50D23D5 /* Mocked.swift */,
-				67008F4BA17E7F26BDCDDB0675F21D67 /* MockManager.swift */,
-				A4F10D715E2F11A24B80E48FF772A854 /* MockManager+preconfigured.swift */,
-				1CE3A9027131CE850BF71D5B463C26DF /* ParameterMatcher.swift */,
-				35EB0AE8F6BDEE522E5767B36DD7913D /* ParameterMatcherFunctions.swift */,
-				13458F4C378236F6FFBBA2533666ECCE /* Set+matchers.swift */,
-				A4A7F37285CA660394132ED6ECD79B4F /* Stub.swift */,
-				571907F2720B0DAABD307F7931AEE6F2 /* StubAction.swift */,
-				D3F4F092EF77757B1D19EECD4738B752 /* StubbingProxy.swift */,
-				1627CE3FB04F89FFA4AE4E79C6F0B170 /* StubCall.swift */,
-				ECDC37F9E18BE356F9B919F24C8977A1 /* StubFunction.swift */,
-				C55FAD297EEA3FE3B9DC6C7898D2E646 /* StubFunctionThenCallRealImplementationTrait.swift */,
-				DD42DD2EF02ABDC92573737696B98E2C /* StubFunctionThenDoNothingTrait.swift */,
-				F63527FD3454B055CBC606DE8CC7B55F /* StubFunctionThenReturnTrait.swift */,
-				45BE7223CECED7C12E204933A19760DE /* StubFunctionThenThrowingTrait.swift */,
-				C1C0C7C5F60F3F8AE7B28CEA2551E426 /* StubFunctionThenThrowTrait.swift */,
-				D1B777B420B033C80987CEAFCB9F895C /* StubFunctionThenTrait.swift */,
-				CE084CB308E3F492D4E2803F8DE1E0C1 /* StubNoReturnFunction.swift */,
-				2994323D528E66DB48CC44AB9B299ED6 /* StubNoReturnThrowingFunction.swift */,
-				CE14A0149BE59FF2B192A6A3A4459005 /* StubThrowingFunction.swift */,
-				ADC4D793DFFB56432A5C6023560E0DDA /* ThreadLocal.swift */,
-				60DD91E75FD8D5784306FF87F16EC682 /* ToBeStubbedProperty.swift */,
-				097B819EADD64713F53F058F432830FF /* ToBeStubbedReadOnlyProperty.swift */,
-				479C7B47873C8B18D90C6662A7C89E78 /* Utils.swift */,
-				17A77C675FBD972D0B6F54B3AFD76E5D /* VerificationProxy.swift */,
-				0E625F3C1482627D94D5F76011F35BF4 /* VerifyProperty.swift */,
-				0801940D804523AB8BB1C395EDA43A72 /* VerifyReadOnlyProperty.swift */,
+				BFBA1B359FE7D66B6693A4F06767667A /* Support Files */,
+				DF5D1A38CCBCDFF2D0476D411395CF78 /* Swift */,
 			);
-			name = Swift;
+			name = Cuckoo;
+			path = Cuckoo;
 			sourceTree = "<group>";
 		};
-		5879248F0A9BA7D7EE6DBAADDC8BA6DC /* Pods */ = {
+		61EDB53CE278A9E471044BF30FDF9CED /* R.swift.Library */ = {
 			isa = PBXGroup;
 			children = (
-				CA51B747909D356D6397FB1DBF115E23 /* Cuckoo */,
-				6512962146B69350C728C1663ED0DC91 /* R.swift */,
-				7FFF3CF1FA1D057EB7E08033AA4DBAAE /* R.swift.Library */,
-				29177BB007BE2289066623FF5089453C /* SwiftLint */,
+				10617AFA55B0E1E840661D39A0E1810A /* Bundle+FileResource.swift */,
+				D263E82CBD8B6A9DE62590538F7BF1A7 /* ColorResource.swift */,
+				03A392E3EE0364A4D2B6F1BB346CD943 /* Data+FileResource.swift */,
+				359515FB097A6601F4BB7EEDA2735F3D /* FileResource.swift */,
+				18505D80E5297B244FB19F8C269B8949 /* FontResource.swift */,
+				B564CE60C65BF2ACA18AACD30B4A9316 /* Identifier.swift */,
+				331694829E8BC904CA9C2058FB21CE9D /* ImageResource.swift */,
+				06C171F9F6C4C463DEEFAED0C2CEAFCF /* NibResource.swift */,
+				BBB92FD6419C30C509282E1D3BD3028E /* NibResource+UIKit.swift */,
+				5B6AD525660454EE1E5FDC4F305CC494 /* ReuseIdentifierProtocol.swift */,
+				F27F33DE998178D63901829BE1990753 /* StoryboardResource.swift */,
+				5026CC01CEF7ADF19B9640C5D7913658 /* StoryboardResourceWithInitialController+UIKit.swift */,
+				7EBE6465282561FDD466D6A235C946D0 /* StoryboardSegueIdentifierProtocol.swift */,
+				30E494B0E42D10AA3AF88F1DF8DA39E4 /* StoryboardViewControllerResource.swift */,
+				A658AF7F64E42BF112CDF9C556FE7EE7 /* StringResource.swift */,
+				1990E359020E3717E4980CF2FA1C9A7F /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */,
+				E5337AD2AB2C96FE4174EF91CE62AD04 /* UICollectionView+ReuseIdentifierProtocol.swift */,
+				07F8C67DB8D2445CB08CF8E3619785B6 /* UIColor+ColorResource.swift */,
+				507F4D5A3271A6E0873489DB1593C17D /* UIFont+FontResource.swift */,
+				79C17C61993E3B63A57594DD8C963229 /* UIImage+ImageResource.swift */,
+				2E262F520A1C28898158D750476776D1 /* UINib+NibResource.swift */,
+				4967248F8EFBE7A8E2B9B184DE3575E8 /* UIStoryboard+StoryboardResource.swift */,
+				6DC37BF8CF1F2A8CFB10994E2F96016F /* UIStoryboard+StoryboardViewControllerResource.swift */,
+				4FF4579E23B72DF576868226173DCBD9 /* UITableView+ReuseIdentifierProtocol.swift */,
+				3C1E774821C112D8487EF29E7FC5D39E /* UIViewController+NibResource.swift */,
+				711A7C36513E6AC714338CA52492F629 /* UIViewController+StoryboardSegueIdentifierProtocol.swift */,
+				D469364769ECD66FF4B246A9716AAC12 /* Validatable.swift */,
+				B62D82CB533F6DDCBBF3AF385EE2B6E3 /* Support Files */,
 			);
-			name = Pods;
+			name = R.swift.Library;
+			path = R.swift.Library;
 			sourceTree = "<group>";
 		};
-		6512962146B69350C728C1663ED0DC91 /* R.swift */ = {
+		62B6B7992E8C7AD9B735664358512314 /* R.swift */ = {
 			isa = PBXGroup;
 			children = (
-				F863BD433F2A47FD21B604471D5FF933 /* Support Files */,
+				FD522BD618DC1E8A7434CAD973B1448D /* Support Files */,
 			);
 			name = R.swift;
 			path = R.swift;
 			sourceTree = "<group>";
 		};
-		746215B4FB006FECB6F97BF93F007EBC /* Support Files */ = {
+		694D8674D7374AADD0E4F2B8B8EF9E28 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EED68E4DC53A9DD44D9C8C47FFF212A3 /* SwiftLint.debug.xcconfig */,
-				18CA8E9B1C174C64904BD30C9C21B001 /* SwiftLint.release.xcconfig */,
+				D7EEF27DACB80AA357972E43ABE4A523 /* SwiftLint.debug.xcconfig */,
+				CDF3C16F2575F756A6C81715CBE7B365 /* SwiftLint.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftLint";
-			sourceTree = "<group>";
-		};
-		7FFF3CF1FA1D057EB7E08033AA4DBAAE /* R.swift.Library */ = {
-			isa = PBXGroup;
-			children = (
-				E6C4CA7475C048644947905BBD1A62C0 /* Bundle+FileResource.swift */,
-				B8D798006D69F84DE4C3CBC01AB20CD3 /* ColorResource.swift */,
-				CB26D679A5BA0DCD26FE15DD75973645 /* Data+FileResource.swift */,
-				836F85B53F6472BB053A86C3E1C59900 /* FileResource.swift */,
-				6436F4E59A771CB2998429C8D8E6C6DF /* FontResource.swift */,
-				548D3658D9947339BF63B2D04E498CD8 /* Identifier.swift */,
-				8347DBFC60AED7D47444B706472E5071 /* ImageResource.swift */,
-				CBA657D1C9A12975C2046531D646A745 /* NibResource.swift */,
-				0FE802010FF0F2A4D6EB2CADD6D2146F /* NibResource+UIKit.swift */,
-				9975DC8A94CD5E55CA89D62529DEC774 /* ReuseIdentifierProtocol.swift */,
-				C8E2DF34253004D6A68F3202EF3E4A0F /* StoryboardResource.swift */,
-				4A306E35A976BD260873AC51C4BF50F1 /* StoryboardResourceWithInitialController+UIKit.swift */,
-				0A9E8FA9B9AD0C8925D9440336F75856 /* StoryboardSegueIdentifierProtocol.swift */,
-				C1353B26474453391234248D2ABA803D /* StoryboardViewControllerResource.swift */,
-				285AA84D48F531B1E1E316E74341179F /* StringResource.swift */,
-				6A64A4458D13026A66D6C2243BFF3DA3 /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */,
-				E93A9818D46754AE73EC671D5E8292B0 /* UICollectionView+ReuseIdentifierProtocol.swift */,
-				DEA7F440D1685362600D032550C8ED76 /* UIColor+ColorResource.swift */,
-				B0426BF01EFB6A193064EAAA02E7078A /* UIFont+FontResource.swift */,
-				8EE7C90802927110A13DFED242511902 /* UIImage+ImageResource.swift */,
-				D0C481A099F29C59796359BE522F9CCF /* UINib+NibResource.swift */,
-				AE858EA91499C3D05D2FF7F7AB8B50EE /* UIStoryboard+StoryboardResource.swift */,
-				B8DAA293006A0F88BE509698297A4A2E /* UIStoryboard+StoryboardViewControllerResource.swift */,
-				3D7CCB64B1CC87732E37AD41DF564D99 /* UITableView+ReuseIdentifierProtocol.swift */,
-				0C512E4845801318D3437518B3A07E4F /* UIViewController+NibResource.swift */,
-				17A2E3EE4CE6E3CB5390B94E9D2549AA /* UIViewController+StoryboardSegueIdentifierProtocol.swift */,
-				C5B44620A453AA07B1DA3109E4A6B81F /* Validatable.swift */,
-				C6DA865DBDCCCE65F5134F3081E58024 /* Support Files */,
-			);
-			name = R.swift.Library;
-			path = R.swift.Library;
 			sourceTree = "<group>";
 		};
 		974814B39C0012DECD183BBB91B32103 /* iOS */ = {
@@ -501,6 +431,21 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B62D82CB533F6DDCBBF3AF385EE2B6E3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2719074CFAC40CE33B418E1537740FBA /* R.swift.Library.modulemap */,
+				F991EFA3055123463FAAFEB667FFA817 /* R.swift.Library-dummy.m */,
+				B5BE1AC80BFD7E862259B5B9B122E103 /* R.swift.Library-Info.plist */,
+				1A8F6B85FA658D4666FFF857ABD2092B /* R.swift.Library-prefix.pch */,
+				1A835CB14369FEFC2795E9A9F58EC2F6 /* R.swift.Library-umbrella.h */,
+				A072EF56051517613C07C4B81EA607F3 /* R.swift.Library.debug.xcconfig */,
+				AB2B358181FDD98891E9392DDB229EE3 /* R.swift.Library.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/R.swift.Library";
+			sourceTree = "<group>";
+		};
 		B697CDE1106368A5282539B1088C3EE9 /* Pods-nytimes-ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +461,32 @@
 			);
 			name = "Pods-nytimes-ios";
 			path = "Target Support Files/Pods-nytimes-ios";
+			sourceTree = "<group>";
+		};
+		BDA7A5E429C09CBA5830142FFDCA09A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CBEB6108C6738A0A1EC7AD6B8C97D5D /* Cuckoo */,
+				62B6B7992E8C7AD9B735664358512314 /* R.swift */,
+				61EDB53CE278A9E471044BF30FDF9CED /* R.swift.Library */,
+				3789B9F19B6BAEA855AC63C50E67FFC5 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFBA1B359FE7D66B6693A4F06767667A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				938D507589C9CF4DD777BCDB1484D821 /* Cuckoo.modulemap */,
+				77DE384FF6519A53565C5EDD7F1E55EC /* Cuckoo-dummy.m */,
+				F916022C32D37C911AF04437EA8F39DD /* Cuckoo-Info.plist */,
+				61579FD12CCFB3823FFCAAFCAB196FAE /* Cuckoo-prefix.pch */,
+				3E8E9C92C53034FB01474F64C8185812 /* Cuckoo-umbrella.h */,
+				E41055363B2C7888733D0D2D956425D4 /* Cuckoo.debug.xcconfig */,
+				2F87A518B0C906D70E98752725CF7BEB /* Cuckoo.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cuckoo";
 			sourceTree = "<group>";
 		};
 		C064699E23C914B00D6252A03619A065 /* Pods-nytimes-iosTests */ = {
@@ -535,47 +506,69 @@
 			path = "Target Support Files/Pods-nytimes-iosTests";
 			sourceTree = "<group>";
 		};
-		C6DA865DBDCCCE65F5134F3081E58024 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D3FEB403F54FBDDCE5CEC8F6E06CA08 /* R.swift.Library.modulemap */,
-				893F4B10911E2FADFE86300ECD0961EB /* R.swift.Library-dummy.m */,
-				608319A77F3E4B6F0B883BBD0FA20391 /* R.swift.Library-Info.plist */,
-				286B95B7940B807FD685F9404005AFB3 /* R.swift.Library-prefix.pch */,
-				AD47CC2A22DD5BCF4A4CE862AA392A80 /* R.swift.Library-umbrella.h */,
-				B135673565A8927C3F4C7C7FC6D804BF /* R.swift.Library.debug.xcconfig */,
-				4BA735DDCEE6DFDFB2CC9E4F8E83A44E /* R.swift.Library.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/R.swift.Library";
-			sourceTree = "<group>";
-		};
-		CA51B747909D356D6397FB1DBF115E23 /* Cuckoo */ = {
-			isa = PBXGroup;
-			children = (
-				45D66473DFC8FEB285DF9F26C91A3E1A /* Support Files */,
-				53B2F5128ABD316B5D926F36BA94F9E4 /* Swift */,
-			);
-			name = Cuckoo;
-			path = Cuckoo;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				5879248F0A9BA7D7EE6DBAADDC8BA6DC /* Pods */,
+				BDA7A5E429C09CBA5830142FFDCA09A0 /* Pods */,
 				36D89430DE694E14DD3EF2FA3C7B95DE /* Products */,
 				AEEEC877525FD9C9FE44D106CE60DCBC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F863BD433F2A47FD21B604471D5FF933 /* Support Files */ = {
+		DF5D1A38CCBCDFF2D0476D411395CF78 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				D244BB14E2911838A16C6CDFBA34457C /* R.swift.debug.xcconfig */,
-				63527A013E18F1349E090C74D4B3B93F /* R.swift.release.xcconfig */,
+				051E98833DA26D1A1B55919B837466C6 /* __DoNotUse.swift */,
+				69ADB36BF24D49A277E172EA51EF7872 /* ArgumentCaptor.swift */,
+				FFD6E810253F9C3E4B3B1C60C1F57925 /* Array+matchers.swift */,
+				F9F01D72A201718F12238EB22A570B4E /* BaseStubFunctionTrait.swift */,
+				3711E0B00F7C695F6845EAB5590C3FA2 /* CallMatcher.swift */,
+				B55ECA4AC088BB708DCB2424BA74DB83 /* CallMatcherFunctions.swift */,
+				C8A1D3EC78D8A213009FAD98B9F8F40B /* CreateMock.swift */,
+				B5F48F43E3BE8F1053141F96EC03C287 /* CuckooFunctions.swift */,
+				3FF973E5033412520EE71159DA4D6DAB /* DefaultValueRegistry.swift */,
+				D19568297FD4B9656387639F95DA866D /* Dictionary+matchers.swift */,
+				F3B9B67A77C6E6A08333CBCA31DE4DCF /* Matchable.swift */,
+				FA6343DBDD7F4CD2784108146C82EC56 /* Mock.swift */,
+				A83E93AB2DABDDF35CEA57E558239835 /* MockBuilder.swift */,
+				1177A80FF7FCBE5997B68A312DF15C41 /* Mocked.swift */,
+				C00129EF56AC1D213A4A7492EC5E4A77 /* MockManager.swift */,
+				2BBFC40EF6CD157CDB70C50DD35E5823 /* MockManager+preconfigured.swift */,
+				B54A625C07DE4FE24FA2BE6B20672911 /* ParameterMatcher.swift */,
+				7E5EBAA7B1373BEEF30DA1D991D32403 /* ParameterMatcherFunctions.swift */,
+				35D8BD0B052768021EBCEB4D5019333B /* Set+matchers.swift */,
+				87BE4BB0FC134B34398BA3D853E11594 /* Stub.swift */,
+				958C757235F0F44E15F668A7149F70A8 /* StubAction.swift */,
+				3E60E1160BEE3829BEE9413428311DE0 /* StubbingProxy.swift */,
+				DA563C398A89C1F30A8F625F1E9ED210 /* StubCall.swift */,
+				B3A7537A3FEC60117BEA3DEC4B9C1A9D /* StubFunction.swift */,
+				A9B5E875EFFC2F257332F236925FE6D7 /* StubFunctionThenCallRealImplementationTrait.swift */,
+				B6AFDF3A417321D49A01FFC98DBD0EEA /* StubFunctionThenDoNothingTrait.swift */,
+				F476CA27D961749BA54F991900D3EDE0 /* StubFunctionThenReturnTrait.swift */,
+				1B8D46221392893B546B2F479B14B1D4 /* StubFunctionThenThrowingTrait.swift */,
+				C404663B3F8B4E17D9128E6C2C22D1A2 /* StubFunctionThenThrowTrait.swift */,
+				64E842DD021963F1329719984942A761 /* StubFunctionThenTrait.swift */,
+				1F9D93FEAA9DEA306877AA9959F8A59A /* StubNoReturnFunction.swift */,
+				903E4A6B30EAAA9E3F609218DFB35D1D /* StubNoReturnThrowingFunction.swift */,
+				EFA0E85BFF4BCA332F0F09BE2E1A7CBD /* StubThrowingFunction.swift */,
+				F2235E182FB35C0C8F44DE7C5BC4DA89 /* ThreadLocal.swift */,
+				5F5F98850F8D6CE04747FFD593880134 /* ToBeStubbedProperty.swift */,
+				10752110F288B786D3572F83A4E46EF3 /* ToBeStubbedReadOnlyProperty.swift */,
+				4B0839A707D4C3E4F5EA9D74E56E42FC /* Utils.swift */,
+				0381E6974394E967EE527C763C2A6EBA /* VerificationProxy.swift */,
+				202B52547FFF966A47AA231986D44D6F /* VerifyProperty.swift */,
+				D3541DA3BE9B28927E9A18050352360E /* VerifyReadOnlyProperty.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		FD522BD618DC1E8A7434CAD973B1448D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BB65039BEBC52893C4744807609C11B /* R.swift.debug.xcconfig */,
+				FFF5AADFF1686EDF33023A12C2643B75 /* R.swift.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/R.swift";
@@ -584,6 +577,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		05ACA1893A8E5D781104AF2F400CB27A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5151166249C750293F23BEFB2A3A144F /* Pods-nytimes-ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B7B1F945CE0842ABF844204FF10E72D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,19 +601,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B45AC29F2BA41476E0186C570570EB6C /* Headers */ = {
+		9FDF4E4587C29D6712E05184965A5049 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883F6D997383279C699858A5C37096E0 /* Pods-nytimes-ios-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D18A52E3E68386213D6254553BFA7BFC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0612B0B3F7A6186FC0999E805DEFA600 /* Pods-nytimes-iosTests-umbrella.h in Headers */,
+				3D10EDC45077684C800756B8E215AAC4 /* Pods-nytimes-iosTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,20 +614,20 @@
 /* Begin PBXNativeTarget section */
 		2CC13B45CBB893AB03C5D3091ECD9987 /* Pods-nytimes-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2624CFC59067C3BAE29C4C6BF5F20C6E /* Build configuration list for PBXNativeTarget "Pods-nytimes-iosTests" */;
+			buildConfigurationList = 38D3DFAA2F33BC1D4DAF55A29773086C /* Build configuration list for PBXNativeTarget "Pods-nytimes-iosTests" */;
 			buildPhases = (
-				D18A52E3E68386213D6254553BFA7BFC /* Headers */,
-				58FD4E89F161870C3D493DBF5CA5541B /* Sources */,
-				1C22FE60E90D9D7AE660A44BA2B5B3C7 /* Frameworks */,
-				A2A83804E0787C754DD835D5027583A0 /* Resources */,
+				9FDF4E4587C29D6712E05184965A5049 /* Headers */,
+				061CFB0270F35A2B1AB30EB0265C37E1 /* Sources */,
+				2BD696C59D48023103A6A02577E0BC19 /* Frameworks */,
+				1D05654B87E0700DA21EF698457A4578 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4954C2E563373E9E1DD45FD4FAA5963B /* PBXTargetDependency */,
-				D52FCE6537EC29B839F571ABBBE204C4 /* PBXTargetDependency */,
-				4E7D3962C203202660CF5C29103AD99C /* PBXTargetDependency */,
-				523192BF2A80A066C78819282AC1CCA2 /* PBXTargetDependency */,
+				8B78191788BD79C08DE9DC97701F1296 /* PBXTargetDependency */,
+				D6291AC58DFEE211AF411E098519BB2A /* PBXTargetDependency */,
+				077F1DF9C3858BCBB522CFA9E429B5C6 /* PBXTargetDependency */,
+				5CAB68E6E04B0A3C5DA766B24E0624B4 /* PBXTargetDependency */,
 			);
 			name = "Pods-nytimes-iosTests";
 			productName = Pods_nytimes_iosTests;
@@ -679,20 +672,19 @@
 		};
 		E76DD5CA50D0484CDAD2FB82F5E35D98 /* Pods-nytimes-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5CEA45DF18A9150A2460945781DCF3D /* Build configuration list for PBXNativeTarget "Pods-nytimes-ios" */;
+			buildConfigurationList = A6933CC323C088B3013CD81A62348750 /* Build configuration list for PBXNativeTarget "Pods-nytimes-ios" */;
 			buildPhases = (
-				B45AC29F2BA41476E0186C570570EB6C /* Headers */,
-				F6FF53D1AA80E9D4CC24D9D345C2409E /* Sources */,
-				C6E8DF50957D7629C841D3C79614D767 /* Frameworks */,
-				061A9AD678CD28C8EB9787C267FAE697 /* Resources */,
+				05ACA1893A8E5D781104AF2F400CB27A /* Headers */,
+				171EF7E97F372CCEEE3B405DACA076A9 /* Sources */,
+				4834D030CA30C418312144AC862C9440 /* Frameworks */,
+				C3AD1B444C235B39604C74F883A2B2B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				26F5D2988A3BBC119BFAF44A438CFA28 /* PBXTargetDependency */,
-				6D2787ABEE4D2143ED3B3A9D0B0A8161 /* PBXTargetDependency */,
-				87B3C986EDF0E2602C087EB9577B9164 /* PBXTargetDependency */,
-				19AA8B80607F380ECBF0CDA19672DBE3 /* PBXTargetDependency */,
+				DA0AAAF5F8A78C19D819233C721439AD /* PBXTargetDependency */,
+				96946BC00CDED2B4FADAAB07D3F9038A /* PBXTargetDependency */,
+				5CACE54B358550D0DE199D265BF1E86E /* PBXTargetDependency */,
 			);
 			name = "Pods-nytimes-ios";
 			productName = Pods_nytimes_ios;
@@ -732,7 +724,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		061A9AD678CD28C8EB9787C267FAE697 /* Resources */ = {
+		1D05654B87E0700DA21EF698457A4578 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -746,7 +738,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2A83804E0787C754DD835D5027583A0 /* Resources */ = {
+		C3AD1B444C235B39604C74F883A2B2B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -798,11 +790,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58FD4E89F161870C3D493DBF5CA5541B /* Sources */ = {
+		061CFB0270F35A2B1AB30EB0265C37E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B310E24A1CA875C3DF0B0AA04605BEC /* Pods-nytimes-iosTests-dummy.m in Sources */,
+				639ECA191F8290E3A81D8D6602B8D7D5 /* Pods-nytimes-iosTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		171EF7E97F372CCEEE3B405DACA076A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C842997F62D3ED574E162CE717A56D36 /* Pods-nytimes-ios-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,58 +854,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6FF53D1AA80E9D4CC24D9D345C2409E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F26D9171D14690349E6E562194E50C97 /* Pods-nytimes-ios-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		19AA8B80607F380ECBF0CDA19672DBE3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = DDD9EBCFCA99F8400243790944CEE92D /* PBXContainerItemProxy */;
-		};
-		26F5D2988A3BBC119BFAF44A438CFA28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cuckoo;
-			target = CFCA8CA494372A14108299CE150648B8 /* Cuckoo */;
-			targetProxy = B3CB73BD6278D4B454D056B7A72D8EFD /* PBXContainerItemProxy */;
-		};
-		4954C2E563373E9E1DD45FD4FAA5963B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cuckoo;
-			target = CFCA8CA494372A14108299CE150648B8 /* Cuckoo */;
-			targetProxy = 8DE89A88F3A87B05BD6F24D5262DB088 /* PBXContainerItemProxy */;
-		};
-		4E7D3962C203202660CF5C29103AD99C /* PBXTargetDependency */ = {
+		077F1DF9C3858BCBB522CFA9E429B5C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = R.swift.Library;
 			target = B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */;
-			targetProxy = A2AE3A590E50CB8B8D76FD93532FBBEA /* PBXContainerItemProxy */;
+			targetProxy = C32B661D7B4F21FF276C64715B5855AB /* PBXContainerItemProxy */;
 		};
-		523192BF2A80A066C78819282AC1CCA2 /* PBXTargetDependency */ = {
+		5CAB68E6E04B0A3C5DA766B24E0624B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 892F350515F3CA72D27D4247DDFABB55 /* PBXContainerItemProxy */;
+			targetProxy = C5103CF706048AB3E2FFA7FAAAA3D985 /* PBXContainerItemProxy */;
 		};
-		6D2787ABEE4D2143ED3B3A9D0B0A8161 /* PBXTargetDependency */ = {
+		5CACE54B358550D0DE199D265BF1E86E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = R.swift;
-			target = 230984053C6652DFF510F450F21C5CF7 /* R.swift */;
-			targetProxy = A92E0C9530F7FC720CF8D0E86E3FB481 /* PBXContainerItemProxy */;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = A4AB74F16882A6ED8F924142F53D6EDB /* PBXContainerItemProxy */;
 		};
-		87B3C986EDF0E2602C087EB9577B9164 /* PBXTargetDependency */ = {
+		8B78191788BD79C08DE9DC97701F1296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cuckoo;
+			target = CFCA8CA494372A14108299CE150648B8 /* Cuckoo */;
+			targetProxy = 805AC641C17013D4CF05BB348F856ACC /* PBXContainerItemProxy */;
+		};
+		96946BC00CDED2B4FADAAB07D3F9038A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = R.swift.Library;
 			target = B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */;
-			targetProxy = 30430C15DC72FCA7CAC7714BAA69414E /* PBXContainerItemProxy */;
+			targetProxy = B80CFF5140E99EA0E77421FCCBA9C9B2 /* PBXContainerItemProxy */;
 		};
 		9F97A8412099D025CD59C84C92FCFB2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -913,16 +893,22 @@
 			target = B12748D8506CB48696BD90F2CA4F4E38 /* R.swift.Library */;
 			targetProxy = EB23EFAD2BE94CC4B5B1193807593702 /* PBXContainerItemProxy */;
 		};
-		D52FCE6537EC29B839F571ABBBE204C4 /* PBXTargetDependency */ = {
+		D6291AC58DFEE211AF411E098519BB2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = R.swift;
 			target = 230984053C6652DFF510F450F21C5CF7 /* R.swift */;
-			targetProxy = E2DFEC118650361D87E00CE34961D2C6 /* PBXContainerItemProxy */;
+			targetProxy = 9EA92310009613475EC72BE3D5DD69E5 /* PBXContainerItemProxy */;
+		};
+		DA0AAAF5F8A78C19D819233C721439AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = R.swift;
+			target = 230984053C6652DFF510F450F21C5CF7 /* R.swift */;
+			targetProxy = 6E33DEC1564D20A2196CB9641D530734 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4E1FA4808873DFDAB48328F627A448F5 /* Debug */ = {
+		608DA0B71D484308265AF9ED6AFC770D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5E0CE9256D5923791ABE40DC20A75E9 /* Pods-nytimes-ios.debug.xcconfig */;
 			buildSettings = {
@@ -961,7 +947,7 @@
 		};
 		6606C3EE87B26C46BDEF4B407FF77984 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AEC74E659056741924F7F1B6C98C78D /* Cuckoo.release.xcconfig */;
+			baseConfigurationReference = 2F87A518B0C906D70E98752725CF7BEB /* Cuckoo.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -994,7 +980,24 @@
 			};
 			name = Release;
 		};
-		6E88F919DC60BE21AB89D11A6CE00574 /* Debug */ = {
+		78348A99DBE5E833006A6ABF8D54B8A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF5AADFF1686EDF33023A12C2643B75 /* R.swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8787C1F9699FF37B7A0A7A963FBD4050 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 989BD2AE326798098AA71796967302F3 /* Pods-nytimes-iosTests.debug.xcconfig */;
 			buildSettings = {
@@ -1030,61 +1033,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		78348A99DBE5E833006A6ABF8D54B8A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63527A013E18F1349E090C74D4B3B93F /* R.swift.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8579D31FEA9ABB30D4F914D1CA03D0EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F870AC335E22E9C795D27847254E50A /* Pods-nytimes-ios.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1152,6 +1100,44 @@
 			};
 			name = Debug;
 		};
+		904E604FC3F903085224F21A994D127E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F870AC335E22E9C795D27847254E50A /* Pods-nytimes-ios.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-nytimes-ios/Pods-nytimes-ios.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1216,7 +1202,7 @@
 		};
 		AD81E62ACCB0B7A923FC8AA288F9921E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18CA8E9B1C174C64904BD30C9C21B001 /* SwiftLint.release.xcconfig */;
+			baseConfigurationReference = CDF3C16F2575F756A6C81715CBE7B365 /* SwiftLint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1231,7 +1217,41 @@
 			};
 			name = Release;
 		};
-		BAEAC2D067A44E4ED53951AD739B2150 /* Release */ = {
+		BB7D1893FD5D4BEB3D3A555991D02166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E41055363B2C7888733D0D2D956425D4 /* Cuckoo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cuckoo/Cuckoo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cuckoo/Cuckoo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cuckoo/Cuckoo.modulemap";
+				PRODUCT_MODULE_NAME = Cuckoo;
+				PRODUCT_NAME = Cuckoo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C3B1CD9E3C64F895BA73674FAA788DFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E8B13DF06E7AD510DEE5D35B2B65A1C /* Pods-nytimes-iosTests.release.xcconfig */;
 			buildSettings = {
@@ -1269,43 +1289,9 @@
 			};
 			name = Release;
 		};
-		BB7D1893FD5D4BEB3D3A555991D02166 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 689069888DFEB7258727A17205E603D8 /* Cuckoo.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cuckoo/Cuckoo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cuckoo/Cuckoo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Cuckoo/Cuckoo.modulemap";
-				PRODUCT_MODULE_NAME = Cuckoo;
-				PRODUCT_NAME = Cuckoo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C871A024D699A2C5C3DF13B5D5F604AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B135673565A8927C3F4C7C7FC6D804BF /* R.swift.Library.debug.xcconfig */;
+			baseConfigurationReference = A072EF56051517613C07C4B81EA607F3 /* R.swift.Library.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1339,7 +1325,7 @@
 		};
 		CD17B93CF7ADE75483B704E6E4A5692A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D244BB14E2911838A16C6CDFBA34457C /* R.swift.debug.xcconfig */;
+			baseConfigurationReference = 9BB65039BEBC52893C4744807609C11B /* R.swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1355,7 +1341,7 @@
 		};
 		E26842CCAF09B6E28EA77C593A4F42B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BA735DDCEE6DFDFB2CC9E4F8E83A44E /* R.swift.Library.release.xcconfig */;
+			baseConfigurationReference = AB2B358181FDD98891E9392DDB229EE3 /* R.swift.Library.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1390,7 +1376,7 @@
 		};
 		EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EED68E4DC53A9DD44D9C8C47FFF212A3 /* SwiftLint.debug.xcconfig */;
+			baseConfigurationReference = D7EEF27DACB80AA357972E43ABE4A523 /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1407,20 +1393,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2624CFC59067C3BAE29C4C6BF5F20C6E /* Build configuration list for PBXNativeTarget "Pods-nytimes-iosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E88F919DC60BE21AB89D11A6CE00574 /* Debug */,
-				BAEAC2D067A44E4ED53951AD739B2150 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		35E9A29638FD6C8BAB727B16AE62ECD4 /* Build configuration list for PBXNativeTarget "Cuckoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB7D1893FD5D4BEB3D3A555991D02166 /* Debug */,
 				6606C3EE87B26C46BDEF4B407FF77984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D3DFAA2F33BC1D4DAF55A29773086C /* Build configuration list for PBXNativeTarget "Pods-nytimes-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8787C1F9699FF37B7A0A7A963FBD4050 /* Debug */,
+				C3B1CD9E3C64F895BA73674FAA788DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1443,20 +1429,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A6933CC323C088B3013CD81A62348750 /* Build configuration list for PBXNativeTarget "Pods-nytimes-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				608DA0B71D484308265AF9ED6AFC770D /* Debug */,
+				904E604FC3F903085224F21A994D127E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */,
 				AD81E62ACCB0B7A923FC8AA288F9921E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5CEA45DF18A9150A2460945781DCF3D /* Build configuration list for PBXNativeTarget "Pods-nytimes-ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E1FA4808873DFDAB48328F627A448F5 /* Debug */,
-				8579D31FEA9ABB30D4F914D1CA03D0EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
