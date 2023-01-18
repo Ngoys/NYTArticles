@@ -2,6 +2,7 @@ import Combine
 import Foundation
 
 class HTTPClient {
+
     //----------------------------------------
     // MARK: - API requests
     //----------------------------------------

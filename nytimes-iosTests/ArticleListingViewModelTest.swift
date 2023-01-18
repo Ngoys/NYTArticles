@@ -1,8 +1,9 @@
 import XCTest
 import Cuckoo
 import Combine
+@testable import nytimes_ios
 
-class ArticleListingViewModelTest: BaseViewModel {
+class ArticleListingViewModelTest: BaseTest {
 
     //----------------------------------------
     // MARK: - Properties
@@ -11,8 +12,6 @@ class ArticleListingViewModelTest: BaseViewModel {
     var viewModel: ArticleListingViewModel!
 
     var mockArticleStore: MockArticleStore!
-
-    var mockAPIClient: MockNYTimesAPIClient!
 
     var mockCoreDataStore: MockCoreDataStore!
 
@@ -25,8 +24,8 @@ class ArticleListingViewModelTest: BaseViewModel {
     }
 
     override func setUp() {
-        mockAPIClient = MockNYTimesAPIClient(apiBaseURL: <#T##URL#>, httpClient: <#T##HTTPClient#>)
-        mockArticleStore = MockArticleStore(apiClient: <#T##APIClient#>, coreDataStore: <#T##CoreDataStore#>)
+        mockCoreDataStore = MockCoreDataStore(coreDataStack: mockCoreDataStack)
+        mockArticleStore = MockArticleStore(apiClient: mockAPIClient, coreDataStore: mockCoreDataStore)
     }
 
     //----------------------------------------

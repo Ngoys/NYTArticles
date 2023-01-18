@@ -13,6 +13,7 @@
 		C22C090D29779D4C005736E1 /* ArticleListingCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C090C29779D4C005736E1 /* ArticleListingCellViewModelTest.swift */; };
 		C22C090F2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C090E2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift */; };
 		C22C09132977A219005736E1 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C09122977A219005736E1 /* BaseTest.swift */; };
+		C22C09152977A2C9005736E1 /* ArticleListingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */; };
 		C2487D122972163A0048F8DF /* ArticleListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */; };
 		C2487D132972163A0048F8DF /* ArticleListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */; };
 		C2487D142972163A0048F8DF /* ArticleListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2487D102972163A0048F8DF /* ArticleListingViewController.swift */; };
@@ -107,6 +108,7 @@
 		C22C090C29779D4C005736E1 /* ArticleListingCellViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCellViewModelTest.swift; sourceTree = "<group>"; };
 		C22C090E2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentArticleListingCellViewModelTest.swift; sourceTree = "<group>"; };
 		C22C09122977A219005736E1 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModelTest.swift; sourceTree = "<group>"; };
 		C2487D0E2972163A0048F8DF /* ArticleListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewModel.swift; sourceTree = "<group>"; };
 		C2487D0F2972163A0048F8DF /* ArticleListingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingCoordinator.swift; sourceTree = "<group>"; };
 		C2487D102972163A0048F8DF /* ArticleListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListingViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			children = (
 				C22C090A29779A8A005736E1 /* GeneratedMocks.swift */,
 				C22C09122977A219005736E1 /* BaseTest.swift */,
+				C22C09142977A2C9005736E1 /* ArticleListingViewModelTest.swift */,
 				C2578AB82975299A0066E24D /* HomeMenuCellViewModel.swift */,
 				C22C090C29779D4C005736E1 /* ArticleListingCellViewModelTest.swift */,
 				C22C090E2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift */,
@@ -696,7 +699,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0\nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Store/ArticleStore.swift\" \\\n\"${INPUT_DIR}/Services/NYTimesAPIClient.swift\" \\\n\"${INPUT_DIR}/Services/Store/CoreDataStore.swift\"\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "if [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0\nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Services/Store/ArticleStore.swift\" \\\n\"${INPUT_DIR}/Services/NYTimesAPIClient.swift\" \\\n\"${INPUT_DIR}/Services/HTTPClient.swift\" \\\n\"${INPUT_DIR}/Services/Store/CoreDataStack.swift\" \\\n\"${INPUT_DIR}/Services/Store/CoreDataStore.swift\"\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		C2E3BA24297133CB00180F8A /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -761,6 +764,7 @@
 			files = (
 				C22C09132977A219005736E1 /* BaseTest.swift in Sources */,
 				C2578AB92975299A0066E24D /* HomeMenuCellViewModel.swift in Sources */,
+				C22C09152977A2C9005736E1 /* ArticleListingViewModelTest.swift in Sources */,
 				C22C090D29779D4C005736E1 /* ArticleListingCellViewModelTest.swift in Sources */,
 				C22C090F2977A00A005736E1 /* DocumentArticleListingCellViewModelTest.swift in Sources */,
 				C22C090B29779A8A005736E1 /* GeneratedMocks.swift in Sources */,
