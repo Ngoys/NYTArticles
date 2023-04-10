@@ -3,7 +3,7 @@
 ## Installation
 
 1. Clone the repo 
-2. Open `CourierService.xcodeproj` using `Xcode`
+2. Open `nytimes-ios.xcworkspace` using `Xcode`
 3. `pod install` 
 4. You should be on `main` branch
 
