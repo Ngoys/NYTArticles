@@ -9,4 +9,4 @@
 
 
 This project is to demostrate the ability of MVVM + C / Combine framework / finite state machine code architecture to integrate [New York Times API](https://developer.nytimes.com/apis).<br />
-It contains search pagination, unit test and a good code template to be utlize across all modules, allowing simple understanding and standardization. 
+It contains search pagination, unit test and a good code template to be utilize across all modules, allowing simple understanding and standardization. 
