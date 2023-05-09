@@ -5,7 +5,10 @@
 
 "type_something_here" = "Type something here...";
 
-// Home Menu
+//----------------------------------------
+// MARK: - Home Menu
+//----------------------------------------
+
 "search" = "Search";
 "popular" = "Popular";
 "location" = "Location";
@@ -17,7 +20,10 @@
 "most_shared" = "Most Shared";
 "most_viewed" = "Most Viewed";
 
-// Error
+//----------------------------------------
+// MARK: - Error
+//----------------------------------------
+
 "error.general" = "An error occurred. Please try again later.";
 "error.quota_violation" = "Quota Violation Error.";
 
