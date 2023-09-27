@@ -18,5 +18,6 @@ This project has **MVVM + C / Combine framework / finite state machine** code ar
 1. Pagination search feature
 2. Coordinator to capture potential deeplinks and navigation
 3. Combine-based view model
-4. Highly reusable code template across modules  
-5. Unit testing on view models
+4. Swinject dependency injection
+5. Highly reusable code template across modules  
+6. Unit testing on view models
