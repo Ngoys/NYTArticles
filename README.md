@@ -13,8 +13,7 @@
 
 ## Feature 
 
-This project has **MVVM + C / Combine framework / finite state machine** code architecture to integrate [New York Times API](https://developer.nytimes.com/apis).<br />
-It contains:
+This project has **MVVM + C / Combine framework / finite state machine** code architecture to integrate [New York Times API](https://developer.nytimes.com/apis).
 
 1. Pagination search feature
 2. Coordinator to capture potential deeplinks and navigation
