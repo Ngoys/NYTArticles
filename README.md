@@ -16,8 +16,9 @@
 This project has **MVVM + C / Combine framework / finite state machine** code architecture to integrate [New York Times API](https://developer.nytimes.com/apis).
 
 1. Pagination search feature
-2. Coordinator to capture potential deeplinks and navigation
+2. Coordinatora for potential deeplinks and navigation
 3. Combine-based view model
 4. Swinject dependency injection
-5. Highly reusable code template across modules  
-6. Unit testing on view models
+5. Core data
+6. Reusable code template across modules  
+7. Unit testing
