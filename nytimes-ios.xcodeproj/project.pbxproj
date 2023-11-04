@@ -345,13 +345,13 @@
 		C28C496F29715A1B00E6757E /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				C2487D3D297235C10048F8DF /* APIResponse.swift */,
 				C2487D592972975C0048F8DF /* NYTimesAPIResult.swift */,
 				C2487D5B297297A80048F8DF /* NYTimesAPIResponse.swift */,
 				C28C497029715A2200E6757E /* HomeMenuSection.swift */,
-				C2487D1C297218750048F8DF /* Article.swift */,
 				C2487D5D297297DB0048F8DF /* SearchResponse.swift */,
 				C2487D5F297298790048F8DF /* DocumentArticle.swift */,
-				C2487D3D297235C10048F8DF /* APIResponse.swift */,
+				C2487D1C297218750048F8DF /* Article.swift */,
 				C21499132975060900272F32 /* ArticleListingContentType.swift */,
 				C2487D782973F4A00048F8DF /* CoreDataModal */,
 			);
@@ -425,9 +425,9 @@
 			isa = PBXGroup;
 			children = (
 				C2E3BA1F2971328100180F8A /* ServicesContainer.swift */,
-				C2487D2B297225EC0048F8DF /* HTTPClient.swift */,
 				C2487D2C297225EC0048F8DF /* APIClient.swift */,
 				C2487D28297225EC0048F8DF /* NYTimesAPIClient.swift */,
+				C2487D2B297225EC0048F8DF /* HTTPClient.swift */,
 				C2487D29297225EC0048F8DF /* AppError.swift */,
 				C2487D2A297225EC0048F8DF /* ApiError.swift */,
 				C2487D3A297233310048F8DF /* Store */,

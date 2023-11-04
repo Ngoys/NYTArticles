@@ -188,9 +188,8 @@ extension SearchViewController: UICollectionViewDelegate {
 extension SearchViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pos = scrollView.contentOffset.y
         let offSet = 200.0
-        if pos > collectionView.contentSize.height - offSet - scrollView.frame.size.height {
+        if scrollView.contentOffset.y > collectionView.contentSize.height - offSet - scrollView.frame.size.height {
             viewModel.loadNextPage()
         }
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public enum AppError: Error, Equatable {
+enum AppError: Error {
     case invalidData
     case urlError
     case network

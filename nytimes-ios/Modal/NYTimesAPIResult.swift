@@ -1,6 +1,6 @@
 import Foundation
 
-struct NYTimesAPIResult<T>: Decodable where T: Decodable {
+struct NYTimesAPIResult<T: Decodable>: Decodable {
     let status: String
     let copyright: String
     let numResults: Int?

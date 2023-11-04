@@ -28,7 +28,7 @@ class HTTPClient {
     private func handleResponseFailure(data: Data?, response: URLResponse?) -> AppError {
         var error = AppError.badRequest
         
-        if let response = (response as? HTTPURLResponse) {
+        if let response = response as? HTTPURLResponse {
             switch response.statusCode {
             case 401:
                 error = .authentication

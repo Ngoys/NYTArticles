@@ -197,7 +197,7 @@ class SearchViewModelTest: BaseTest {
         let appError = AppError.quotaViolation
 
         Cuckoo.stub(mockArticleStore) { stub in
-            when(stub.searchDocumentArticles(keyword: any(), pageNumber: any())).thenReturn(Result.Publisher(.failure(AppError.quotaViolation))
+            when(stub.searchDocumentArticles(keyword: any(), pageNumber: any())).thenReturn(Result.Publisher(.failure(appError))
                 .eraseToAnyPublisher())
         }
 

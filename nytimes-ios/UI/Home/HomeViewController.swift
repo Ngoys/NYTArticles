@@ -20,14 +20,6 @@ class HomeViewController: BaseViewController {
     }
 
     //----------------------------------------
-    // MARK: - Type aliases
-    //----------------------------------------
-
-    typealias DataSource = UICollectionViewDiffableDataSource<HomeMenuSection, HomeMenu>
-
-    typealias Snapshot = NSDiffableDataSourceSnapshot<HomeMenuSection, HomeMenu>
-
-    //----------------------------------------
     // MARK:- View model
     //----------------------------------------
 
@@ -123,7 +115,7 @@ class HomeViewController: BaseViewController {
     //----------------------------------------
 
     private func applySnapshot(homeMenuSections: [HomeMenuSection], animatingDifferences: Bool = true) {
-        var snapshot = Snapshot()
+        var snapshot = NSDiffableDataSourceSnapshot<HomeMenuSection, HomeMenu>()
         snapshot.appendSections(homeMenuSections)
         homeMenuSections.forEach {
             snapshot.appendItems($0.menus, toSection: $0)
@@ -131,8 +123,8 @@ class HomeViewController: BaseViewController {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
-    private func createDataSource() -> DataSource {
-        let dataSource = DataSource(
+    private func createDataSource() -> UICollectionViewDiffableDataSource<HomeMenuSection, HomeMenu> {
+        let dataSource = UICollectionViewDiffableDataSource<HomeMenuSection, HomeMenu>(
             collectionView: collectionView,
             cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.homeMenuCell, for: indexPath) as! HomeMenuCell

@@ -20,7 +20,7 @@ class ArticleListingCellViewModel {
     }
 
     var dateText: String? {
-        return NYTimesDateFormatter.relativeDateFormatter(fromDate: self.article.publishedDate, doesRelativeDateFormatting: true) 
+        return NYTimesDateFormatter.relativeDateFormatter(fromDate: self.article.publishedDate) 
     }
     
     //----------------------------------------
